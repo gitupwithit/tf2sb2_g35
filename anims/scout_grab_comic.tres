@@ -3,7 +3,6 @@
 [resource]
 resource_name = "grab_comic"
 length = 2.33333
-loop = true
 tracks/0/type = "transform"
 tracks/0/path = NodePath("scoutqc_skeleton/Skeleton:prp_microphone")
 tracks/0/interp = 1
