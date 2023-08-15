@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/Ha_ha_ha_Im_a_drunk.mp3-ddc97090931cb24488792fc05b03c724.mp3str"
+
+[deps]
+
+source_file="res://audio/3_demo/1_happy/Ha_ha_ha_Im_a_drunk.mp3"
+dest_files=[ "res://.import/Ha_ha_ha_Im_a_drunk.mp3-ddc97090931cb24488792fc05b03c724.mp3str" ]
+
+[params]
+
+loop=false
+loop_offset=0

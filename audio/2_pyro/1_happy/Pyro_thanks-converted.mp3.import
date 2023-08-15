@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/Pyro_thanks-converted.mp3-41355570980c9f4b66f4174c81b5de39.mp3str"
+
+[deps]
+
+source_file="res://audio/2_pyro/1_happy/Pyro_thanks-converted.mp3"
+dest_files=[ "res://.import/Pyro_thanks-converted.mp3-41355570980c9f4b66f4174c81b5de39.mp3str" ]
+
+[params]
+
+loop=false
+loop_offset=0

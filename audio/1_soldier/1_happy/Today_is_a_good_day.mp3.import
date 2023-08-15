@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/Today_is_a_good_day.mp3-6a4ecca4a8131ced55c5c751778006a3.mp3str"
+
+[deps]
+
+source_file="res://audio/1_soldier/1_happy/Today_is_a_good_day.mp3"
+dest_files=[ "res://.import/Today_is_a_good_day.mp3-6a4ecca4a8131ced55c5c751778006a3.mp3str" ]
+
+[params]
+
+loop=false
+loop_offset=0

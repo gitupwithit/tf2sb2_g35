@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/Hahaha_absolutely.mp3-34809e83b20a3e1d0c21ec29a2b6f253.mp3str"
+
+[deps]
+
+source_file="res://audio/3_demo/1_happy/Hahaha_absolutely.mp3"
+dest_files=[ "res://.import/Hahaha_absolutely.mp3-34809e83b20a3e1d0c21ec29a2b6f253.mp3str" ]
+
+[params]
+
+loop=false
+loop_offset=0

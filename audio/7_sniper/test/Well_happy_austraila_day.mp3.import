@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/Well_happy_austraila_day.mp3-b261694f9b8bfcfcbacb5ad57d5ed4f7.mp3str"
+
+[deps]
+
+source_file="res://audio/7_sniper/test/Well_happy_austraila_day.mp3"
+dest_files=[ "res://.import/Well_happy_austraila_day.mp3-b261694f9b8bfcfcbacb5ad57d5ed4f7.mp3str" ]
+
+[params]
+
+loop=false
+loop_offset=0

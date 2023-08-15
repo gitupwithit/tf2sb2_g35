@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/Gentlemen.mp3-1d421adba3d4e48df7392121859c8533.mp3str"
+
+[deps]
+
+source_file="res://audio/8_spy/0_neutral/Gentlemen.mp3"
+dest_files=[ "res://.import/Gentlemen.mp3-1d421adba3d4e48df7392121859c8533.mp3str" ]
+
+[params]
+
+loop=false
+loop_offset=0

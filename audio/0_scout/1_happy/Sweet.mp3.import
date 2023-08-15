@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/Sweet.mp3-9381a1d0ec4bbcec958fb3a86dfddce3.mp3str"
+
+[deps]
+
+source_file="res://audio/0_scout/1_happy/Sweet.mp3"
+dest_files=[ "res://.import/Sweet.mp3-9381a1d0ec4bbcec958fb3a86dfddce3.mp3str" ]
+
+[params]
+
+loop=false
+loop_offset=0

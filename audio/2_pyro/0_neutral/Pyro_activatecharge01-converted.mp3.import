@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/Pyro_activatecharge01-converted.mp3-3e270141527de3cd51ac88a9ac852c1a.mp3str"
+
+[deps]
+
+source_file="res://audio/2_pyro/0_neutral/Pyro_activatecharge01-converted.mp3"
+dest_files=[ "res://.import/Pyro_activatecharge01-converted.mp3-3e270141527de3cd51ac88a9ac852c1a.mp3str" ]
+
+[params]
+
+loop=false
+loop_offset=0

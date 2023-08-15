@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/This_is_my_world.mp3-019cb84207dc14949924991e428b62e6.mp3str"
+
+[deps]
+
+source_file="res://audio/1_soldier/2_angry/This_is_my_world.mp3"
+dest_files=[ "res://.import/This_is_my_world.mp3-019cb84207dc14949924991e428b62e6.mp3str" ]
+
+[params]
+
+loop=false
+loop_offset=0

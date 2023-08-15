@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/Scientists_in_the_future.mp3-fe0a900d755608525b21541bdf00d93b.mp3str"
+
+[deps]
+
+source_file="res://audio/1_soldier/2_angry/Scientists_in_the_future.mp3"
+dest_files=[ "res://.import/Scientists_in_the_future.mp3-fe0a900d755608525b21541bdf00d93b.mp3str" ]
+
+[params]
+
+loop=false
+loop_offset=0

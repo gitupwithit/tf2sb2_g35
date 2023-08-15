@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/Bloody_piker.mp3-7594396893b37440ba63ca1cd15d867e.mp3str"
+
+[deps]
+
+source_file="res://audio/7_sniper/2_angry/Bloody_piker.mp3"
+dest_files=[ "res://.import/Bloody_piker.mp3-7594396893b37440ba63ca1cd15d867e.mp3str" ]
+
+[params]
+
+loop=false
+loop_offset=0

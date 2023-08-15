@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/As_long_as_nothing_super_.mp3-8930e6576eca0e1cce304bcce5d2758e.mp3str"
+
+[deps]
+
+source_file="res://audio/8_spy/0_neutral/As_long_as_nothing_super_.mp3"
+dest_files=[ "res://.import/As_long_as_nothing_super_.mp3-8930e6576eca0e1cce304bcce5d2758e.mp3str" ]
+
+[params]
+
+loop=false
+loop_offset=0

@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/Moron.mp3-7754962e2d7eec86b6a7091dc2a179e0.mp3str"
+
+[deps]
+
+source_file="res://audio/0_scout/2_angry/Moron.mp3"
+dest_files=[ "res://.import/Moron.mp3-7754962e2d7eec86b6a7091dc2a179e0.mp3str" ]
+
+[params]
+
+loop=false
+loop_offset=0

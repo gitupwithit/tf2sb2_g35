@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/Thanks_for_the_aid.mp3-aa172228e083a2ead5e3157909c268ee.mp3str"
+
+[deps]
+
+source_file="res://audio/1_soldier/1_happy/Thanks_for_the_aid.mp3"
+dest_files=[ "res://.import/Thanks_for_the_aid.mp3-aa172228e083a2ead5e3157909c268ee.mp3str" ]
+
+[params]
+
+loop=false
+loop_offset=0

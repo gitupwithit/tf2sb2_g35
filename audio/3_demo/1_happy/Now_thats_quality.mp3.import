@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/Now_thats_quality.mp3-559db5fec96826fc703dafb300c529bc.mp3str"
+
+[deps]
+
+source_file="res://audio/3_demo/1_happy/Now_thats_quality.mp3"
+dest_files=[ "res://.import/Now_thats_quality.mp3-559db5fec96826fc703dafb300c529bc.mp3str" ]
+
+[params]
+
+loop=false
+loop_offset=0

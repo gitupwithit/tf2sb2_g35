@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/Play_ball.mp3-bae10fe77d640b7d291c962edd2a7a55.mp3str"
+
+[deps]
+
+source_file="res://audio/0_scout/0_neutral/Play_ball.mp3"
+dest_files=[ "res://.import/Play_ball.mp3-bae10fe77d640b7d291c962edd2a7a55.mp3str" ]
+
+[params]
+
+loop=false
+loop_offset=0

@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/I_feel_like_a_million_.mp3-636482d48c2e952911d5d5af613b3f0a.mp3str"
+
+[deps]
+
+source_file="res://audio/6_medic/1_happy/I_feel_like_a_million_.mp3"
+dest_files=[ "res://.import/I_feel_like_a_million_.mp3-636482d48c2e952911d5d5af613b3f0a.mp3str" ]
+
+[params]
+
+loop=false
+loop_offset=0

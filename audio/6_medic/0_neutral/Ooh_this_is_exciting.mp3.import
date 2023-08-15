@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/Ooh_this_is_exciting.mp3-96f87b664e0fe57688b92c84fba02193.mp3str"
+
+[deps]
+
+source_file="res://audio/6_medic/0_neutral/Ooh_this_is_exciting.mp3"
+dest_files=[ "res://.import/Ooh_this_is_exciting.mp3-96f87b664e0fe57688b92c84fba02193.mp3str" ]
+
+[params]
+
+loop=false
+loop_offset=0

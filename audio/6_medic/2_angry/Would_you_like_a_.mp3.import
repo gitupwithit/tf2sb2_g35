@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/Would_you_like_a_.mp3-3846979e9063b18077200e86e6214949.mp3str"
+
+[deps]
+
+source_file="res://audio/6_medic/2_angry/Would_you_like_a_.mp3"
+dest_files=[ "res://.import/Would_you_like_a_.mp3-3846979e9063b18077200e86e6214949.mp3str" ]
+
+[params]
+
+loop=false
+loop_offset=0

@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/Eey_me_bottle_of_scrumpy.mp3-480075a40c4e2b3f147a3235071678d3.mp3str"
+
+[deps]
+
+source_file="res://audio/3_demo/0_neutral/Eey_me_bottle_of_scrumpy.mp3"
+dest_files=[ "res://.import/Eey_me_bottle_of_scrumpy.mp3-480075a40c4e2b3f147a3235071678d3.mp3str" ]
+
+[params]
+
+loop=false
+loop_offset=0

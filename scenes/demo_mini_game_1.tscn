@@ -1,0 +1,370 @@
+[gd_scene load_steps=29 format=2]
+
+[ext_resource path="res://animated_sprites/medic_sprite_frames.tres" type="SpriteFrames" id=2]
+[ext_resource path="res://animated_sprites/heavy_sprite_frames.tres" type="SpriteFrames" id=3]
+[ext_resource path="res://animated_sprites/scout_sprite_frames.tres" type="SpriteFrames" id=4]
+[ext_resource path="res://animated_sprites/pyro_sprite_frames.tres" type="SpriteFrames" id=5]
+[ext_resource path="res://animated_sprites/demo_sprite_frames.tres" type="SpriteFrames" id=6]
+[ext_resource path="res://animated_sprites/sniper_sprite_frames.tres" type="SpriteFrames" id=7]
+[ext_resource path="res://animated_sprites/spy_sprite_frames.tres" type="SpriteFrames" id=8]
+[ext_resource path="res://animated_sprites/soldier_sprite_frames.tres" type="SpriteFrames" id=9]
+[ext_resource path="res://animated_sprites/engi_sprite_frames.tres" type="SpriteFrames" id=10]
+[ext_resource path="res://scripts/demo_minigame_1.gd" type="Script" id=11]
+[ext_resource path="res://scripts/dmg_description.gd" type="Script" id=12]
+[ext_resource path="res://scripts/Fade_icon_heavy.gd" type="Script" id=14]
+[ext_resource path="res://scripts/Fade_icon_pyro.gd" type="Script" id=15]
+[ext_resource path="res://scripts/Fade_icon_sniper.gd" type="Script" id=16]
+[ext_resource path="res://scripts/Fade_icon_scout.gd" type="Script" id=17]
+[ext_resource path="res://scripts/Fade_icon_spy.gd" type="Script" id=18]
+[ext_resource path="res://scripts/Fade_icon_soldier.gd" type="Script" id=19]
+[ext_resource path="res://scripts/Fade_icon_medic.gd" type="Script" id=20]
+[ext_resource path="res://scripts/Fade_icon_engi.gd" type="Script" id=21]
+[ext_resource path="res://images/bg_1.png" type="Texture" id=22]
+
+[sub_resource type="Animation" id=1]
+resource_name = "fade_scout"
+length = 2.0
+tracks/0/type = "value"
+tracks/0/path = NodePath("scout_animated_sprite:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 2 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ) ]
+}
+
+[sub_resource type="Animation" id=2]
+resource_name = "fade_soldier"
+length = 2.0
+tracks/0/type = "value"
+tracks/0/path = NodePath("soldier_animated_sprite:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 2 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0.572549 ) ]
+}
+
+[sub_resource type="Animation" id=3]
+resource_name = "fade_pyro"
+length = 2.0
+tracks/0/type = "value"
+tracks/0/path = NodePath("pyro_animated_sprite:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 2 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ) ]
+}
+
+[sub_resource type="Animation" id=4]
+resource_name = "fade_heavy"
+length = 2.0
+tracks/0/type = "value"
+tracks/0/path = NodePath("heavy_animated_sprite:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 2 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ) ]
+}
+
+[sub_resource type="Animation" id=5]
+resource_name = "fade_engi"
+length = 2.0
+tracks/0/type = "value"
+tracks/0/path = NodePath("engi_animated_sprite:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 2 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ) ]
+}
+
+[sub_resource type="Animation" id=6]
+resource_name = "fade_medic"
+length = 2.0
+tracks/0/type = "value"
+tracks/0/path = NodePath("medic_animated_sprite:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 2 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ) ]
+}
+
+[sub_resource type="Animation" id=7]
+resource_name = "fade_sniper"
+length = 2.0
+tracks/0/type = "value"
+tracks/0/path = NodePath("sniper_animated_sprite:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 2 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ) ]
+}
+
+[sub_resource type="Animation" id=8]
+resource_name = "fade_spy"
+length = 2.0
+tracks/0/type = "value"
+tracks/0/path = NodePath("spy_animated_sprite:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 2 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ) ]
+}
+
+[node name="demo_minigame_1" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 11 )
+
+[node name="bg" type="TextureRect" parent="."]
+margin_left = -100.0
+margin_right = 1180.0
+margin_bottom = 1920.0
+texture = ExtResource( 22 )
+
+[node name="scout_button" type="Button" parent="."]
+self_modulate = Color( 1, 1, 1, 0 )
+margin_left = 19.0
+margin_top = 170.0
+margin_right = 339.0
+margin_bottom = 490.0
+shortcut_in_tooltip = false
+
+[node name="scout_animated_sprite" type="AnimatedSprite" parent="scout_button"]
+position = Vector2( 10, 10 )
+scale = Vector2( 0.9, 0.9 )
+frames = ExtResource( 4 )
+animation = "01"
+offset = Vector2( 160, 160 )
+
+[node name="Fade_icon_scout" type="AnimationPlayer" parent="scout_button"]
+anims/fade_scout = SubResource( 1 )
+script = ExtResource( 17 )
+
+[node name="soldier_button" type="Button" parent="."]
+self_modulate = Color( 1, 1, 1, 0 )
+anchor_left = 0.5
+anchor_right = 0.5
+margin_left = -161.0
+margin_top = 170.0
+margin_right = 159.0
+margin_bottom = 490.0
+shortcut_in_tooltip = false
+
+[node name="soldier_animated_sprite" type="AnimatedSprite" parent="soldier_button"]
+position = Vector2( 10, 10 )
+scale = Vector2( 0.9, 0.9 )
+frames = ExtResource( 9 )
+animation = "01"
+offset = Vector2( 160, 160 )
+
+[node name="Fade_icon_soldier" type="AnimationPlayer" parent="soldier_button"]
+anims/fade_soldier = SubResource( 2 )
+script = ExtResource( 19 )
+
+[node name="pyro_button" type="Button" parent="."]
+self_modulate = Color( 1, 1, 1, 0 )
+anchor_left = 0.5
+anchor_right = 0.5
+margin_left = 199.0
+margin_top = 170.0
+margin_right = 519.0
+margin_bottom = 490.0
+shortcut_in_tooltip = false
+
+[node name="pyro_animated_sprite" type="AnimatedSprite" parent="pyro_button"]
+position = Vector2( 10, 10 )
+scale = Vector2( 0.9, 0.9 )
+frames = ExtResource( 5 )
+animation = "01"
+offset = Vector2( 160, 160 )
+
+[node name="Fade_icon_pyro" type="AnimationPlayer" parent="pyro_button"]
+anims/fade_pyro = SubResource( 3 )
+script = ExtResource( 15 )
+
+[node name="demo_button" type="Button" parent="."]
+self_modulate = Color( 1, 1, 1, 0 )
+margin_left = 19.0
+margin_top = 550.0
+margin_right = 339.0
+margin_bottom = 870.0
+shortcut_in_tooltip = false
+
+[node name="demo_animated_sprite" type="AnimatedSprite" parent="demo_button"]
+position = Vector2( 10, 10 )
+scale = Vector2( 0.9, 0.9 )
+frames = ExtResource( 6 )
+animation = "01"
+offset = Vector2( 160, 160 )
+
+[node name="heavy_button" type="Button" parent="."]
+self_modulate = Color( 1, 1, 1, 0 )
+anchor_left = 0.5
+anchor_right = 0.5
+margin_left = -161.0
+margin_top = 550.0
+margin_right = 159.0
+margin_bottom = 870.0
+shortcut_in_tooltip = false
+
+[node name="heavy_animated_sprite" type="AnimatedSprite" parent="heavy_button"]
+position = Vector2( 10, 10 )
+scale = Vector2( 0.9, 0.9 )
+frames = ExtResource( 3 )
+animation = "01"
+offset = Vector2( 160, 160 )
+
+[node name="Fade_icon_heavy" type="AnimationPlayer" parent="heavy_button"]
+anims/fade_heavy = SubResource( 4 )
+script = ExtResource( 14 )
+
+[node name="engi_button" type="Button" parent="."]
+self_modulate = Color( 1, 1, 1, 0 )
+anchor_left = 0.5
+anchor_right = 0.5
+margin_left = 199.0
+margin_top = 550.0
+margin_right = 519.0
+margin_bottom = 870.0
+shortcut_in_tooltip = false
+
+[node name="engi_animated_sprite" type="AnimatedSprite" parent="engi_button"]
+position = Vector2( 10, 10 )
+scale = Vector2( 0.9, 0.9 )
+frames = ExtResource( 10 )
+animation = "01"
+offset = Vector2( 160, 160 )
+
+[node name="Fade_icon_engi" type="AnimationPlayer" parent="engi_button"]
+anims/fade_engi = SubResource( 5 )
+script = ExtResource( 21 )
+
+[node name="medic_button" type="Button" parent="."]
+self_modulate = Color( 1, 1, 1, 0 )
+margin_left = 19.0
+margin_top = 930.0
+margin_right = 339.0
+margin_bottom = 1250.0
+shortcut_in_tooltip = false
+
+[node name="medic_animated_sprite" type="AnimatedSprite" parent="medic_button"]
+position = Vector2( 10, 10 )
+scale = Vector2( 0.9, 0.9 )
+frames = ExtResource( 2 )
+animation = "01"
+offset = Vector2( 160, 160 )
+
+[node name="Fade_icon_medic" type="AnimationPlayer" parent="medic_button"]
+anims/fade_medic = SubResource( 6 )
+script = ExtResource( 20 )
+
+[node name="sniper_button" type="Button" parent="."]
+self_modulate = Color( 1, 1, 1, 0 )
+anchor_left = 0.5
+anchor_right = 0.5
+margin_left = -161.0
+margin_top = 930.0
+margin_right = 159.0
+margin_bottom = 1250.0
+shortcut_in_tooltip = false
+
+[node name="sniper_animated_sprite" type="AnimatedSprite" parent="sniper_button"]
+position = Vector2( 10, 10 )
+scale = Vector2( 0.9, 0.9 )
+frames = ExtResource( 7 )
+animation = "01"
+offset = Vector2( 160, 160 )
+
+[node name="Fade_icon_sniper" type="AnimationPlayer" parent="sniper_button"]
+anims/fade_sniper = SubResource( 7 )
+script = ExtResource( 16 )
+
+[node name="spy_button" type="Button" parent="."]
+self_modulate = Color( 1, 1, 1, 0 )
+anchor_left = 0.5
+anchor_right = 0.5
+margin_left = 199.0
+margin_top = 930.0
+margin_right = 519.0
+margin_bottom = 1250.0
+shortcut_in_tooltip = false
+
+[node name="spy_animated_sprite" type="AnimatedSprite" parent="spy_button"]
+position = Vector2( 10, 10 )
+scale = Vector2( 0.9, 0.9 )
+frames = ExtResource( 8 )
+animation = "01"
+offset = Vector2( 160, 160 )
+
+[node name="Fade_icon_spy" type="AnimationPlayer" parent="spy_button"]
+anims/fade_spy = SubResource( 8 )
+script = ExtResource( 18 )
+
+[node name="dmg_description" type="AudioStreamPlayer" parent="."]
+volume_db = -8.0
+bus = "descriptions"
+script = ExtResource( 12 )
+
+[connection signal="pressed" from="scout_button" to="scout_button/Fade_icon_scout" method="_on_scout_button_pressed"]
+[connection signal="pressed" from="scout_button" to="dmg_description" method="_on_scout_button_pressed"]
+[connection signal="animation_finished" from="scout_button/Fade_icon_scout" to="." method="_on_Fade_icon_scout_animation_finished"]
+[connection signal="pressed" from="soldier_button" to="soldier_button/Fade_icon_soldier" method="_on_soldier_button_pressed"]
+[connection signal="pressed" from="soldier_button" to="dmg_description" method="_on_soldier_button_pressed"]
+[connection signal="animation_finished" from="soldier_button/Fade_icon_soldier" to="." method="_on_Fade_icon_soldier_animation_finished"]
+[connection signal="pressed" from="pyro_button" to="pyro_button/Fade_icon_pyro" method="_on_pyro_button_pressed"]
+[connection signal="pressed" from="pyro_button" to="dmg_description" method="_on_pyro_button_pressed"]
+[connection signal="animation_finished" from="pyro_button/Fade_icon_pyro" to="." method="_on_Fade_icon_pyro_animation_finished"]
+[connection signal="pressed" from="heavy_button" to="heavy_button/Fade_icon_heavy" method="_on_heavy_button_pressed"]
+[connection signal="pressed" from="heavy_button" to="dmg_description" method="_on_heavy_button_pressed"]
+[connection signal="animation_finished" from="heavy_button/Fade_icon_heavy" to="." method="_on_Fade_icon_heavy_animation_finished"]
+[connection signal="pressed" from="engi_button" to="engi_button/Fade_icon_engi" method="_on_engi_button_pressed"]
+[connection signal="pressed" from="engi_button" to="dmg_description" method="_on_engi_button_pressed"]
+[connection signal="animation_finished" from="engi_button/Fade_icon_engi" to="." method="_on_Fade_icon_engi_animation_finished"]
+[connection signal="pressed" from="medic_button" to="medic_button/Fade_icon_medic" method="_on_medic_button_pressed"]
+[connection signal="pressed" from="medic_button" to="dmg_description" method="_on_medic_button_pressed"]
+[connection signal="animation_finished" from="medic_button/Fade_icon_medic" to="." method="_on_Fade_icon_medic_animation_finished"]
+[connection signal="pressed" from="sniper_button" to="sniper_button/Fade_icon_sniper" method="_on_sniper_button_pressed"]
+[connection signal="pressed" from="sniper_button" to="dmg_description" method="_on_sniper_button_pressed"]
+[connection signal="animation_finished" from="sniper_button/Fade_icon_sniper" to="." method="_on_Fade_icon_sniper_animation_finished"]
+[connection signal="pressed" from="spy_button" to="spy_button/Fade_icon_spy" method="_on_spy_button_pressed"]
+[connection signal="pressed" from="spy_button" to="dmg_description" method="_on_spy_button_pressed"]
+[connection signal="animation_finished" from="spy_button/Fade_icon_spy" to="." method="_on_Fade_icon_spy_animation_finished"]

@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/The_healing_is_not_as_.mp3-e9f2c1d16d0f5c746aea8b03a41d4fbb.mp3str"
+
+[deps]
+
+source_file="res://audio/6_medic/0_neutral/The_healing_is_not_as_.mp3"
+dest_files=[ "res://.import/The_healing_is_not_as_.mp3-e9f2c1d16d0f5c746aea8b03a41d4fbb.mp3str" ]
+
+[params]
+
+loop=false
+loop_offset=0

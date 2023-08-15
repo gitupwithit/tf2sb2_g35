@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/uh_no.mp3-9e18b4e90cdf33250ddad723de3ce527.mp3str"
+
+[deps]
+
+source_file="res://audio/0_scout/uh_no.mp3"
+dest_files=[ "res://.import/uh_no.mp3-9e18b4e90cdf33250ddad723de3ce527.mp3str" ]
+
+[params]
+
+loop=false
+loop_offset=0

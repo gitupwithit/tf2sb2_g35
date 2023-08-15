@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/Get_a_haircut_hippie.mp3-a3ab19822ff573d4db35ebcc4c3927a8.mp3str"
+
+[deps]
+
+source_file="res://audio/1_soldier/2_angry/Get_a_haircut_hippie.mp3"
+dest_files=[ "res://.import/Get_a_haircut_hippie.mp3-a3ab19822ff573d4db35ebcc4c3927a8.mp3str" ]
+
+[params]
+
+loop=false
+loop_offset=0

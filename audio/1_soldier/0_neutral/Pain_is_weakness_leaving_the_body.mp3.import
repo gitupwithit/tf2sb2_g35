@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/Pain_is_weakness_leaving_the_body.mp3-6ebf312c0834d03d4afb74c0e5793928.mp3str"
+
+[deps]
+
+source_file="res://audio/1_soldier/0_neutral/Pain_is_weakness_leaving_the_body.mp3"
+dest_files=[ "res://.import/Pain_is_weakness_leaving_the_body.mp3-6ebf312c0834d03d4afb74c0e5793928.mp3str" ]
+
+[params]
+
+loop=false
+loop_offset=0

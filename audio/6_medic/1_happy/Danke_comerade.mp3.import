@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/Danke_comerade.mp3-a197606501da3651f8449bc1a2ac2a79.mp3str"
+
+[deps]
+
+source_file="res://audio/6_medic/1_happy/Danke_comerade.mp3"
+dest_files=[ "res://.import/Danke_comerade.mp3-a197606501da3651f8449bc1a2ac2a79.mp3str" ]
+
+[params]
+
+loop=false
+loop_offset=0

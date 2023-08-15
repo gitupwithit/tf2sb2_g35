@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/Dat_is_how_you_do_it.mp3-7e3edd47099e47bfc2e4ab2341c95f74.mp3str"
+
+[deps]
+
+source_file="res://audio/0_scout/1_happy/Dat_is_how_you_do_it.mp3"
+dest_files=[ "res://.import/Dat_is_how_you_do_it.mp3-7e3edd47099e47bfc2e4ab2341c95f74.mp3str" ]
+
+[params]
+
+loop=false
+loop_offset=0

@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/Well_done.mp3-abdc7e7fc0c999215b8ba5aec3a443ab.mp3str"
+
+[deps]
+
+source_file="res://audio/6_medic/1_happy/Well_done.mp3"
+dest_files=[ "res://.import/Well_done.mp3-abdc7e7fc0c999215b8ba5aec3a443ab.mp3str" ]
+
+[params]
+
+loop=false
+loop_offset=0

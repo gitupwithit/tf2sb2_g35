@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/Youre_like_a_little_bunyy.mp3-77e91437a091041cad3b76cd8d35e3b1.mp3str"
+
+[deps]
+
+source_file="res://audio/3_demo/2_angry/Youre_like_a_little_bunyy.mp3"
+dest_files=[ "res://.import/Youre_like_a_little_bunyy.mp3-77e91437a091041cad3b76cd8d35e3b1.mp3str" ]
+
+[params]
+
+loop=false
+loop_offset=0

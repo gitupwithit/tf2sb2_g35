@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/This_team_needs_all_demo.mp3-a17605cbb841d83c2717f6ca4dcfb168.mp3str"
+
+[deps]
+
+source_file="res://audio/3_demo/0_neutral/This_team_needs_all_demo.mp3"
+dest_files=[ "res://.import/This_team_needs_all_demo.mp3-a17605cbb841d83c2717f6ca4dcfb168.mp3str" ]
+
+[params]
+
+loop=false
+loop_offset=0

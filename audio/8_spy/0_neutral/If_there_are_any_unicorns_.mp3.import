@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/If_there_are_any_unicorns_.mp3-fcd05d6b0d944939f429e0a8f7d6be0c.mp3str"
+
+[deps]
+
+source_file="res://audio/8_spy/0_neutral/If_there_are_any_unicorns_.mp3"
+dest_files=[ "res://.import/If_there_are_any_unicorns_.mp3-fcd05d6b0d944939f429e0a8f7d6be0c.mp3str" ]
+
+[params]
+
+loop=false
+loop_offset=0

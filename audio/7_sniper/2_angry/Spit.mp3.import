@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/Spit.mp3-b4a4ae4628e02c98a80d3c2a18b2f4fd.mp3str"
+
+[deps]
+
+source_file="res://audio/7_sniper/2_angry/Spit.mp3"
+dest_files=[ "res://.import/Spit.mp3-b4a4ae4628e02c98a80d3c2a18b2f4fd.mp3str" ]
+
+[params]
+
+loop=false
+loop_offset=0

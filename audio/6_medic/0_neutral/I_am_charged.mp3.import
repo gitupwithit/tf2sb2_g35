@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/I_am_charged.mp3-99389ee2b2d02819f8064202182e0115.mp3str"
+
+[deps]
+
+source_file="res://audio/6_medic/0_neutral/I_am_charged.mp3"
+dest_files=[ "res://.import/I_am_charged.mp3-99389ee2b2d02819f8064202182e0115.mp3str" ]
+
+[params]
+
+loop=false
+loop_offset=0

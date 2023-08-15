@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/Oh_wonderbar.mp3-d88a04c35130b0d41a654d72861059ce.mp3str"
+
+[deps]
+
+source_file="res://audio/6_medic/1_happy/Oh_wonderbar.mp3"
+dest_files=[ "res://.import/Oh_wonderbar.mp3-d88a04c35130b0d41a654d72861059ce.mp3str" ]
+
+[params]
+
+loop=false
+loop_offset=0

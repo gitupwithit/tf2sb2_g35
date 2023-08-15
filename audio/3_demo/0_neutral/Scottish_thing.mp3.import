@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/Scottish_thing.mp3-4e6726a367cd9ebbf25397eb49a0e4a1.mp3str"
+
+[deps]
+
+source_file="res://audio/3_demo/0_neutral/Scottish_thing.mp3"
+dest_files=[ "res://.import/Scottish_thing.mp3-4e6726a367cd9ebbf25397eb49a0e4a1.mp3str" ]
+
+[params]
+
+loop=false
+loop_offset=0

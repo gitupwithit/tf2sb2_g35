@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/God_save_the_queen.mp3-1a5a8ae886e3af58770a536a2b6c62a6.mp3str"
+
+[deps]
+
+source_file="res://audio/7_sniper/test/God_save_the_queen.mp3"
+dest_files=[ "res://.import/God_save_the_queen.mp3-1a5a8ae886e3af58770a536a2b6c62a6.mp3str" ]
+
+[params]
+
+loop=false
+loop_offset=0

@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/Aw_cripe.mp3-46f35d349bdb3f50b7c179e726ba4506.mp3str"
+
+[deps]
+
+source_file="res://audio/3_demo/2_angry/Aw_cripe.mp3"
+dest_files=[ "res://.import/Aw_cripe.mp3-46f35d349bdb3f50b7c179e726ba4506.mp3str" ]
+
+[params]
+
+loop=false
+loop_offset=0

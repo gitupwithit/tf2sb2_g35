@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/Oy_you_yellow_bellied.mp3-31259fc311f8cfe613faf16dd70b18b5.mp3str"
+
+[deps]
+
+source_file="res://audio/5_engi/2_angry/Oy_you_yellow_bellied.mp3"
+dest_files=[ "res://.import/Oy_you_yellow_bellied.mp3-31259fc311f8cfe613faf16dd70b18b5.mp3str" ]
+
+[params]
+
+loop=false
+loop_offset=0

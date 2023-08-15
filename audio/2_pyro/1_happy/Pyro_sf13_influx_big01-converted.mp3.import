@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/Pyro_sf13_influx_big01-converted.mp3-981081e3e7c42ac1bccbf3e236324038.mp3str"
+
+[deps]
+
+source_file="res://audio/2_pyro/1_happy/Pyro_sf13_influx_big01-converted.mp3"
+dest_files=[ "res://.import/Pyro_sf13_influx_big01-converted.mp3-981081e3e7c42ac1bccbf3e236324038.mp3str" ]
+
+[params]
+
+loop=false
+loop_offset=0

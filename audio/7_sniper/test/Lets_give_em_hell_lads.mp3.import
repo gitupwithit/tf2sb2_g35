@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/Lets_give_em_hell_lads.mp3-179e398592dfc673cb3df23af011beba.mp3str"
+
+[deps]
+
+source_file="res://audio/7_sniper/test/Lets_give_em_hell_lads.mp3"
+dest_files=[ "res://.import/Lets_give_em_hell_lads.mp3-179e398592dfc673cb3df23af011beba.mp3str" ]
+
+[params]
+
+loop=false
+loop_offset=0

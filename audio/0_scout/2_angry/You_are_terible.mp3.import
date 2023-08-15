@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/You_are_terible.mp3-fbe2f4a904d9e109f50c8bbb88103d6b.mp3str"
+
+[deps]
+
+source_file="res://audio/0_scout/2_angry/You_are_terible.mp3"
+dest_files=[ "res://.import/You_are_terible.mp3-fbe2f4a904d9e109f50c8bbb88103d6b.mp3str" ]
+
+[params]
+
+loop=false
+loop_offset=0

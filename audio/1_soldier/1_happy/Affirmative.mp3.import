@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/Affirmative.mp3-d1ae8d636322ec722562ccc4dde7da68.mp3str"
+
+[deps]
+
+source_file="res://audio/1_soldier/1_happy/Affirmative.mp3"
+dest_files=[ "res://.import/Affirmative.mp3-d1ae8d636322ec722562ccc4dde7da68.mp3str" ]
+
+[params]
+
+loop=false
+loop_offset=0

@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/We_did_it_mate.mp3-d59f12ff6ac7489bc7043fbf180b3da8.mp3str"
+
+[deps]
+
+source_file="res://audio/3_demo/1_happy/We_did_it_mate.mp3"
+dest_files=[ "res://.import/We_did_it_mate.mp3-d59f12ff6ac7489bc7043fbf180b3da8.mp3str" ]
+
+[params]
+
+loop=false
+loop_offset=0

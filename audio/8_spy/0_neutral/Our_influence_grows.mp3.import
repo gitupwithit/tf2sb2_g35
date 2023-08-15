@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/Our_influence_grows.mp3-b6068e3e3b202f92c4c7fd28b7d27931.mp3str"
+
+[deps]
+
+source_file="res://audio/8_spy/0_neutral/Our_influence_grows.mp3"
+dest_files=[ "res://.import/Our_influence_grows.mp3-b6068e3e3b202f92c4c7fd28b7d27931.mp3str" ]
+
+[params]
+
+loop=false
+loop_offset=0

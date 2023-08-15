@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/I_am_ze_uber_mensch.mp3-be924406cf89e63c5f4fcc429fd220b3.mp3str"
+
+[deps]
+
+source_file="res://audio/6_medic/0_neutral/I_am_ze_uber_mensch.mp3"
+dest_files=[ "res://.import/I_am_ze_uber_mensch.mp3-be924406cf89e63c5f4fcc429fd220b3.mp3str" ]
+
+[params]
+
+loop=false
+loop_offset=0

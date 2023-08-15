@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/Was_there_ever_any_doubt.mp3-5ce1088143d0ddb119543cdb4a495d9e.mp3str"
+
+[deps]
+
+source_file="res://audio/8_spy/0_neutral/Was_there_ever_any_doubt.mp3"
+dest_files=[ "res://.import/Was_there_ever_any_doubt.mp3-5ce1088143d0ddb119543cdb4a495d9e.mp3str" ]
+
+[params]
+
+loop=false
+loop_offset=0

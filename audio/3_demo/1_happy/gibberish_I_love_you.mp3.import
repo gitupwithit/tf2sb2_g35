@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/gibberish_I_love_you.mp3-4bc97f913eb826a2575432047a86d14a.mp3str"
+
+[deps]
+
+source_file="res://audio/3_demo/1_happy/gibberish_I_love_you.mp3"
+dest_files=[ "res://.import/gibberish_I_love_you.mp3-4bc97f913eb826a2575432047a86d14a.mp3str" ]
+
+[params]
+
+loop=false
+loop_offset=0

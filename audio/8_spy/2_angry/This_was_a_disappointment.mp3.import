@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/This_was_a_disappointment.mp3-f935b74e85b9c253b8758976ae3cd346.mp3str"
+
+[deps]
+
+source_file="res://audio/8_spy/2_angry/This_was_a_disappointment.mp3"
+dest_files=[ "res://.import/This_was_a_disappointment.mp3-f935b74e85b9c253b8758976ae3cd346.mp3str" ]
+
+[params]
+
+loop=false
+loop_offset=0

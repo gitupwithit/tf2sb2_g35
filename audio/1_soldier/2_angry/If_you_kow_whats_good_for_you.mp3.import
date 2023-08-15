@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/If_you_kow_whats_good_for_you.mp3-6a7067b26489e1acde509372dfba3fd3.mp3str"
+
+[deps]
+
+source_file="res://audio/1_soldier/2_angry/If_you_kow_whats_good_for_you.mp3"
+dest_files=[ "res://.import/If_you_kow_whats_good_for_you.mp3-6a7067b26489e1acde509372dfba3fd3.mp3str" ]
+
+[params]
+
+loop=false
+loop_offset=0

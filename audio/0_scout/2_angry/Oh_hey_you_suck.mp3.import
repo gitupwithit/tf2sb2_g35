@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/Oh_hey_you_suck.mp3-80306e832d3ad295a68d7a52751e18a3.mp3str"
+
+[deps]
+
+source_file="res://audio/0_scout/2_angry/Oh_hey_you_suck.mp3"
+dest_files=[ "res://.import/Oh_hey_you_suck.mp3-80306e832d3ad295a68d7a52751e18a3.mp3str" ]
+
+[params]
+
+loop=false
+loop_offset=0

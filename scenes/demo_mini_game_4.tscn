@@ -1,0 +1,145 @@
+[gd_scene load_steps=18 format=2]
+
+[ext_resource path="res://scripts/demo_mini_sprite.gd" type="Script" id=2]
+[ext_resource path="res://scripts/demo_mini_area2D.gd" type="Script" id=3]
+[ext_resource path="res://scripts/dmg4_sfx.gd" type="Script" id=4]
+[ext_resource path="res://scripts/dmg4bg.gd" type="Script" id=5]
+[ext_resource path="res://scripts/demo_mini_game_4.gd" type="Script" id=6]
+[ext_resource path="res://images/demo_logo.png" type="Texture" id=7]
+[ext_resource path="res://images/demo_soldier_desk.png" type="Texture" id=8]
+[ext_resource path="res://scripts/glitch_area2D.gd" type="Script" id=9]
+[ext_resource path="res://scripts/glitch.gd" type="Script" id=10]
+[ext_resource path="res://audio/sfx/mvm_bought_in.mp3" type="AudioStream" id=11]
+[ext_resource path="res://scripts/glitch_sfx.gd" type="Script" id=12]
+[ext_resource path="res://scripts/dmg4_audio.gd" type="Script" id=13]
+[ext_resource path="res://audio/decriptions/happy_memories.mp3" type="AudioStream" id=14]
+
+[sub_resource type="CapsuleShape2D" id=1]
+
+[sub_resource type="Shader" id=7]
+code = "/*
+	Glitch Effect Shader by Yui Kinomoto @arlez80
+
+	MIT License
+*/
+
+shader_type canvas_item;
+
+// 振動の強さ
+uniform float shake_power = 0.005;
+// 振動率
+uniform float shake_rate : hint_range( 0.0, 1.0 ) = .75;
+// 振動速度
+uniform float shake_speed = .025;
+// 振動ブロックサイズ
+uniform float shake_block_size = 1;
+// 色の分離率
+uniform float shake_color_rate : hint_range( 0.0, 1.0 ) = 0.002;
+
+float random( float seed )
+{
+	return fract( 543.2543 * sin( dot( vec2( seed, seed ), vec2( 3525.46, -54.3415 ) ) ) );
+}
+
+void fragment( )
+{
+	float enable_shift = float(
+		random( trunc( TIME * shake_speed ) )
+	<	shake_rate
+	);
+
+	vec2 fixed_uv = SCREEN_UV;
+	fixed_uv.x += (
+		random(
+			( trunc( SCREEN_UV.y * shake_block_size ) / shake_block_size )
+		+	TIME
+		) - 0.1
+	) * shake_power * enable_shift;
+
+	vec4 pixel_color = textureLod( SCREEN_TEXTURE, fixed_uv, 0.0 );
+	pixel_color.r = mix(
+		pixel_color.r
+	,	textureLod( SCREEN_TEXTURE, fixed_uv + vec2( shake_color_rate, 0.0 ), 0.0 ).r
+	,	enable_shift
+	);
+	pixel_color.b = mix(
+		pixel_color.b
+	,	textureLod( SCREEN_TEXTURE, fixed_uv + vec2( -shake_color_rate, 0.0 ), 0.0 ).b
+	,	enable_shift
+	);
+	COLOR = pixel_color;
+}
+"
+
+[sub_resource type="ShaderMaterial" id=6]
+shader = SubResource( 7 )
+shader_param/shake_power = 0.01
+shader_param/shake_rate = 0.75
+shader_param/shake_speed = 0.002
+shader_param/shake_block_size = 10.0
+shader_param/shake_color_rate = 0.002
+
+[sub_resource type="RectangleShape2D" id=4]
+
+[node name="demo_mini_game_4" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 6 )
+
+[node name="dmg4bg" type="TextureRect" parent="."]
+margin_right = 1080.0
+margin_bottom = 1920.0
+texture = ExtResource( 8 )
+expand = true
+script = ExtResource( 5 )
+
+[node name="demo_mini_sprite" type="Sprite" parent="."]
+position = Vector2( 160, 800 )
+scale = Vector2( 0.2, 0.2 )
+texture = ExtResource( 7 )
+script = ExtResource( 2 )
+
+[node name="demo_mini_area2D" type="Area2D" parent="demo_mini_sprite"]
+script = ExtResource( 3 )
+
+[node name="demo_mini_collision" type="CollisionShape2D" parent="demo_mini_sprite/demo_mini_area2D"]
+scale = Vector2( 30, 30 )
+shape = SubResource( 1 )
+
+[node name="dmg4_sfx" type="AudioStreamPlayer2D" parent="."]
+script = ExtResource( 4 )
+
+[node name="glitch" type="ColorRect" parent="."]
+material = SubResource( 6 )
+margin_left = 656.0
+margin_top = 1055.0
+margin_right = 836.0
+margin_bottom = 1255.0
+color = Color( 1, 1, 1, 0 )
+script = ExtResource( 10 )
+
+[node name="glitch_area2D" type="Area2D" parent="glitch"]
+position = Vector2( 90, 100 )
+scale = Vector2( 10, 10 )
+script = ExtResource( 9 )
+
+[node name="glitch_collision" type="CollisionShape2D" parent="glitch/glitch_area2D"]
+shape = SubResource( 4 )
+
+[node name="glitch_sfx" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 11 )
+script = ExtResource( 12 )
+
+[node name="dmg4_audio" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 14 )
+bus = "descriptions"
+script = ExtResource( 13 )
+
+[connection signal="demo_move" from="demo_mini_sprite" to="dmg4_sfx" method="_on_demo_mini_sprite_demo_move"]
+[connection signal="step" from="demo_mini_sprite" to="." method="_on_demo_mini_sprite_step"]
+[connection signal="step" from="demo_mini_sprite" to="dmg4_audio" method="_on_demo_mini_sprite_step"]
+[connection signal="demo_collided_with_fog" from="demo_mini_sprite/demo_mini_area2D" to="." method="_on_demo_mini_area2D_demo_collided_with_fog"]
+[connection signal="played_glitch_sound" from="dmg4_sfx" to="." method="_on_dmg4_sfx_played_glitch_sound"]
+[connection signal="area_entered" from="glitch/glitch_area2D" to="glitch/glitch_area2D" method="_on_glitch_area2D_area_entered"]
+[connection signal="play_link_sound" from="glitch/glitch_area2D" to="glitch_sfx" method="_on_glitch_area2D_play_link_sound"]
+[connection signal="finished" from="glitch_sfx" to="." method="_on_glitch_sfx_finished"]

@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/Oooh_yeh_youre_real_scary.mp3-7cd0277e857ff2dfe2a75d72171da38f.mp3str"
+
+[deps]
+
+source_file="res://audio/0_scout/2_angry/Oooh_yeh_youre_real_scary.mp3"
+dest_files=[ "res://.import/Oooh_yeh_youre_real_scary.mp3-7cd0277e857ff2dfe2a75d72171da38f.mp3str" ]
+
+[params]
+
+loop=false
+loop_offset=0

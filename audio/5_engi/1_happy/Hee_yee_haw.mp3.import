@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/Hee_yee_haw.mp3-be40493b625235f3cf952aa569345c51.mp3str"
+
+[deps]
+
+source_file="res://audio/5_engi/1_happy/Hee_yee_haw.mp3"
+dest_files=[ "res://.import/Hee_yee_haw.mp3-be40493b625235f3cf952aa569345c51.mp3str" ]
+
+[params]
+
+loop=false
+loop_offset=0

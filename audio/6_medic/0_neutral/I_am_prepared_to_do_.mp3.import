@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/I_am_prepared_to_do_.mp3-3c2542a66508331a93fad13d8923127f.mp3str"
+
+[deps]
+
+source_file="res://audio/6_medic/0_neutral/I_am_prepared_to_do_.mp3"
+dest_files=[ "res://.import/I_am_prepared_to_do_.mp3-3c2542a66508331a93fad13d8923127f.mp3str" ]
+
+[params]
+
+loop=false
+loop_offset=0

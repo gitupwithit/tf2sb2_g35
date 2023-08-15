@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/Now_that_is_what_I_wanna_see.mp3-f12384abeeaacbd530e21dafc70c5672.mp3str"
+
+[deps]
+
+source_file="res://audio/1_soldier/1_happy/Now_that_is_what_I_wanna_see.mp3"
+dest_files=[ "res://.import/Now_that_is_what_I_wanna_see.mp3-f12384abeeaacbd530e21dafc70c5672.mp3str" ]
+
+[params]
+
+loop=false
+loop_offset=0

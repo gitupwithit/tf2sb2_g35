@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/First_rate.mp3-50b1c90e2c5d72978b48620cd0619899.mp3str"
+
+[deps]
+
+source_file="res://audio/8_spy/1_happy/First_rate.mp3"
+dest_files=[ "res://.import/First_rate.mp3-50b1c90e2c5d72978b48620cd0619899.mp3str" ]
+
+[params]
+
+loop=false
+loop_offset=0

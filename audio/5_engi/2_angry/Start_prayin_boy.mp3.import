@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/Start_prayin_boy.mp3-bdd477f629435509a1e2f4af74999ba7.mp3str"
+
+[deps]
+
+source_file="res://audio/5_engi/2_angry/Start_prayin_boy.mp3"
+dest_files=[ "res://.import/Start_prayin_boy.mp3-bdd477f629435509a1e2f4af74999ba7.mp3str" ]
+
+[params]
+
+loop=false
+loop_offset=0

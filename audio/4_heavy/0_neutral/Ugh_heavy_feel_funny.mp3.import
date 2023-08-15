@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/Ugh_heavy_feel_funny.mp3-394c8c9a1b6897a95e805d90227404ea.mp3str"
+
+[deps]
+
+source_file="res://audio/4_heavy/0_neutral/Ugh_heavy_feel_funny.mp3"
+dest_files=[ "res://.import/Ugh_heavy_feel_funny.mp3-394c8c9a1b6897a95e805d90227404ea.mp3str" ]
+
+[params]
+
+loop=false
+loop_offset=0

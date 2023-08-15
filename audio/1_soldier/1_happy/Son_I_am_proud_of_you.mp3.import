@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/Son_I_am_proud_of_you.mp3-d777f594aa53e7c87ba0e8ae168c48db.mp3str"
+
+[deps]
+
+source_file="res://audio/1_soldier/1_happy/Son_I_am_proud_of_you.mp3"
+dest_files=[ "res://.import/Son_I_am_proud_of_you.mp3-d777f594aa53e7c87ba0e8ae168c48db.mp3str" ]
+
+[params]
+
+loop=false
+loop_offset=0

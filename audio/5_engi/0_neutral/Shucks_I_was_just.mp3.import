@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/Shucks_I_was_just.mp3-5541a81a458a3f7d84d7b1766fb75905.mp3str"
+
+[deps]
+
+source_file="res://audio/5_engi/0_neutral/Shucks_I_was_just.mp3"
+dest_files=[ "res://.import/Shucks_I_was_just.mp3-5541a81a458a3f7d84d7b1766fb75905.mp3str" ]
+
+[params]
+
+loop=false
+loop_offset=0

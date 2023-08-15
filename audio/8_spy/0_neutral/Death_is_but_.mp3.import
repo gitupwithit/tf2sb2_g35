@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/Death_is_but_.mp3-0bd66f8ca0d11d6c79c00fa0c61d8774.mp3str"
+
+[deps]
+
+source_file="res://audio/8_spy/0_neutral/Death_is_but_.mp3"
+dest_files=[ "res://.import/Death_is_but_.mp3-0bd66f8ca0d11d6c79c00fa0c61d8774.mp3str" ]
+
+[params]
+
+loop=false
+loop_offset=0

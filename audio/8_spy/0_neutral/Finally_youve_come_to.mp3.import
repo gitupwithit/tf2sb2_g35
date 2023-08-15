@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/Finally_youve_come_to.mp3-4288a74ba64eb11c41a5f40f719c075b.mp3str"
+
+[deps]
+
+source_file="res://audio/8_spy/0_neutral/Finally_youve_come_to.mp3"
+dest_files=[ "res://.import/Finally_youve_come_to.mp3-4288a74ba64eb11c41a5f40f719c075b.mp3str" ]
+
+[params]
+
+loop=false
+loop_offset=0

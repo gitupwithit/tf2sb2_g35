@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/Well_done+partner.mp3-f9b2b6dd7f1c09931e0e40e15709ed9b.mp3str"
+
+[deps]
+
+source_file="res://audio/5_engi/1_happy/Well_done+partner.mp3"
+dest_files=[ "res://.import/Well_done+partner.mp3-f9b2b6dd7f1c09931e0e40e15709ed9b.mp3str" ]
+
+[params]
+
+loop=false
+loop_offset=0

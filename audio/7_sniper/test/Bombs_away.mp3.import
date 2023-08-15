@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/Bombs_away.mp3-49d82718df9444575ddc6b9fadc8e7fa.mp3str"
+
+[deps]
+
+source_file="res://audio/7_sniper/test/Bombs_away.mp3"
+dest_files=[ "res://.import/Bombs_away.mp3-49d82718df9444575ddc6b9fadc8e7fa.mp3str" ]
+
+[params]
+
+loop=false
+loop_offset=0

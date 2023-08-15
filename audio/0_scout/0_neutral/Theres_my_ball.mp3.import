@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/Theres_my_ball.mp3-90b6deb12421a889b901431688d8a9b7.mp3str"
+
+[deps]
+
+source_file="res://audio/0_scout/0_neutral/Theres_my_ball.mp3"
+dest_files=[ "res://.import/Theres_my_ball.mp3-90b6deb12421a889b901431688d8a9b7.mp3str" ]
+
+[params]
+
+loop=false
+loop_offset=0

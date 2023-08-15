@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/Hello_again_dumbbell.mp3-c36cdc8b146b5be7cd49b42044e088c1.mp3str"
+
+[deps]
+
+source_file="res://audio/8_spy/2_angry/Hello_again_dumbbell.mp3"
+dest_files=[ "res://.import/Hello_again_dumbbell.mp3-c36cdc8b146b5be7cd49b42044e088c1.mp3str" ]
+
+[params]
+
+loop=false
+loop_offset=0

@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/Laughing.mp3-8e3d573f1f77e0b9810e2939557241fd.mp3str"
+
+[deps]
+
+source_file="res://audio/7_sniper/1_happy/Laughing.mp3"
+dest_files=[ "res://.import/Laughing.mp3-8e3d573f1f77e0b9810e2939557241fd.mp3str" ]
+
+[params]
+
+loop=false
+loop_offset=0

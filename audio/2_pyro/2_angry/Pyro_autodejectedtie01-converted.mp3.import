@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/Pyro_autodejectedtie01-converted.mp3-57dc68263c49493dfa643e5ab3775155.mp3str"
+
+[deps]
+
+source_file="res://audio/2_pyro/2_angry/Pyro_autodejectedtie01-converted.mp3"
+dest_files=[ "res://.import/Pyro_autodejectedtie01-converted.mp3-57dc68263c49493dfa643e5ab3775155.mp3str" ]
+
+[params]
+
+loop=false
+loop_offset=0

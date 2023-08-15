@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/Ten_hut_you_too_brain_maggot.mp3-6404d7a913e7a40f768eb3ee327314ae.mp3str"
+
+[deps]
+
+source_file="res://audio/1_soldier/0_neutral/Ten_hut_you_too_brain_maggot.mp3"
+dest_files=[ "res://.import/Ten_hut_you_too_brain_maggot.mp3-6404d7a913e7a40f768eb3ee327314ae.mp3str" ]
+
+[params]
+
+loop=false
+loop_offset=0

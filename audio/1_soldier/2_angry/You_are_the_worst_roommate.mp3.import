@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/You_are_the_worst_roommate.mp3-5fea7870320189abc2adf253519be7f9.mp3str"
+
+[deps]
+
+source_file="res://audio/1_soldier/2_angry/You_are_the_worst_roommate.mp3"
+dest_files=[ "res://.import/You_are_the_worst_roommate.mp3-5fea7870320189abc2adf253519be7f9.mp3str" ]
+
+[params]
+
+loop=false
+loop_offset=0

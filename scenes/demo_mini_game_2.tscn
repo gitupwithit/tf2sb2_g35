@@ -1,0 +1,68 @@
+[gd_scene load_steps=10 format=2]
+
+[ext_resource path="res://animated_sprites/soldier_sprite_frames.tres" type="SpriteFrames" id=1]
+[ext_resource path="res://scripts/soldier_button.gd" type="Script" id=2]
+[ext_resource path="res://images/bg_1.png" type="Texture" id=3]
+[ext_resource path="res://scripts/demo_mini_game_2.gd" type="Script" id=4]
+[ext_resource path="res://scripts/dmg2_audio.gd" type="Script" id=7]
+[ext_resource path="res://images/demo_logo.png" type="Texture" id=8]
+[ext_resource path="res://scripts/demo_mini.gd" type="Script" id=9]
+
+[sub_resource type="RectangleShape2D" id=2]
+
+[sub_resource type="CapsuleShape2D" id=3]
+
+[node name="demo_mini_game_2" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 4 )
+
+[node name="bg" type="TextureRect" parent="."]
+margin_left = -100.0
+margin_right = 1180.0
+margin_bottom = 1920.0
+texture = ExtResource( 3 )
+
+[node name="soldier_button" type="Button" parent="."]
+self_modulate = Color( 1, 1, 1, 0 )
+anchor_left = 0.5
+anchor_right = 0.5
+margin_left = -161.0
+margin_top = 170.0
+margin_right = 159.0
+margin_bottom = 490.0
+shortcut_in_tooltip = false
+script = ExtResource( 2 )
+
+[node name="soldier_animated_sprite" type="AnimatedSprite" parent="soldier_button"]
+position = Vector2( 10, 10 )
+scale = Vector2( 0.9, 0.9 )
+frames = ExtResource( 1 )
+animation = "01"
+offset = Vector2( 160, 160 )
+
+[node name="Area2D" type="Area2D" parent="soldier_button"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="soldier_button/Area2D"]
+position = Vector2( 160, 160 )
+scale = Vector2( 15, 15 )
+shape = SubResource( 2 )
+
+[node name="demo_mini" type="Sprite" parent="."]
+position = Vector2( 160, 800 )
+scale = Vector2( 0.2, 0.2 )
+texture = ExtResource( 8 )
+script = ExtResource( 9 )
+
+[node name="Area2D" type="Area2D" parent="demo_mini"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="demo_mini/Area2D"]
+scale = Vector2( 30, 30 )
+shape = SubResource( 3 )
+
+[node name="dmg2_audio" type="AudioStreamPlayer" parent="."]
+bus = "descriptions"
+script = ExtResource( 7 )
+
+[connection signal="area_entered" from="soldier_button/Area2D" to="dmg2_audio" method="_on_Area2D_area_entered"]
+[connection signal="play_sound" from="demo_mini" to="dmg2_audio" method="_on_demo_mini_play_sound"]

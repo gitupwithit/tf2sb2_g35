@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/And_another_thing_youre.mp3-6a84dd6e351c2b5faa898a0c1765fc0c.mp3str"
+
+[deps]
+
+source_file="res://audio/5_engi/2_angry/And_another_thing_youre.mp3"
+dest_files=[ "res://.import/And_another_thing_youre.mp3-6a84dd6e351c2b5faa898a0c1765fc0c.mp3str" ]
+
+[params]
+
+loop=false
+loop_offset=0

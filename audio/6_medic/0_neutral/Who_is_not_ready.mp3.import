@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/Who_is_not_ready.mp3-93de47a4e0672b3d3ec44bea815d6390.mp3str"
+
+[deps]
+
+source_file="res://audio/6_medic/0_neutral/Who_is_not_ready.mp3"
+dest_files=[ "res://.import/Who_is_not_ready.mp3-93de47a4e0672b3d3ec44bea815d6390.mp3str" ]
+
+[params]
+
+loop=false
+loop_offset=0

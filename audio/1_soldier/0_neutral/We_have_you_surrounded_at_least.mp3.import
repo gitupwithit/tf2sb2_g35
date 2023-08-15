@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/We_have_you_surrounded_at_least.mp3-625b8b35355da2cb3cd743395811f36c.mp3str"
+
+[deps]
+
+source_file="res://audio/1_soldier/0_neutral/We_have_you_surrounded_at_least.mp3"
+dest_files=[ "res://.import/We_have_you_surrounded_at_least.mp3-625b8b35355da2cb3cd743395811f36c.mp3str" ]
+
+[params]
+
+loop=false
+loop_offset=0

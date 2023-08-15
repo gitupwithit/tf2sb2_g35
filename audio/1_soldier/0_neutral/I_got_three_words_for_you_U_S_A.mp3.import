@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/I_got_three_words_for_you_U_S_A.mp3-06243956003bab8bd5446b70aa2dfe6d.mp3str"
+
+[deps]
+
+source_file="res://audio/1_soldier/0_neutral/I_got_three_words_for_you_U_S_A.mp3"
+dest_files=[ "res://.import/I_got_three_words_for_you_U_S_A.mp3-06243956003bab8bd5446b70aa2dfe6d.mp3str" ]
+
+[params]
+
+loop=false
+loop_offset=0

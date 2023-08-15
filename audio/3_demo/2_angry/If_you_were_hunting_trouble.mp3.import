@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/If_you_were_hunting_trouble.mp3-2bb9c6212a4720640ab234a744711dab.mp3str"
+
+[deps]
+
+source_file="res://audio/3_demo/2_angry/If_you_were_hunting_trouble.mp3"
+dest_files=[ "res://.import/If_you_were_hunting_trouble.mp3-2bb9c6212a4720640ab234a744711dab.mp3str" ]
+
+[params]
+
+loop=false
+loop_offset=0

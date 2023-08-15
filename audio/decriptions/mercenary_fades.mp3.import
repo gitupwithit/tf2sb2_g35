@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/mercenary_fades.mp3-4c28ef91f21dea0c91908bc872fdf69d.mp3str"
+
+[deps]
+
+source_file="res://audio/decriptions/mercenary_fades.mp3"
+dest_files=[ "res://.import/mercenary_fades.mp3-4c28ef91f21dea0c91908bc872fdf69d.mp3str" ]
+
+[params]
+
+loop=false
+loop_offset=0

@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/Yeh_thats_right.mp3-997ca67e7de133d215f634f3382dc99e.mp3str"
+
+[deps]
+
+source_file="res://audio/0_scout/0_neutral/Yeh_thats_right.mp3"
+dest_files=[ "res://.import/Yeh_thats_right.mp3-997ca67e7de133d215f634f3382dc99e.mp3str" ]
+
+[params]
+
+loop=false
+loop_offset=0

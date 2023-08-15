@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/I_joined_this_team_just_to.mp3-18e2fe3a249300298b87ec1f6aee003a.mp3str"
+
+[deps]
+
+source_file="res://audio/1_soldier/2_angry/I_joined_this_team_just_to.mp3"
+dest_files=[ "res://.import/I_joined_this_team_just_to.mp3-18e2fe3a249300298b87ec1f6aee003a.mp3str" ]
+
+[params]
+
+loop=false
+loop_offset=0

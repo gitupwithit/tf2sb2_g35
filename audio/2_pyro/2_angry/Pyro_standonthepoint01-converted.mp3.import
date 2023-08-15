@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/Pyro_standonthepoint01-converted.mp3-3e6362b03ede2dfc4e0bc77907c8bcec.mp3str"
+
+[deps]
+
+source_file="res://audio/2_pyro/2_angry/Pyro_standonthepoint01-converted.mp3"
+dest_files=[ "res://.import/Pyro_standonthepoint01-converted.mp3-3e6362b03ede2dfc4e0bc77907c8bcec.mp3str" ]
+
+[params]
+
+loop=false
+loop_offset=0

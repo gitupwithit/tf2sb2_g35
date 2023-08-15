@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/Guts_and_glory_lads.mp3-db9c8485c1ba4af4a47fb8909c68d6a0.mp3str"
+
+[deps]
+
+source_file="res://audio/3_demo/0_neutral/Guts_and_glory_lads.mp3"
+dest_files=[ "res://.import/Guts_and_glory_lads.mp3-db9c8485c1ba4af4a47fb8909c68d6a0.mp3str" ]
+
+[params]
+
+loop=false
+loop_offset=0

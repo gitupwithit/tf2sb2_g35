@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/Does_that_sting_sorry.mp3-b7bab1b9c25c6cc552dd12a662962a00.mp3str"
+
+[deps]
+
+source_file="res://audio/6_medic/2_angry/Does_that_sting_sorry.mp3"
+dest_files=[ "res://.import/Does_that_sting_sorry.mp3-b7bab1b9c25c6cc552dd12a662962a00.mp3str" ]
+
+[params]
+
+loop=false
+loop_offset=0

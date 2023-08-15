@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/laughing_yeh_yeh.mp3-8ed901937969070eec293e3e8a98cfe2.mp3str"
+
+[deps]
+
+source_file="res://audio/0_scout/1_happy/laughing_yeh_yeh.mp3"
+dest_files=[ "res://.import/laughing_yeh_yeh.mp3-8ed901937969070eec293e3e8a98cfe2.mp3str" ]
+
+[params]
+
+loop=false
+loop_offset=0

@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/This_is_gonna_be_a_.mp3-0a597e572f64aff8b25ef4a865cab7e7.mp3str"
+
+[deps]
+
+source_file="res://audio/7_sniper/2_angry/This_is_gonna_be_a_.mp3"
+dest_files=[ "res://.import/This_is_gonna_be_a_.mp3-0a597e572f64aff8b25ef4a865cab7e7.mp3str" ]
+
+[params]
+
+loop=false
+loop_offset=0

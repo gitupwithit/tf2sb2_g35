@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/I_Never_liked_you.mp3-d11f59bf890899b498973de7f164b702.mp3str"
+
+[deps]
+
+source_file="res://audio/1_soldier/2_angry/I_Never_liked_you.mp3"
+dest_files=[ "res://.import/I_Never_liked_you.mp3-d11f59bf890899b498973de7f164b702.mp3str" ]
+
+[params]
+
+loop=false
+loop_offset=0

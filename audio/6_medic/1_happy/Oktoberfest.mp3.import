@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/Oktoberfest.mp3-f4b9adf34f67cb6f82c2cf4d0c40c0c3.mp3str"
+
+[deps]
+
+source_file="res://audio/6_medic/1_happy/Oktoberfest.mp3"
+dest_files=[ "res://.import/Oktoberfest.mp3-f4b9adf34f67cb6f82c2cf4d0c40c0c3.mp3str" ]
+
+[params]
+
+loop=false
+loop_offset=0

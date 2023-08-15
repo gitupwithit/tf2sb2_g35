@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/Bang_I_make_it_look_easy.mp3-5cb589e3ce48fa50a392eac96f48b40a.mp3str"
+
+[deps]
+
+source_file="res://audio/0_scout/0_neutral/Bang_I_make_it_look_easy.mp3"
+dest_files=[ "res://.import/Bang_I_make_it_look_easy.mp3-5cb589e3ce48fa50a392eac96f48b40a.mp3str" ]
+
+[params]
+
+loop=false
+loop_offset=0

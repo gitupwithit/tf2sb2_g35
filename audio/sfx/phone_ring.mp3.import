@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/phone_ring.mp3-e04e268fc1f09966d5db508da57b4cec.mp3str"
+
+[deps]
+
+source_file="res://audio/sfx/phone_ring.mp3"
+dest_files=[ "res://.import/phone_ring.mp3-e04e268fc1f09966d5db508da57b4cec.mp3str" ]
+
+[params]
+
+loop=false
+loop_offset=0

@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/Woooo-we.mp3-ec6b9319c32f002977f67ebc986b366c.mp3str"
+
+[deps]
+
+source_file="res://audio/5_engi/1_happy/Woooo-we.mp3"
+dest_files=[ "res://.import/Woooo-we.mp3-ec6b9319c32f002977f67ebc986b366c.mp3str" ]
+
+[params]
+
+loop=false
+loop_offset=0

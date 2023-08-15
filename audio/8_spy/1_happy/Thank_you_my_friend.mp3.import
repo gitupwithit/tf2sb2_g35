@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/Thank_you_my_friend.mp3-f7126e009b80ac9f91a641fe30003db4.mp3str"
+
+[deps]
+
+source_file="res://audio/8_spy/1_happy/Thank_you_my_friend.mp3"
+dest_files=[ "res://.import/Thank_you_my_friend.mp3-f7126e009b80ac9f91a641fe30003db4.mp3str" ]
+
+[params]
+
+loop=false
+loop_offset=0

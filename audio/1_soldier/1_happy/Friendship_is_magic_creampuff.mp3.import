@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/Friendship_is_magic_creampuff.mp3-0af46bb2b5d3ec0a230782978c2d3a7a.mp3str"
+
+[deps]
+
+source_file="res://audio/1_soldier/1_happy/Friendship_is_magic_creampuff.mp3"
+dest_files=[ "res://.import/Friendship_is_magic_creampuff.mp3-0af46bb2b5d3ec0a230782978c2d3a7a.mp3str" ]
+
+[params]
+
+loop=false
+loop_offset=0

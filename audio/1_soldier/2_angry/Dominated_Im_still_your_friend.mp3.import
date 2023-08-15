@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/Dominated_Im_still_your_friend.mp3-f142a61e619d39bcef2c79912a5dd77c.mp3str"
+
+[deps]
+
+source_file="res://audio/1_soldier/2_angry/Dominated_Im_still_your_friend.mp3"
+dest_files=[ "res://.import/Dominated_Im_still_your_friend.mp3-f142a61e619d39bcef2c79912a5dd77c.mp3str" ]
+
+[params]
+
+loop=false
+loop_offset=0

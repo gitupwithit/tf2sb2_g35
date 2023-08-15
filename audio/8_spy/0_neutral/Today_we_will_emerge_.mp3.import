@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/Today_we_will_emerge_.mp3-4c21b8750a6a11f3a937eca72ede3b90.mp3str"
+
+[deps]
+
+source_file="res://audio/8_spy/0_neutral/Today_we_will_emerge_.mp3"
+dest_files=[ "res://.import/Today_we_will_emerge_.mp3-4c21b8750a6a11f3a937eca72ede3b90.mp3str" ]
+
+[params]
+
+loop=false
+loop_offset=0

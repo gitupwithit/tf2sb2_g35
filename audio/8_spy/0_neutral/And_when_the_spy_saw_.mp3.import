@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/And_when_the_spy_saw_.mp3-3e49133e924f6278f2d2d3a0893eff8d.mp3str"
+
+[deps]
+
+source_file="res://audio/8_spy/0_neutral/And_when_the_spy_saw_.mp3"
+dest_files=[ "res://.import/And_when_the_spy_saw_.mp3-3e49133e924f6278f2d2d3a0893eff8d.mp3str" ]
+
+[params]
+
+loop=false
+loop_offset=0

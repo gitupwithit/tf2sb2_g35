@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/The_hell_was_that_crap.mp3-4eef11c11d289ceb59bf27f8d2a2f431.mp3str"
+
+[deps]
+
+source_file="res://audio/0_scout/2_angry/The_hell_was_that_crap.mp3"
+dest_files=[ "res://.import/The_hell_was_that_crap.mp3-4eef11c11d289ceb59bf27f8d2a2f431.mp3str" ]
+
+[params]
+
+loop=false
+loop_offset=0

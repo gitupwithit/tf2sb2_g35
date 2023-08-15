@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/Get_along_there.mp3-20b6a170872a7025825da89ef84c7354.mp3str"
+
+[deps]
+
+source_file="res://audio/5_engi/0_neutral/Get_along_there.mp3"
+dest_files=[ "res://.import/Get_along_there.mp3-20b6a170872a7025825da89ef84c7354.mp3str" ]
+
+[params]
+
+loop=false
+loop_offset=0

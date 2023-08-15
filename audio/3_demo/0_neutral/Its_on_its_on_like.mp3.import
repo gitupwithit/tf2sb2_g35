@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/Its_on_its_on_like.mp3-90379fee246783432e82291db5e1871c.mp3str"
+
+[deps]
+
+source_file="res://audio/3_demo/0_neutral/Its_on_its_on_like.mp3"
+dest_files=[ "res://.import/Its_on_its_on_like.mp3-90379fee246783432e82291db5e1871c.mp3str" ]
+
+[params]
+
+loop=false
+loop_offset=0

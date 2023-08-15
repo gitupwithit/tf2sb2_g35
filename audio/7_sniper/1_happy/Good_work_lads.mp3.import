@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/Good_work_lads.mp3-95a505c9746007de4ef882c2fc6ffbcf.mp3str"
+
+[deps]
+
+source_file="res://audio/7_sniper/1_happy/Good_work_lads.mp3"
+dest_files=[ "res://.import/Good_work_lads.mp3-95a505c9746007de4ef882c2fc6ffbcf.mp3str" ]
+
+[params]
+
+loop=false
+loop_offset=0

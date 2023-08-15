@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/Im_a_dinkum_aussie.mp3-085d9087ddd73fe0e97d6c3b8375fd44.mp3str"
+
+[deps]
+
+source_file="res://audio/7_sniper/test/Im_a_dinkum_aussie.mp3"
+dest_files=[ "res://.import/Im_a_dinkum_aussie.mp3-085d9087ddd73fe0e97d6c3b8375fd44.mp3str" ]
+
+[params]
+
+loop=false
+loop_offset=0

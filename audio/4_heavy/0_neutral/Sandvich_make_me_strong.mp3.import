@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/Sandvich_make_me_strong.mp3-7fc00c0170718661ceb0aa7b188d9e6a.mp3str"
+
+[deps]
+
+source_file="res://audio/4_heavy/0_neutral/Sandvich_make_me_strong.mp3"
+dest_files=[ "res://.import/Sandvich_make_me_strong.mp3-7fc00c0170718661ceb0aa7b188d9e6a.mp3str" ]
+
+[params]
+
+loop=false
+loop_offset=0

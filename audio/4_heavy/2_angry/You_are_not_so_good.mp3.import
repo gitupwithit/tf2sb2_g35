@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/You_are_not_so_good.mp3-1e86928f23185bc4b6e5dd668d7349ac.mp3str"
+
+[deps]
+
+source_file="res://audio/4_heavy/2_angry/You_are_not_so_good.mp3"
+dest_files=[ "res://.import/You_are_not_so_good.mp3-1e86928f23185bc4b6e5dd668d7349ac.mp3str" ]
+
+[params]
+
+loop=false
+loop_offset=0

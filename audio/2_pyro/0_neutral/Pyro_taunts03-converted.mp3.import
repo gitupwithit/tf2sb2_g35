@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/Pyro_taunts03-converted.mp3-689c3bfa2f580134223713c2e286121f.mp3str"
+
+[deps]
+
+source_file="res://audio/2_pyro/0_neutral/Pyro_taunts03-converted.mp3"
+dest_files=[ "res://.import/Pyro_taunts03-converted.mp3-689c3bfa2f580134223713c2e286121f.mp3str" ]
+
+[params]
+
+loop=false
+loop_offset=0

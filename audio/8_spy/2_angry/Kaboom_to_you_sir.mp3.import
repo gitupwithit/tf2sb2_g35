@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/Kaboom_to_you_sir.mp3-ef005a897a4a6f42efc339f1c6fec5c0.mp3str"
+
+[deps]
+
+source_file="res://audio/8_spy/2_angry/Kaboom_to_you_sir.mp3"
+dest_files=[ "res://.import/Kaboom_to_you_sir.mp3-ef005a897a4a6f42efc339f1c6fec5c0.mp3str" ]
+
+[params]
+
+loop=false
+loop_offset=0

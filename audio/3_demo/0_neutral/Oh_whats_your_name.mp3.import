@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/Oh_whats_your_name.mp3-7a762044c76adbfc4a02f04b1f234edf.mp3str"
+
+[deps]
+
+source_file="res://audio/3_demo/0_neutral/Oh_whats_your_name.mp3"
+dest_files=[ "res://.import/Oh_whats_your_name.mp3-7a762044c76adbfc4a02f04b1f234edf.mp3str" ]
+
+[params]
+
+loop=false
+loop_offset=0

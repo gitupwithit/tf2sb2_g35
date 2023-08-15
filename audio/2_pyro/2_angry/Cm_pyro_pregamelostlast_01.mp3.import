@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/Cm_pyro_pregamelostlast_01.mp3-3de804caaf1763d1c15db635cfcaf500.mp3str"
+
+[deps]
+
+source_file="res://audio/2_pyro/2_angry/Cm_pyro_pregamelostlast_01.mp3"
+dest_files=[ "res://.import/Cm_pyro_pregamelostlast_01.mp3-3de804caaf1763d1c15db635cfcaf500.mp3str" ]
+
+[params]
+
+loop=false
+loop_offset=0

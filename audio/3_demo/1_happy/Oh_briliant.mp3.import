@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/Oh_briliant.mp3-b9db5a53989ec67cbc7287ea94231743.mp3str"
+
+[deps]
+
+source_file="res://audio/3_demo/1_happy/Oh_briliant.mp3"
+dest_files=[ "res://.import/Oh_briliant.mp3-b9db5a53989ec67cbc7287ea94231743.mp3str" ]
+
+[params]
+
+loop=false
+loop_offset=0

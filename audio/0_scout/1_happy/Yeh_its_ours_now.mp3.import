@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/Yeh_its_ours_now.mp3-93677b3029efe103783cc2b8634226cc.mp3str"
+
+[deps]
+
+source_file="res://audio/0_scout/1_happy/Yeh_its_ours_now.mp3"
+dest_files=[ "res://.import/Yeh_its_ours_now.mp3-93677b3029efe103783cc2b8634226cc.mp3str" ]
+
+[params]
+
+loop=false
+loop_offset=0

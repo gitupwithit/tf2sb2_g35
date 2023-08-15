@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/small_demo_walks.mp3-d8e904fa707d14a6aeaadadc0fd886ce.mp3str"
+
+[deps]
+
+source_file="res://audio/decriptions/small_demo_walks.mp3"
+dest_files=[ "res://.import/small_demo_walks.mp3-d8e904fa707d14a6aeaadadc0fd886ce.mp3str" ]
+
+[params]
+
+loop=false
+loop_offset=0

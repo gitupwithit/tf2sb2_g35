@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/These_fellas_are_gonna_be.mp3-8374ce66af4f81ddce7e34eda846141a.mp3str"
+
+[deps]
+
+source_file="res://audio/5_engi/0_neutral/These_fellas_are_gonna_be.mp3"
+dest_files=[ "res://.import/These_fellas_are_gonna_be.mp3-8374ce66af4f81ddce7e34eda846141a.mp3str" ]
+
+[params]
+
+loop=false
+loop_offset=0

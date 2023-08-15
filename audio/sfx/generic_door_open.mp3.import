@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/generic_door_open.mp3-d870ee7d76d4488ec065cd947a8454a1.mp3str"
+
+[deps]
+
+source_file="res://audio/sfx/generic_door_open.mp3"
+dest_files=[ "res://.import/generic_door_open.mp3-d870ee7d76d4488ec065cd947a8454a1.mp3str" ]
+
+[params]
+
+loop=false
+loop_offset=0

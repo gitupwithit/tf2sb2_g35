@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/Sometimes_you_need_a_little_less.mp3-2ae5ecbe50fe51fde16fb50201742f6d.mp3str"
+
+[deps]
+
+source_file="res://audio/5_engi/0_neutral/Sometimes_you_need_a_little_less.mp3"
+dest_files=[ "res://.import/Sometimes_you_need_a_little_less.mp3-2ae5ecbe50fe51fde16fb50201742f6d.mp3str" ]
+
+[params]
+
+loop=false
+loop_offset=0

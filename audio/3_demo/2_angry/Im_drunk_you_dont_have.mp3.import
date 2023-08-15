@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/Im_drunk_you_dont_have.mp3-0ca13fcb7fc8a6c65dbc06f5e47d177c.mp3str"
+
+[deps]
+
+source_file="res://audio/3_demo/2_angry/Im_drunk_you_dont_have.mp3"
+dest_files=[ "res://.import/Im_drunk_you_dont_have.mp3-0ca13fcb7fc8a6c65dbc06f5e47d177c.mp3str" ]
+
+[params]
+
+loop=false
+loop_offset=0

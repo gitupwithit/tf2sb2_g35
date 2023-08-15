@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/Now_that_is_how_its_done.mp3-451a6b1594d3ed33da8ff6073af06312.mp3str"
+
+[deps]
+
+source_file="res://audio/7_sniper/1_happy/Now_that_is_how_its_done.mp3"
+dest_files=[ "res://.import/Now_that_is_how_its_done.mp3-451a6b1594d3ed33da8ff6073af06312.mp3str" ]
+
+[params]
+
+loop=false
+loop_offset=0

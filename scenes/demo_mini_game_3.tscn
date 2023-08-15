@@ -1,0 +1,102 @@
+[gd_scene load_steps=15 format=2]
+
+[ext_resource path="res://scripts/bg3.gd" type="Script" id=1]
+[ext_resource path="res://scripts/demo_mini_game_3.gd" type="Script" id=2]
+[ext_resource path="res://images/demo_logo.png" type="Texture" id=4]
+[ext_resource path="res://scripts/demo_mini_sprite3.gd" type="Script" id=5]
+[ext_resource path="res://scripts/dmg3_sfx.gd" type="Script" id=6]
+[ext_resource path="res://scripts/demo_mini_area2D.gd" type="Script" id=7]
+[ext_resource path="res://scripts/rain_fade.gd" type="Script" id=8]
+[ext_resource path="res://scripts/rain_sfx.gd" type="Script" id=9]
+[ext_resource path="res://scripts/dmg3_audio.gd" type="Script" id=10]
+[ext_resource path="res://audio/decriptions/small_demo_walks.mp3" type="AudioStream" id=11]
+[ext_resource path="res://images/demo_soldier_desk.png" type="Texture" id=12]
+
+[sub_resource type="CapsuleShape2D" id=1]
+
+[sub_resource type="Animation" id=8]
+resource_name = "fade_in"
+length = 4.0
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:volume_db")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 4 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ -80.0, 0.0 ]
+}
+
+[sub_resource type="Animation" id=9]
+resource_name = "fade_out"
+length = 2.0
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:volume_db")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 2 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ 0.0, -80.0 ]
+}
+
+[node name="demo_mini_game_3" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 2 )
+
+[node name="Control" type="Control" parent="."]
+margin_right = 40.0
+margin_bottom = 40.0
+
+[node name="bg3" type="TextureRect" parent="Control"]
+margin_right = 1080.0
+margin_bottom = 1920.0
+texture = ExtResource( 12 )
+expand = true
+script = ExtResource( 1 )
+
+[node name="demo_mini_sprite3" type="Sprite" parent="Control"]
+position = Vector2( 160, 800 )
+scale = Vector2( 0.2, 0.2 )
+texture = ExtResource( 4 )
+script = ExtResource( 5 )
+
+[node name="demo_mini_area2D" type="Area2D" parent="Control/demo_mini_sprite3"]
+collision_layer = 2
+collision_mask = 2
+monitorable = false
+script = ExtResource( 7 )
+
+[node name="demo_mini_collision" type="CollisionShape2D" parent="Control/demo_mini_sprite3/demo_mini_area2D"]
+scale = Vector2( 30, 30 )
+shape = SubResource( 1 )
+
+[node name="dmg3_sfx" type="AudioStreamPlayer2D" parent="Control"]
+script = ExtResource( 6 )
+
+[node name="rain_sfx" type="AudioStreamPlayer2D" parent="Control"]
+volume_db = -80.0
+script = ExtResource( 9 )
+
+[node name="rain_fade" type="AnimationPlayer" parent="Control/rain_sfx"]
+anims/fade_in = SubResource( 8 )
+anims/fade_out = SubResource( 9 )
+script = ExtResource( 8 )
+
+[node name="dmg3_audio" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 11 )
+bus = "descriptions"
+script = ExtResource( 10 )
+
+[connection signal="demo_move" from="Control/demo_mini_sprite3" to="Control/dmg3_sfx" method="_on_demo_mini_sprite3_demo_move"]
+[connection signal="step" from="Control/demo_mini_sprite3" to="." method="_on_demo_mini_sprite3_step"]
+[connection signal="step" from="Control/demo_mini_sprite3" to="dmg3_audio" method="_on_demo_mini_sprite3_step"]
+[connection signal="area_entered" from="Control/demo_mini_sprite3/demo_mini_area2D" to="Control/demo_mini_sprite3/demo_mini_area2D" method="_on_demo_mini_area2D_area_entered"]
+[connection signal="demo_collided_with_fog" from="Control/demo_mini_sprite3/demo_mini_area2D" to="." method="_on_demo_mini_area2D_demo_collided_with_fog"]

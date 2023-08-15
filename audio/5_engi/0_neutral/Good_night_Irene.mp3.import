@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/Good_night_Irene.mp3-099e33ec03eae98f3fb47223afdb37f6.mp3str"
+
+[deps]
+
+source_file="res://audio/5_engi/0_neutral/Good_night_Irene.mp3"
+dest_files=[ "res://.import/Good_night_Irene.mp3-099e33ec03eae98f3fb47223afdb37f6.mp3str" ]
+
+[params]
+
+loop=false
+loop_offset=0

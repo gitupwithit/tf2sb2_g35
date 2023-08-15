@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/Laugh_that_slaps_me.mp3-6648fc56e5e6d9922f02edb6d5ec8f6f.mp3str"
+
+[deps]
+
+source_file="res://audio/4_heavy/1_happy/Laugh_that_slaps_me.mp3"
+dest_files=[ "res://.import/Laugh_that_slaps_me.mp3-6648fc56e5e6d9922f02edb6d5ec8f6f.mp3str" ]
+
+[params]
+
+loop=false
+loop_offset=0

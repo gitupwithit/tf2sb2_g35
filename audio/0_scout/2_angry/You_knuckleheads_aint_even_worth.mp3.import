@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/You_knuckleheads_aint_even_worth.mp3-9163d955644391f08b0e3bf7f72ea4e2.mp3str"
+
+[deps]
+
+source_file="res://audio/0_scout/2_angry/You_knuckleheads_aint_even_worth.mp3"
+dest_files=[ "res://.import/You_knuckleheads_aint_even_worth.mp3-9163d955644391f08b0e3bf7f72ea4e2.mp3str" ]
+
+[params]
+
+loop=false
+loop_offset=0

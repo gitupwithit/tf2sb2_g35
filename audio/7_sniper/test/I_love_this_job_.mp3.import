@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/I_love_this_job_.mp3-c7540d85c62a7e6d4f5a016d2bd772c5.mp3str"
+
+[deps]
+
+source_file="res://audio/7_sniper/test/I_love_this_job_.mp3"
+dest_files=[ "res://.import/I_love_this_job_.mp3-c7540d85c62a7e6d4f5a016d2bd772c5.mp3str" ]
+
+[params]
+
+loop=false
+loop_offset=0

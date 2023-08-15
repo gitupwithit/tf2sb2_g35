@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/It_is_good_day_to_be_giant_man.mp3-79476d5258aceb5e170b213cff70ac17.mp3str"
+
+[deps]
+
+source_file="res://audio/4_heavy/0_neutral/It_is_good_day_to_be_giant_man.mp3"
+dest_files=[ "res://.import/It_is_good_day_to_be_giant_man.mp3-79476d5258aceb5e170b213cff70ac17.mp3str" ]
+
+[params]
+
+loop=false
+loop_offset=0

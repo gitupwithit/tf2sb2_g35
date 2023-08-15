@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/Why_dont_you_get_along.mp3-3aa68936813b5cebc095600faaadd8dd.mp3str"
+
+[deps]
+
+source_file="res://audio/5_engi/2_angry/Why_dont_you_get_along.mp3"
+dest_files=[ "res://.import/Why_dont_you_get_along.mp3-3aa68936813b5cebc095600faaadd8dd.mp3str" ]
+
+[params]
+
+loop=false
+loop_offset=0

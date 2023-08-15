@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/Good_day.mp3-c4a4440909918c8226ced2d5a03a4f99.mp3str"
+
+[deps]
+
+source_file="res://audio/7_sniper/test/Good_day.mp3"
+dest_files=[ "res://.import/Good_day.mp3-c4a4440909918c8226ced2d5a03a4f99.mp3str" ]
+
+[params]
+
+loop=false
+loop_offset=0

@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/Och.mp3-bdbfd02d74a31bafc060074999ae033c.mp3str"
+
+[deps]
+
+source_file="res://audio/3_demo/2_angry/Och.mp3"
+dest_files=[ "res://.import/Och.mp3-bdbfd02d74a31bafc060074999ae033c.mp3str" ]
+
+[params]
+
+loop=false
+loop_offset=0

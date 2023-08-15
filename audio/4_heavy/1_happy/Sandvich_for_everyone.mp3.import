@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/Sandvich_for_everyone.mp3-0835ff8b3f4e61b17d3ac699eb3039ae.mp3str"
+
+[deps]
+
+source_file="res://audio/4_heavy/1_happy/Sandvich_for_everyone.mp3"
+dest_files=[ "res://.import/Sandvich_for_everyone.mp3-0835ff8b3f4e61b17d3ac699eb3039ae.mp3str" ]
+
+[params]
+
+loop=false
+loop_offset=0

@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/Bottles_up_lads.mp3-a527aaf3306c82f0b517da5ea56b61be.mp3str"
+
+[deps]
+
+source_file="res://audio/3_demo/1_happy/Bottles_up_lads.mp3"
+dest_files=[ "res://.import/Bottles_up_lads.mp3-a527aaf3306c82f0b517da5ea56b61be.mp3str" ]
+
+[params]
+
+loop=false
+loop_offset=0

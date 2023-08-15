@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/Run_home_to_mama.mp3-9b4f120408d9d5d626ac520438e3b6b9.mp3str"
+
+[deps]
+
+source_file="res://audio/4_heavy/2_angry/Run_home_to_mama.mp3"
+dest_files=[ "res://.import/Run_home_to_mama.mp3-9b4f120408d9d5d626ac520438e3b6b9.mp3str" ]
+
+[params]
+
+loop=false
+loop_offset=0

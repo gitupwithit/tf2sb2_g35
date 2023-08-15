@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/You_done_incurred_my_.mp3-dec54f62313fdb55737a511b8592e83e.mp3str"
+
+[deps]
+
+source_file="res://audio/5_engi/2_angry/You_done_incurred_my_.mp3"
+dest_files=[ "res://.import/You_done_incurred_my_.mp3-dec54f62313fdb55737a511b8592e83e.mp3str" ]
+
+[params]
+
+loop=false
+loop_offset=0

@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/Youre_making_me_very_cross.mp3-b5921e769b131ecd1345223b15092a7c.mp3str"
+
+[deps]
+
+source_file="res://audio/3_demo/2_angry/Youre_making_me_very_cross.mp3"
+dest_files=[ "res://.import/Youre_making_me_very_cross.mp3-b5921e769b131ecd1345223b15092a7c.mp3str" ]
+
+[params]
+
+loop=false
+loop_offset=0

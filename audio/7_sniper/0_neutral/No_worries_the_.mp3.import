@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/No_worries_the_.mp3-23831a2d49c6051589aec13e5bf9c1d1.mp3str"
+
+[deps]
+
+source_file="res://audio/7_sniper/0_neutral/No_worries_the_.mp3"
+dest_files=[ "res://.import/No_worries_the_.mp3-23831a2d49c6051589aec13e5bf9c1d1.mp3str" ]
+
+[params]
+
+loop=false
+loop_offset=0

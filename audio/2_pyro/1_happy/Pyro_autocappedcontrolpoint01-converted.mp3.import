@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/Pyro_autocappedcontrolpoint01-converted.mp3-2100f92724d459ca7c88b566636c3990.mp3str"
+
+[deps]
+
+source_file="res://audio/2_pyro/1_happy/Pyro_autocappedcontrolpoint01-converted.mp3"
+dest_files=[ "res://.import/Pyro_autocappedcontrolpoint01-converted.mp3-2100f92724d459ca7c88b566636c3990.mp3str" ]
+
+[params]
+
+loop=false
+loop_offset=0

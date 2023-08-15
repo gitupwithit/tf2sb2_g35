@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/Pyro_specialcompleted01-converted.mp3-c61dfa6d989e437381fa3ccbc6f3a103.mp3str"
+
+[deps]
+
+source_file="res://audio/2_pyro/0_neutral/Pyro_specialcompleted01-converted.mp3"
+dest_files=[ "res://.import/Pyro_specialcompleted01-converted.mp3-c61dfa6d989e437381fa3ccbc6f3a103.mp3str" ]
+
+[params]
+
+loop=false
+loop_offset=0

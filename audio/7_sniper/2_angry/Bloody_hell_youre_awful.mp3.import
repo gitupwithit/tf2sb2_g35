@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/Bloody_hell_youre_awful.mp3-d150ae65c3c8567d3b91f3d5afc5704f.mp3str"
+
+[deps]
+
+source_file="res://audio/7_sniper/2_angry/Bloody_hell_youre_awful.mp3"
+dest_files=[ "res://.import/Bloody_hell_youre_awful.mp3-d150ae65c3c8567d3b91f3d5afc5704f.mp3str" ]
+
+[params]
+
+loop=false
+loop_offset=0

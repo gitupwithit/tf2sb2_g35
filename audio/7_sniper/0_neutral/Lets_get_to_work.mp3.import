@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/Lets_get_to_work.mp3-e44b708a7e8c603094145f95adc85b33.mp3str"
+
+[deps]
+
+source_file="res://audio/7_sniper/0_neutral/Lets_get_to_work.mp3"
+dest_files=[ "res://.import/Lets_get_to_work.mp3-e44b708a7e8c603094145f95adc85b33.mp3str" ]
+
+[params]
+
+loop=false
+loop_offset=0

@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/I_would_be_worried_.mp3-a5fd3f28ed1123c195df61ecbf8ee138.mp3str"
+
+[deps]
+
+source_file="res://audio/4_heavy/0_neutral/I_would_be_worried_.mp3"
+dest_files=[ "res://.import/I_would_be_worried_.mp3-a5fd3f28ed1123c195df61ecbf8ee138.mp3str" ]
+
+[params]
+
+loop=false
+loop_offset=0

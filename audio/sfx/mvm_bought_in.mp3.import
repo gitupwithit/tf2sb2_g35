@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/mvm_bought_in.mp3-886e0d655d1d4ea2985b480841fb753b.mp3str"
+
+[deps]
+
+source_file="res://audio/sfx/mvm_bought_in.mp3"
+dest_files=[ "res://.import/mvm_bought_in.mp3-886e0d655d1d4ea2985b480841fb753b.mp3str" ]
+
+[params]
+
+loop=false
+loop_offset=0

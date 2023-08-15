@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/Let_us_fight_man_vs_tiny.mp3-ddd4ef81f060a1ff5af49dd30411a406.mp3str"
+
+[deps]
+
+source_file="res://audio/4_heavy/2_angry/Let_us_fight_man_vs_tiny.mp3"
+dest_files=[ "res://.import/Let_us_fight_man_vs_tiny.mp3-ddd4ef81f060a1ff5af49dd30411a406.mp3str" ]
+
+[params]
+
+loop=false
+loop_offset=0

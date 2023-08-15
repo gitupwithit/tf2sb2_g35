@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/Laugh2.mp3-1bc577aa08784fcd19749114978bd315.mp3str"
+
+[deps]
+
+source_file="res://audio/6_medic/1_happy/Laugh2.mp3"
+dest_files=[ "res://.import/Laugh2.mp3-1bc577aa08784fcd19749114978bd315.mp3str" ]
+
+[params]
+
+loop=false
+loop_offset=0

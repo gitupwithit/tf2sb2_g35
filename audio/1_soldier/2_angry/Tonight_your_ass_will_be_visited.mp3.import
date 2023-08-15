@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/Tonight_your_ass_will_be_visited.mp3-4388fe99bc86d7ec734d15b1522338df.mp3str"
+
+[deps]
+
+source_file="res://audio/1_soldier/2_angry/Tonight_your_ass_will_be_visited.mp3"
+dest_files=[ "res://.import/Tonight_your_ass_will_be_visited.mp3-4388fe99bc86d7ec734d15b1522338df.mp3str" ]
+
+[params]
+
+loop=false
+loop_offset=0

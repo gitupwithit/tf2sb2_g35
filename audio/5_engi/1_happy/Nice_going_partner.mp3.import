@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/Nice_going_partner.mp3-1dedc73afd4c281d73559c639c6cd910.mp3str"
+
+[deps]
+
+source_file="res://audio/5_engi/1_happy/Nice_going_partner.mp3"
+dest_files=[ "res://.import/Nice_going_partner.mp3-1dedc73afd4c281d73559c639c6cd910.mp3str" ]
+
+[params]
+
+loop=false
+loop_offset=0

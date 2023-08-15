@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/In_russia_if_hand_is_rotten_.mp3-71de7df3c9c593ee79a36624d0dc9257.mp3str"
+
+[deps]
+
+source_file="res://audio/4_heavy/0_neutral/In_russia_if_hand_is_rotten_.mp3"
+dest_files=[ "res://.import/In_russia_if_hand_is_rotten_.mp3-71de7df3c9c593ee79a36624d0dc9257.mp3str" ]
+
+[params]
+
+loop=false
+loop_offset=0

@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/Freedom_for_unicorns.mp3-8d2d3c82dad42faf6bfc3d87abe8fa2a.mp3str"
+
+[deps]
+
+source_file="res://audio/3_demo/0_neutral/Freedom_for_unicorns.mp3"
+dest_files=[ "res://.import/Freedom_for_unicorns.mp3-8d2d3c82dad42faf6bfc3d87abe8fa2a.mp3str" ]
+
+[params]
+
+loop=false
+loop_offset=0

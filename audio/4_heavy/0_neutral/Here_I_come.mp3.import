@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/Here_I_come.mp3-3717eba472c2783575f21406905703d6.mp3str"
+
+[deps]
+
+source_file="res://audio/4_heavy/0_neutral/Here_I_come.mp3"
+dest_files=[ "res://.import/Here_I_come.mp3-3717eba472c2783575f21406905703d6.mp3str" ]
+
+[params]
+
+loop=false
+loop_offset=0

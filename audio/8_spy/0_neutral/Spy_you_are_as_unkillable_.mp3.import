@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/Spy_you_are_as_unkillable_.mp3-5cc154677c411ff5013ddb93bdea2a53.mp3str"
+
+[deps]
+
+source_file="res://audio/8_spy/0_neutral/Spy_you_are_as_unkillable_.mp3"
+dest_files=[ "res://.import/Spy_you_are_as_unkillable_.mp3-5cc154677c411ff5013ddb93bdea2a53.mp3str" ]
+
+[params]
+
+loop=false
+loop_offset=0

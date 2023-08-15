@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/Youre_like_a_car_crash.mp3-34d74530004b29e67db93a61d0dd2936.mp3str"
+
+[deps]
+
+source_file="res://audio/0_scout/2_angry/Youre_like_a_car_crash.mp3"
+dest_files=[ "res://.import/Youre_like_a_car_crash.mp3-34d74530004b29e67db93a61d0dd2936.mp3str" ]
+
+[params]
+
+loop=false
+loop_offset=0

@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/Coach_defend_here.mp3-3ea67e269631d17d4fa7c142ff00b278.mp3str"
+
+[deps]
+
+source_file="res://audio/sfx/Coach_defend_here.mp3"
+dest_files=[ "res://.import/Coach_defend_here.mp3-3ea67e269631d17d4fa7c142ff00b278.mp3str" ]
+
+[params]
+
+loop=false
+loop_offset=0

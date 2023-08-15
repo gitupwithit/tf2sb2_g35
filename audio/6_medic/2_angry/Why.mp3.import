@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/Why.mp3-f03b84f8398259b6ce7f56cabaa11f19.mp3str"
+
+[deps]
+
+source_file="res://audio/6_medic/2_angry/Why.mp3"
+dest_files=[ "res://.import/Why.mp3-f03b84f8398259b6ce7f56cabaa11f19.mp3str" ]
+
+[params]
+
+loop=false
+loop_offset=0

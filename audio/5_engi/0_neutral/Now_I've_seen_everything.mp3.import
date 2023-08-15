@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/Now_I've_seen_everything.mp3-4d6ede704c6a5e1a501c6413b18f4ae9.mp3str"
+
+[deps]
+
+source_file="res://audio/5_engi/0_neutral/Now_I've_seen_everything.mp3"
+dest_files=[ "res://.import/Now_I've_seen_everything.mp3-4d6ede704c6a5e1a501c6413b18f4ae9.mp3str" ]
+
+[params]
+
+loop=false
+loop_offset=0

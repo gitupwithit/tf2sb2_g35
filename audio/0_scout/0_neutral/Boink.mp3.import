@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/Boink.mp3-b6900b15dc993e1b6551a641b99d5f66.mp3str"
+
+[deps]
+
+source_file="res://audio/0_scout/0_neutral/Boink.mp3"
+dest_files=[ "res://.import/Boink.mp3-b6900b15dc993e1b6551a641b99d5f66.mp3str" ]
+
+[params]
+
+loop=false
+loop_offset=0

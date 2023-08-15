@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/Lets_do_it.mp3-471578651469aa3e33caa4bce33fa5ca.mp3str"
+
+[deps]
+
+source_file="res://audio/3_demo/0_neutral/Lets_do_it.mp3"
+dest_files=[ "res://.import/Lets_do_it.mp3-471578651469aa3e33caa4bce33fa5ca.mp3str" ]
+
+[params]
+
+loop=false
+loop_offset=0

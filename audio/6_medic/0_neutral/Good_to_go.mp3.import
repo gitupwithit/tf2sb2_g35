@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/Good_to_go.mp3-ea72addb955faa3b7295b31807dabd63.mp3str"
+
+[deps]
+
+source_file="res://audio/6_medic/0_neutral/Good_to_go.mp3"
+dest_files=[ "res://.import/Good_to_go.mp3-ea72addb955faa3b7295b31807dabd63.mp3str" ]
+
+[params]
+
+loop=false
+loop_offset=0

@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/You_are_all_weak.mp3-5466604b6cd1fe40e0b7abdacde37efa.mp3str"
+
+[deps]
+
+source_file="res://audio/1_soldier/2_angry/You_are_all_weak.mp3"
+dest_files=[ "res://.import/You_are_all_weak.mp3-5466604b6cd1fe40e0b7abdacde37efa.mp3str" ]
+
+[params]
+
+loop=false
+loop_offset=0

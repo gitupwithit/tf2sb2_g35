@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/Alright_I_feel_good.mp3-f09fcc2a4c8ecb60fc05a3d8aab449fa.mp3str"
+
+[deps]
+
+source_file="res://audio/0_scout/1_happy/Alright_I_feel_good.mp3"
+dest_files=[ "res://.import/Alright_I_feel_good.mp3-f09fcc2a4c8ecb60fc05a3d8aab449fa.mp3str" ]
+
+[params]
+
+loop=false
+loop_offset=0

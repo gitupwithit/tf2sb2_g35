@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/Excellent.mp3-03001c92ac2143eb401483a7aa9aaec6.mp3str"
+
+[deps]
+
+source_file="res://audio/8_spy/1_happy/Excellent.mp3"
+dest_files=[ "res://.import/Excellent.mp3-03001c92ac2143eb401483a7aa9aaec6.mp3str" ]
+
+[params]
+
+loop=false
+loop_offset=0

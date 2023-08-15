@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/Everybody_I_dont_like_this_man.mp3-f4733024f0a407cafbf9204a30d46a8f.mp3str"
+
+[deps]
+
+source_file="res://audio/3_demo/2_angry/Everybody_I_dont_like_this_man.mp3"
+dest_files=[ "res://.import/Everybody_I_dont_like_this_man.mp3-f4733024f0a407cafbf9204a30d46a8f.mp3str" ]
+
+[params]
+
+loop=false
+loop_offset=0

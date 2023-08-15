@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/Jealous.mp3-d8c5774fd80090b03f6ba503070c42ab.mp3str"
+
+[deps]
+
+source_file="res://audio/8_spy/0_neutral/Jealous.mp3"
+dest_files=[ "res://.import/Jealous.mp3-d8c5774fd80090b03f6ba503070c42ab.mp3str" ]
+
+[params]
+
+loop=false
+loop_offset=0

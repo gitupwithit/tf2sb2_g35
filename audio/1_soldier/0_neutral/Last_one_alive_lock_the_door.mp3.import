@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/Last_one_alive_lock_the_door.mp3-5e10ad235b379b9e2b358558ad89de00.mp3str"
+
+[deps]
+
+source_file="res://audio/1_soldier/0_neutral/Last_one_alive_lock_the_door.mp3"
+dest_files=[ "res://.import/Last_one_alive_lock_the_door.mp3-5e10ad235b379b9e2b358558ad89de00.mp3str" ]
+
+[params]
+
+loop=false
+loop_offset=0

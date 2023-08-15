@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/groan.mp3-462c033c1355225774a0dd79070c8fd9.mp3str"
+
+[deps]
+
+source_file="res://audio/7_sniper/test/groan.mp3"
+dest_files=[ "res://.import/groan.mp3-462c033c1355225774a0dd79070c8fd9.mp3str" ]
+
+[params]
+
+loop=false
+loop_offset=0

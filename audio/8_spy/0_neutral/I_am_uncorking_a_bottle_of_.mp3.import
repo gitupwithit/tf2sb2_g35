@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/I_am_uncorking_a_bottle_of_.mp3-a026bc8aa647fb12051f74efaa56b99a.mp3str"
+
+[deps]
+
+source_file="res://audio/8_spy/0_neutral/I_am_uncorking_a_bottle_of_.mp3"
+dest_files=[ "res://.import/I_am_uncorking_a_bottle_of_.mp3-a026bc8aa647fb12051f74efaa56b99a.mp3str" ]
+
+[params]
+
+loop=false
+loop_offset=0

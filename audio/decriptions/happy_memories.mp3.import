@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/happy_memories.mp3-8fac7152b18b92336c152ad11492b769.mp3str"
+
+[deps]
+
+source_file="res://audio/decriptions/happy_memories.mp3"
+dest_files=[ "res://.import/happy_memories.mp3-8fac7152b18b92336c152ad11492b769.mp3str" ]
+
+[params]
+
+loop=false
+loop_offset=0

@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/Demoman_gibberish08-converted.mp3-d3624ac709e8217a2b1f87fda6f4b612.mp3str"
+
+[deps]
+
+source_file="res://audio/3_demo/0_neutral/Demoman_gibberish08-converted.mp3"
+dest_files=[ "res://.import/Demoman_gibberish08-converted.mp3-d3624ac709e8217a2b1f87fda6f4b612.mp3str" ]
+
+[params]
+
+loop=false
+loop_offset=0

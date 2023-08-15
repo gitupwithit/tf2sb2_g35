@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/Youre_all_hard_hat_.mp3-759740eb6ffab13a84f1087d734f5fa0.mp3str"
+
+[deps]
+
+source_file="res://audio/5_engi/2_angry/Youre_all_hard_hat_.mp3"
+dest_files=[ "res://.import/Youre_all_hard_hat_.mp3-759740eb6ffab13a84f1087d734f5fa0.mp3str" ]
+
+[params]
+
+loop=false
+loop_offset=0

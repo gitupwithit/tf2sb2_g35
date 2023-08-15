@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/I_have_a_bird_head.mp3-f3facf4e15cc8491bb7ecbfb3fbfeee2.mp3str"
+
+[deps]
+
+source_file="res://audio/6_medic/2_angry/I_have_a_bird_head.mp3"
+dest_files=[ "res://.import/I_have_a_bird_head.mp3-f3facf4e15cc8491bb7ecbfb3fbfeee2.mp3str" ]
+
+[params]
+
+loop=false
+loop_offset=0

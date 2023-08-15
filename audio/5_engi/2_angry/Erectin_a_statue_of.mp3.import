@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/Erectin_a_statue_of.mp3-06487bae635ce6058224c320cce080de.mp3str"
+
+[deps]
+
+source_file="res://audio/5_engi/2_angry/Erectin_a_statue_of.mp3"
+dest_files=[ "res://.import/Erectin_a_statue_of.mp3-06487bae635ce6058224c320cce080de.mp3str" ]
+
+[params]
+
+loop=false
+loop_offset=0

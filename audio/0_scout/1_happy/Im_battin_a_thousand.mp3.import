@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/Im_battin_a_thousand.mp3-d02823a897c86ed9484765f0634a7c29.mp3str"
+
+[deps]
+
+source_file="res://audio/0_scout/1_happy/Im_battin_a_thousand.mp3"
+dest_files=[ "res://.import/Im_battin_a_thousand.mp3-d02823a897c86ed9484765f0634a7c29.mp3str" ]
+
+[params]
+
+loop=false
+loop_offset=0

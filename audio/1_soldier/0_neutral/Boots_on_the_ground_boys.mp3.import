@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/Boots_on_the_ground_boys.mp3-1fbfa861481a67c975134d4e742b555f.mp3str"
+
+[deps]
+
+source_file="res://audio/1_soldier/0_neutral/Boots_on_the_ground_boys.mp3"
+dest_files=[ "res://.import/Boots_on_the_ground_boys.mp3-1fbfa861481a67c975134d4e742b555f.mp3str" ]
+
+[params]
+
+loop=false
+loop_offset=0

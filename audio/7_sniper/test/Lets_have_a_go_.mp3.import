@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/Lets_have_a_go_.mp3-1f83176acecdb8ba12692909f1fdd646.mp3str"
+
+[deps]
+
+source_file="res://audio/7_sniper/test/Lets_have_a_go_.mp3"
+dest_files=[ "res://.import/Lets_have_a_go_.mp3-1f83176acecdb8ba12692909f1fdd646.mp3str" ]
+
+[params]
+
+loop=false
+loop_offset=0

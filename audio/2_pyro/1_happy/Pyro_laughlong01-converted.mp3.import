@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/Pyro_laughlong01-converted.mp3-c6a83bdd3b62993634bcc9d1938700b1.mp3str"
+
+[deps]
+
+source_file="res://audio/2_pyro/1_happy/Pyro_laughlong01-converted.mp3"
+dest_files=[ "res://.import/Pyro_laughlong01-converted.mp3-c6a83bdd3b62993634bcc9d1938700b1.mp3str" ]
+
+[params]
+
+loop=false
+loop_offset=0

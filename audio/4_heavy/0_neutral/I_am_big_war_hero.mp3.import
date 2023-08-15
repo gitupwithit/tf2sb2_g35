@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/I_am_big_war_hero.mp3-3fb78d29c8c0e54859fdac52cd75bb4a.mp3str"
+
+[deps]
+
+source_file="res://audio/4_heavy/0_neutral/I_am_big_war_hero.mp3"
+dest_files=[ "res://.import/I_am_big_war_hero.mp3-3fb78d29c8c0e54859fdac52cd75bb4a.mp3str" ]
+
+[params]
+
+loop=false
+loop_offset=0

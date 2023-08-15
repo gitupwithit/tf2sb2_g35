@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/Much_obliged_partner.mp3-e58899b59b1b0c33d55ae1cbcf841308.mp3str"
+
+[deps]
+
+source_file="res://audio/5_engi/1_happy/Much_obliged_partner.mp3"
+dest_files=[ "res://.import/Much_obliged_partner.mp3-e58899b59b1b0c33d55ae1cbcf841308.mp3str" ]
+
+[params]
+
+loop=false
+loop_offset=0

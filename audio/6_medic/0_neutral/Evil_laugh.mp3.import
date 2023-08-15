@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/Evil_laugh.mp3-3964422ba9c5ee031dffeb04a45fb456.mp3str"
+
+[deps]
+
+source_file="res://audio/6_medic/0_neutral/Evil_laugh.mp3"
+dest_files=[ "res://.import/Evil_laugh.mp3-3964422ba9c5ee031dffeb04a45fb456.mp3str" ]
+
+[params]
+
+loop=false
+loop_offset=0

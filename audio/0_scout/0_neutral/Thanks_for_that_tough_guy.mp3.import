@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/Thanks_for_that_tough_guy.mp3-fd3f925ada2547c1fb3de1c05f51742e.mp3str"
+
+[deps]
+
+source_file="res://audio/0_scout/0_neutral/Thanks_for_that_tough_guy.mp3"
+dest_files=[ "res://.import/Thanks_for_that_tough_guy.mp3-fd3f925ada2547c1fb3de1c05f51742e.mp3str" ]
+
+[params]
+
+loop=false
+loop_offset=0

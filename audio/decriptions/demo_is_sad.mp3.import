@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/demo_is_sad.mp3-6cd2be1291acb36719c4811ee74f8cf1.mp3str"
+
+[deps]
+
+source_file="res://audio/decriptions/demo_is_sad.mp3"
+dest_files=[ "res://.import/demo_is_sad.mp3-6cd2be1291acb36719c4811ee74f8cf1.mp3str" ]
+
+[params]
+
+loop=false
+loop_offset=0

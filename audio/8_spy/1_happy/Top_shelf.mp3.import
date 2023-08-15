@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/Top_shelf.mp3-0864f9a243f6f9d647322eca2e04c0dc.mp3str"
+
+[deps]
+
+source_file="res://audio/8_spy/1_happy/Top_shelf.mp3"
+dest_files=[ "res://.import/Top_shelf.mp3-0864f9a243f6f9d647322eca2e04c0dc.mp3str" ]
+
+[params]
+
+loop=false
+loop_offset=0

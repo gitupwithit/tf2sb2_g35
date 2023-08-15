@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/You_suck.mp3-3c64df575ec248e0d228388b134034dc.mp3str"
+
+[deps]
+
+source_file="res://audio/8_spy/2_angry/You_suck.mp3"
+dest_files=[ "res://.import/You_suck.mp3-3c64df575ec248e0d228388b134034dc.mp3str" ]
+
+[params]
+
+loop=false
+loop_offset=0

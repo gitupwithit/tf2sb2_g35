@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/Magnificent.mp3-94639ebeae6db76e1cad159619518e0f.mp3str"
+
+[deps]
+
+source_file="res://audio/8_spy/1_happy/Magnificent.mp3"
+dest_files=[ "res://.import/Magnificent.mp3-94639ebeae6db76e1cad159619518e0f.mp3str" ]
+
+[params]
+
+loop=false
+loop_offset=0

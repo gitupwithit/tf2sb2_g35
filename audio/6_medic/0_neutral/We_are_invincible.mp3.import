@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/We_are_invincible.mp3-d9ef7bd5e5c78bf52b99d6085421ecdf.mp3str"
+
+[deps]
+
+source_file="res://audio/6_medic/0_neutral/We_are_invincible.mp3"
+dest_files=[ "res://.import/We_are_invincible.mp3-d9ef7bd5e5c78bf52b99d6085421ecdf.mp3str" ]
+
+[params]
+
+loop=false
+loop_offset=0

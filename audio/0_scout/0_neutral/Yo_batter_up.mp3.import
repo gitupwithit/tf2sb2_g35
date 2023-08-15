@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/Yo_batter_up.mp3-0b15d4b60fa5425736451371bdba2b44.mp3str"
+
+[deps]
+
+source_file="res://audio/0_scout/0_neutral/Yo_batter_up.mp3"
+dest_files=[ "res://.import/Yo_batter_up.mp3-0b15d4b60fa5425736451371bdba2b44.mp3str" ]
+
+[params]
+
+loop=false
+loop_offset=0

@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/Bring_me_metal_men_.mp3-4cb42a5ec07b0485fd409bd85b3818d7.mp3str"
+
+[deps]
+
+source_file="res://audio/4_heavy/0_neutral/Bring_me_metal_men_.mp3"
+dest_files=[ "res://.import/Bring_me_metal_men_.mp3-4cb42a5ec07b0485fd409bd85b3818d7.mp3str" ]
+
+[params]
+
+loop=false
+loop_offset=0

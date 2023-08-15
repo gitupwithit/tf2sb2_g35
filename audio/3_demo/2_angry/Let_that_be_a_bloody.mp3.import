@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/Let_that_be_a_bloody.mp3-88e1b6206095665fa09c5f537488e80b.mp3str"
+
+[deps]
+
+source_file="res://audio/3_demo/2_angry/Let_that_be_a_bloody.mp3"
+dest_files=[ "res://.import/Let_that_be_a_bloody.mp3-88e1b6206095665fa09c5f537488e80b.mp3str" ]
+
+[params]
+
+loop=false
+loop_offset=0

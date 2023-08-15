@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/Laughing.mp3-11ae45b6513cdb716552ca930f59273c.mp3str"
+
+[deps]
+
+source_file="res://audio/4_heavy/1_happy/Laughing.mp3"
+dest_files=[ "res://.import/Laughing.mp3-11ae45b6513cdb716552ca930f59273c.mp3str" ]
+
+[params]
+
+loop=false
+loop_offset=0

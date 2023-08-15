@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/Yeh_welcome_to_the_winning_team.mp3-cb0beebc7d3155a1c08c362ad7899a89.mp3str"
+
+[deps]
+
+source_file="res://audio/0_scout/1_happy/Yeh_welcome_to_the_winning_team.mp3"
+dest_files=[ "res://.import/Yeh_welcome_to_the_winning_team.mp3-cb0beebc7d3155a1c08c362ad7899a89.mp3str" ]
+
+[params]
+
+loop=false
+loop_offset=0

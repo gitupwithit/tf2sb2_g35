@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/That_there_is_just_a_sad.mp3-019df7dbc5ad53a169e2a44381aae6da.mp3str"
+
+[deps]
+
+source_file="res://audio/5_engi/2_angry/That_there_is_just_a_sad.mp3"
+dest_files=[ "res://.import/That_there_is_just_a_sad.mp3-019df7dbc5ad53a169e2a44381aae6da.mp3str" ]
+
+[params]
+
+loop=false
+loop_offset=0

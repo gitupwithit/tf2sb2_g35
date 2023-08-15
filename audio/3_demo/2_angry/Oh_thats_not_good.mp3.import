@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/Oh_thats_not_good.mp3-151e9113389342e0d48daa2d182ff728.mp3str"
+
+[deps]
+
+source_file="res://audio/3_demo/2_angry/Oh_thats_not_good.mp3"
+dest_files=[ "res://.import/Oh_thats_not_good.mp3-151e9113389342e0d48daa2d182ff728.mp3str" ]
+
+[params]
+
+loop=false
+loop_offset=0

@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/Freedom.mp3-12003bebb15f2dbe3fb9049350602484.mp3str"
+
+[deps]
+
+source_file="res://audio/3_demo/0_neutral/Freedom.mp3"
+dest_files=[ "res://.import/Freedom.mp3-12003bebb15f2dbe3fb9049350602484.mp3str" ]
+
+[params]
+
+loop=false
+loop_offset=0

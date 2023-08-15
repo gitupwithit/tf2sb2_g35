@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/I_am_going_to_kill_you_and.mp3-06e9d17a83cd9ac2b99c11db8d475ae3.mp3str"
+
+[deps]
+
+source_file="res://audio/4_heavy/2_angry/I_am_going_to_kill_you_and.mp3"
+dest_files=[ "res://.import/I_am_going_to_kill_you_and.mp3-06e9d17a83cd9ac2b99c11db8d475ae3.mp3str" ]
+
+[params]
+
+loop=false
+loop_offset=0

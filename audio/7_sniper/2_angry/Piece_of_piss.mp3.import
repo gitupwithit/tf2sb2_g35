@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/Piece_of_piss.mp3-82670b388a59999559e0f41e0d4ccc13.mp3str"
+
+[deps]
+
+source_file="res://audio/7_sniper/2_angry/Piece_of_piss.mp3"
+dest_files=[ "res://.import/Piece_of_piss.mp3-82670b388a59999559e0f41e0d4ccc13.mp3str" ]
+
+[params]
+
+loop=false
+loop_offset=0

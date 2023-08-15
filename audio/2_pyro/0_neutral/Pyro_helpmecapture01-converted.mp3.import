@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/Pyro_helpmecapture01-converted.mp3-f23e34a1b63e5c3b7f5726da802e4f02.mp3str"
+
+[deps]
+
+source_file="res://audio/2_pyro/0_neutral/Pyro_helpmecapture01-converted.mp3"
+dest_files=[ "res://.import/Pyro_helpmecapture01-converted.mp3-f23e34a1b63e5c3b7f5726da802e4f02.mp3str" ]
+
+[params]
+
+loop=false
+loop_offset=0

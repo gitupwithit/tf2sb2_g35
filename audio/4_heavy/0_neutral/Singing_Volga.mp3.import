@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/Singing_Volga.mp3-9021ea748986655ed5567b5b1f69ea74.mp3str"
+
+[deps]
+
+source_file="res://audio/4_heavy/0_neutral/Singing_Volga.mp3"
+dest_files=[ "res://.import/Singing_Volga.mp3-9021ea748986655ed5567b5b1f69ea74.mp3str" ]
+
+[params]
+
+loop=false
+loop_offset=0

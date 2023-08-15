@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/Can_you_feel_ze_sc_.mp3-d8f6dde9e844da98611c9c2c52bbe304.mp3str"
+
+[deps]
+
+source_file="res://audio/6_medic/1_happy/Can_you_feel_ze_sc_.mp3"
+dest_files=[ "res://.import/Can_you_feel_ze_sc_.mp3-d8f6dde9e844da98611c9c2c52bbe304.mp3str" ]
+
+[params]
+
+loop=false
+loop_offset=0

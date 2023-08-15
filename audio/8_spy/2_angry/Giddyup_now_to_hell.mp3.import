@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/Giddyup_now_to_hell.mp3-de80d0d180599c0eef4003036c2b5890.mp3str"
+
+[deps]
+
+source_file="res://audio/8_spy/2_angry/Giddyup_now_to_hell.mp3"
+dest_files=[ "res://.import/Giddyup_now_to_hell.mp3-de80d0d180599c0eef4003036c2b5890.mp3str" ]
+
+[params]
+
+loop=false
+loop_offset=0

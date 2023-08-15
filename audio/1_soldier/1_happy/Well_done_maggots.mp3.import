@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/Well_done_maggots.mp3-52690fd9c813f92abf40da3e6c671250.mp3str"
+
+[deps]
+
+source_file="res://audio/1_soldier/1_happy/Well_done_maggots.mp3"
+dest_files=[ "res://.import/Well_done_maggots.mp3-52690fd9c813f92abf40da3e6c671250.mp3str" ]
+
+[params]
+
+loop=false
+loop_offset=0

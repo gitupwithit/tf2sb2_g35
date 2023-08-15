@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/Yeh_were_pretty_great.mp3-26bf6c12bbff08de85754ce6efae1537.mp3str"
+
+[deps]
+
+source_file="res://audio/0_scout/1_happy/Yeh_were_pretty_great.mp3"
+dest_files=[ "res://.import/Yeh_were_pretty_great.mp3-26bf6c12bbff08de85754ce6efae1537.mp3str" ]
+
+[params]
+
+loop=false
+loop_offset=0

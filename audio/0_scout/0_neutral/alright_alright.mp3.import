@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/alright_alright.mp3-d7961ea856a53776ba515ed4ddd8ebfa.mp3str"
+
+[deps]
+
+source_file="res://audio/0_scout/0_neutral/alright_alright.mp3"
+dest_files=[ "res://.import/alright_alright.mp3-d7961ea856a53776ba515ed4ddd8ebfa.mp3str" ]
+
+[params]
+
+loop=false
+loop_offset=0

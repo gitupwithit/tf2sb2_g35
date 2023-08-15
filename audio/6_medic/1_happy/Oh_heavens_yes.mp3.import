@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/Oh_heavens_yes.mp3-341fba03fed184e9af9f9b3a8d9eefe9.mp3str"
+
+[deps]
+
+source_file="res://audio/6_medic/1_happy/Oh_heavens_yes.mp3"
+dest_files=[ "res://.import/Oh_heavens_yes.mp3-341fba03fed184e9af9f9b3a8d9eefe9.mp3str" ]
+
+[params]
+
+loop=false
+loop_offset=0

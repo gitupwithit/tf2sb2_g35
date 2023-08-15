@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/This_team_just_got_.mp3-8478ca076dbe1b8a6544d4559cc91f4e.mp3str"
+
+[deps]
+
+source_file="res://audio/7_sniper/test/This_team_just_got_.mp3"
+dest_files=[ "res://.import/This_team_just_got_.mp3-8478ca076dbe1b8a6544d4559cc91f4e.mp3str" ]
+
+[params]
+
+loop=false
+loop_offset=0

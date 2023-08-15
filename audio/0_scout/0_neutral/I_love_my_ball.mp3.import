@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/I_love_my_ball.mp3-e923a0b08c0ee986d8a996e77d054c98.mp3str"
+
+[deps]
+
+source_file="res://audio/0_scout/0_neutral/I_love_my_ball.mp3"
+dest_files=[ "res://.import/I_love_my_ball.mp3-e923a0b08c0ee986d8a996e77d054c98.mp3str" ]
+
+[params]
+
+loop=false
+loop_offset=0

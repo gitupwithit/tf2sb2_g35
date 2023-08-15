@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/Piss_off_big_head.mp3-8662819db52cb3c418215a97b435f324.mp3str"
+
+[deps]
+
+source_file="res://audio/7_sniper/2_angry/Piss_off_big_head.mp3"
+dest_files=[ "res://.import/Piss_off_big_head.mp3-8662819db52cb3c418215a97b435f324.mp3str" ]
+
+[params]
+
+loop=false
+loop_offset=0

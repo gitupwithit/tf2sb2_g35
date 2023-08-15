@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/Ooh_very_nice.mp3-3104b8ddecba3ce33b3105198ba6ff3d.mp3str"
+
+[deps]
+
+source_file="res://audio/6_medic/1_happy/Ooh_very_nice.mp3"
+dest_files=[ "res://.import/Ooh_very_nice.mp3-3104b8ddecba3ce33b3105198ba6ff3d.mp3str" ]
+
+[params]
+
+loop=false
+loop_offset=0

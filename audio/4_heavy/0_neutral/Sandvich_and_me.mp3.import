@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/Sandvich_and_me.mp3-72969774b4199d501fd730dae538da5c.mp3str"
+
+[deps]
+
+source_file="res://audio/4_heavy/0_neutral/Sandvich_and_me.mp3"
+dest_files=[ "res://.import/Sandvich_and_me.mp3-72969774b4199d501fd730dae538da5c.mp3str" ]
+
+[params]
+
+loop=false
+loop_offset=0

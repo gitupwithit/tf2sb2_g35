@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/soldier_fades.mp3-c8b93767a33f0032e5e0439dcb241bfc.mp3str"
+
+[deps]
+
+source_file="res://audio/decriptions/soldier_fades.mp3"
+dest_files=[ "res://.import/soldier_fades.mp3-c8b93767a33f0032e5e0439dcb241bfc.mp3str" ]
+
+[params]
+
+loop=false
+loop_offset=0

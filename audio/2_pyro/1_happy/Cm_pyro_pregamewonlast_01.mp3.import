@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/Cm_pyro_pregamewonlast_01.mp3-2a138c631903e9de9aa17c3c86823d7b.mp3str"
+
+[deps]
+
+source_file="res://audio/2_pyro/1_happy/Cm_pyro_pregamewonlast_01.mp3"
+dest_files=[ "res://.import/Cm_pyro_pregamewonlast_01.mp3-2a138c631903e9de9aa17c3c86823d7b.mp3str" ]
+
+[params]
+
+loop=false
+loop_offset=0

@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/No_problem.mp3-bec4dd68e72bb24bc83d8aa97b87ef8b.mp3str"
+
+[deps]
+
+source_file="res://audio/0_scout/0_neutral/No_problem.mp3"
+dest_files=[ "res://.import/No_problem.mp3-bec4dd68e72bb24bc83d8aa97b87ef8b.mp3str" ]
+
+[params]
+
+loop=false
+loop_offset=0

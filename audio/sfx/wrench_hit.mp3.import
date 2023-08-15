@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/wrench_hit.mp3-86a97c6cd6aa9898a58ad1e963e7fd70.mp3str"
+
+[deps]
+
+source_file="res://audio/sfx/wrench_hit.mp3"
+dest_files=[ "res://.import/wrench_hit.mp3-86a97c6cd6aa9898a58ad1e963e7fd70.mp3str" ]
+
+[params]
+
+loop=false
+loop_offset=0

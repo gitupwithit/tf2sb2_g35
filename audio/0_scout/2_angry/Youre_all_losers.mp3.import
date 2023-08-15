@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/Youre_all_losers.mp3-f0cdfa1ef875af2dde67eaf8c61e5dd6.mp3str"
+
+[deps]
+
+source_file="res://audio/0_scout/2_angry/Youre_all_losers.mp3"
+dest_files=[ "res://.import/Youre_all_losers.mp3-f0cdfa1ef875af2dde67eaf8c61e5dd6.mp3str" ]
+
+[params]
+
+loop=false
+loop_offset=0

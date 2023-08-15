@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/Pyro_cloakedspyidentify01-converted.mp3-25ba7dfbd605b0ba0a64da440010fec4.mp3str"
+
+[deps]
+
+source_file="res://audio/2_pyro/0_neutral/Pyro_cloakedspyidentify01-converted.mp3"
+dest_files=[ "res://.import/Pyro_cloakedspyidentify01-converted.mp3-25ba7dfbd605b0ba0a64da440010fec4.mp3str" ]
+
+[params]
+
+loop=false
+loop_offset=0

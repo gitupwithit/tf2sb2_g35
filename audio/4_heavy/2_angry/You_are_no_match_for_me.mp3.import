@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/You_are_no_match_for_me.mp3-51f2fe592d580515b38e74a23e878339.mp3str"
+
+[deps]
+
+source_file="res://audio/4_heavy/2_angry/You_are_no_match_for_me.mp3"
+dest_files=[ "res://.import/You_are_no_match_for_me.mp3-51f2fe592d580515b38e74a23e878339.mp3str" ]
+
+[params]
+
+loop=false
+loop_offset=0

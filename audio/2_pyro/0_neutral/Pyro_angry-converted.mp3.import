@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/Pyro_angry-converted.mp3-0bad9b541ccd242e41d8bc83a8223774.mp3str"
+
+[deps]
+
+source_file="res://audio/2_pyro/0_neutral/Pyro_angry-converted.mp3"
+dest_files=[ "res://.import/Pyro_angry-converted.mp3-0bad9b541ccd242e41d8bc83a8223774.mp3str" ]
+
+[params]
+
+loop=false
+loop_offset=0

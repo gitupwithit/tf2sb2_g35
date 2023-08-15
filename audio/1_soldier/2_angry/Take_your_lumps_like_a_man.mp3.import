@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/Take_your_lumps_like_a_man.mp3-7d5ed559de1c1985fca2add6d66e5791.mp3str"
+
+[deps]
+
+source_file="res://audio/1_soldier/2_angry/Take_your_lumps_like_a_man.mp3"
+dest_files=[ "res://.import/Take_your_lumps_like_a_man.mp3-7d5ed559de1c1985fca2add6d66e5791.mp3str" ]
+
+[params]
+
+loop=false
+loop_offset=0

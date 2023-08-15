@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/Ooh_this_is_not_good.mp3-d43e74077b5c3242e5aab3d295a0f054.mp3str"
+
+[deps]
+
+source_file="res://audio/6_medic/2_angry/Ooh_this_is_not_good.mp3"
+dest_files=[ "res://.import/Ooh_this_is_not_good.mp3-d43e74077b5c3242e5aab3d295a0f054.mp3str" ]
+
+[params]
+
+loop=false
+loop_offset=0

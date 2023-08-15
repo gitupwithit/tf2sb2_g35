@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/Whats_a_matter_you_freaking_stupid.mp3-6858b293efe36112ae772c8185693bb6.mp3str"
+
+[deps]
+
+source_file="res://audio/0_scout/2_angry/Whats_a_matter_you_freaking_stupid.mp3"
+dest_files=[ "res://.import/Whats_a_matter_you_freaking_stupid.mp3-6858b293efe36112ae772c8185693bb6.mp3str" ]
+
+[params]
+
+loop=false
+loop_offset=0
