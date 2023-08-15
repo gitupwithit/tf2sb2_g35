@@ -1,4 +1,4 @@
-[gd_scene load_steps=27 format=2]
+[gd_scene load_steps=29 format=2]
 
 [ext_resource path="res://scout_mg_assets/talking_scout_imported.glb" type="PackedScene" id=1]
 [ext_resource path="res://scripts/scout_mg.gd" type="Script" id=2]
@@ -5708,10 +5708,21 @@ tracks/91/keys = {
 } ]
 }
 
+[sub_resource type="AnimationNodeAnimation" id=21]
+animation = "lounge_loop"
+
+[sub_resource type="AnimationNodeAnimation" id=22]
+animation = "grab_comic"
+
 [sub_resource type="AnimationNodeBlendSpace1D" id=19]
+blend_point_0/node = SubResource( 21 )
+blend_point_0/pos = -1.0
+blend_point_1/node = SubResource( 22 )
+blend_point_1/pos = 1.0
+value_label = "0"
 
 [sub_resource type="AnimationNodeBlendTree" id=20]
-graph_offset = Vector2( -188, 48 )
+graph_offset = Vector2( -36.661, 159.595 )
 nodes/BlendSpace1D/node = SubResource( 19 )
 nodes/BlendSpace1D/position = Vector2( 0, 140 )
 node_connections = [ "output", 0, "BlendSpace1D" ]
@@ -5720,9 +5731,6 @@ node_connections = [ "output", 0, "BlendSpace1D" ]
 
 [node name="scout_mg" instance=ExtResource( 1 )]
 script = ExtResource( 2 )
-
-[node name="comic_hand" parent="scoutqc_skeleton/Skeleton" index="1"]
-visible = false
 
 [node name="Handset_scout" parent="scoutqc_skeleton/Skeleton" index="3"]
 visible = false
@@ -5761,7 +5769,7 @@ anims/wake_up = SubResource( 17 )
 tree_root = SubResource( 20 )
 anim_player = NodePath("..")
 active = true
-parameters/BlendSpace1D/blend_position = 0
+parameters/BlendSpace1D/blend_position = -1.0
 
 [node name="scout_vo" type="AudioStreamPlayer" parent="." index="16"]
 stream = ExtResource( 5 )
@@ -5782,6 +5790,8 @@ stream = ExtResource( 3 )
 one_shot = true
 
 [node name="scout_mg_timer" type="Timer" parent="." index="21"]
+
+[node name="Tween" type="Tween" parent="." index="22"]
 
 [connection signal="timeout" from="scout_mg_anims/scout_anims_timer" to="." method="_on_scout_anims_timer_timeout"]
 [connection signal="finished" from="phone_ring" to="." method="_on_phone_ring_finished"]

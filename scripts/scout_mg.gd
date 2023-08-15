@@ -9,7 +9,7 @@ var rung = false
 var current_scout_anim = ""
 
 func _ready():
-	anim_blender = $scout_mg_anims/anim_blender
+	anim_blender = $scout_mg_anims/animation_blender
 	Globals.checkvars()
 	var fade_in_node = load("res://scenes/fade_in_scene.tscn")
 	var fade_in_node_instance = fade_in_node.instance()
@@ -27,11 +27,26 @@ func _ready():
 func _on_scout_anims_timer_timeout():
 	print("scout animation timer event")
 	scout_animation_control()
+	
+func set_looping(animation_name: String, looping: bool):
+	var animation = $scout_mg_anims.get_animation(animation_name)
+	if animation:
+		animation.loop = looping
 
 func blend_anims(initial_anim, new_anim, time):
+	$scout_mg_anims.stop()
+	$scout_mg_anims.seek(0)
+	$scout_mg_anims.play("grab_comic")
+	set_looping("grab_comic", false)
+	var initial_pos = -1
+	var target_pos = 1
 	var animation_tree = $scout_mg_anims/animation_blender
-	var 
-	
+	var tween = $Tween
+	animation_tree.set("parameters/BlendSpace1D/blend_position", initial_pos)
+	tween.interpolate_property(animation_tree, "parameters/BlendSpace1D/blend_position", initial_pos, target_pos, time, Tween.TRANS_LINEAR, Tween.EASE_IN_OUT)
+
+	tween.start()
+
 	
 #	if blend_space == null:
 #		print("BlendSpace1D not found!")
@@ -43,7 +58,7 @@ func scout_animation_control():
 	if current_scout_anim == "lounge":
 		var initial_anim = "lounge"
 		var new_anim = "grab_comic"
-		var time = 1
+		var time = .5
 		blend_anims(initial_anim,new_anim,time)
 		
 
