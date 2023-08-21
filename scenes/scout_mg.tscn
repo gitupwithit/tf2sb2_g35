@@ -1,4 +1,4 @@
-[gd_scene load_steps=27 format=2]
+[gd_scene load_steps=48 format=2]
 
 [ext_resource path="res://scout_mg_assets/talking_scout_imported.glb" type="PackedScene" id=1]
 [ext_resource path="res://scripts/scout_mg.gd" type="Script" id=2]
@@ -10,6 +10,7 @@
 [ext_resource path="res://anims/scout_lounge_loop.tres" type="Animation" id=8]
 [ext_resource path="res://anims/scout_sleep_anim.tres" type="Animation" id=9]
 [ext_resource path="res://anims/scout_grab_comic.tres" type="Animation" id=10]
+[ext_resource path="res://scenes/AnimationTree.gd" type="Script" id=11]
 
 [sub_resource type="Environment" id=1]
 background_energy = 0.8
@@ -832,22 +833,20 @@ tracks/90/loop_wrap = true
 tracks/90/imported = false
 tracks/90/enabled = true
 tracks/90/keys = PoolRealArray( 0, 1, -2.47485, 6.07459, 32.6178, -0.263081, -0.0923196, -0.132899, 0.951106, 1, 1, 1, 1.04167, 1, -2.47485, 6.07459, 32.6178, -0.263081, -0.0923196, -0.132899, 0.951106, 1, 1, 1 )
-tracks/91/type = "method"
-tracks/91/path = NodePath(".")
+tracks/91/type = "value"
+tracks/91/path = NodePath("scoutqc_skeleton/Handset_chair:visible")
 tracks/91/interp = 1
 tracks/91/loop_wrap = true
 tracks/91/imported = false
 tracks/91/enabled = true
 tracks/91/keys = {
-"times": PoolRealArray( 0.9 ),
+"times": PoolRealArray( 0.3 ),
 "transitions": PoolRealArray( 1 ),
-"values": [ {
-"args": [  ],
-"method": "lounge_loop"
-} ]
+"update": 1,
+"values": [ true ]
 }
 tracks/92/type = "value"
-tracks/92/path = NodePath("scoutqc_skeleton/Handset_chair:visible")
+tracks/92/path = NodePath("scoutqc_skeleton/Skeleton/Handset_scout:visible")
 tracks/92/interp = 1
 tracks/92/loop_wrap = true
 tracks/92/imported = false
@@ -856,19 +855,33 @@ tracks/92/keys = {
 "times": PoolRealArray( 0.3 ),
 "transitions": PoolRealArray( 1 ),
 "update": 1,
-"values": [ true ]
+"values": [ false ]
 }
 tracks/93/type = "value"
-tracks/93/path = NodePath("scoutqc_skeleton/Skeleton/Handset_scout:visible")
+tracks/93/path = NodePath("AnimationTree:parameters/lounge-holdphone-hangup/blend_amount")
 tracks/93/interp = 1
 tracks/93/loop_wrap = true
 tracks/93/imported = false
 tracks/93/enabled = true
 tracks/93/keys = {
-"times": PoolRealArray( 0.3 ),
+"times": PoolRealArray( 0, 0.8, 1 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ 1.0, 1.0, 0.0 ]
+}
+tracks/94/type = "method"
+tracks/94/path = NodePath(".")
+tracks/94/interp = 1
+tracks/94/loop_wrap = true
+tracks/94/imported = false
+tracks/94/enabled = true
+tracks/94/keys = {
+"times": PoolRealArray( 1 ),
 "transitions": PoolRealArray( 1 ),
-"update": 1,
-"values": [ false ]
+"values": [ {
+"args": [  ],
+"method": "hang_up_complete"
+} ]
 }
 
 [sub_resource type="Animation" id=8]
@@ -881,6 +894,1232 @@ tracks/0/loop_wrap = true
 tracks/0/imported = false
 tracks/0/enabled = true
 tracks/0/keys = PoolRealArray( 0, 1, 23.7599, 37.3955, -42.7789, 0, 0, 0, 1, 1, 1, 1 )
+
+[sub_resource type="Animation" id=36]
+resource_name = "holding_comic"
+loop = true
+tracks/0/type = "transform"
+tracks/0/path = NodePath("scoutqc_skeleton/Skeleton:prp_microphone")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = PoolRealArray( 0, 1, 3.33786e-06, -1.66893e-05, 2.13981e-05, -1.48267e-06, 1.07326e-05, 6.25309e-08, 1, 1, 1, 1 )
+tracks/1/type = "transform"
+tracks/1/path = NodePath("scoutqc_skeleton/Skeleton:prp_headphones")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = PoolRealArray( 0, 1, -6.19888e-06, 6.19888e-06, 2.5034e-06, -1.51247e-06, -5.35511e-09, -1.86265e-08, 1, 1, 1, 1 )
+tracks/2/type = "transform"
+tracks/2/path = NodePath("scoutqc_skeleton/Skeleton:prp_hat")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = PoolRealArray( 0, 1, -4.76837e-07, -1.66893e-05, -3.48091e-05, 3.31923e-06, 1.11759e-08, 1.49012e-08, 1, 1, 1, 1 )
+tracks/3/type = "transform"
+tracks/3/path = NodePath("scoutqc_skeleton/Skeleton:bip_head")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = PoolRealArray( 0, 1, 9.53674e-07, -4.81606e-05, 6.77109e-05, -0.039866, -0.00328191, 0.00210715, 0.999197, 1, 1, 1 )
+tracks/4/type = "transform"
+tracks/4/path = NodePath("scoutqc_skeleton/Skeleton:bip_dogtag_3")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = PoolRealArray( 0, 1, 0.0639606, 0.301861, -0.916757, 0.180212, 0.0202191, 0.0227408, 0.983157, 1, 1, 1 )
+tracks/5/type = "transform"
+tracks/5/path = NodePath("scoutqc_skeleton/Skeleton:bip_dogtag_2_L")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/keys = PoolRealArray( 0, 1, -1.19209e-06, -4.29153e-06, 1.7643e-05, 2.68221e-07, -1.11759e-08, -9.31323e-09, 1, 1, 1, 1 )
+tracks/6/type = "transform"
+tracks/6/path = NodePath("scoutqc_skeleton/Skeleton:bip_dogtag_2_R")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/keys = PoolRealArray( 0, 1, -2.6226e-06, -2.38419e-06, -6.19888e-06, 8.49366e-07, -7.45058e-08, 1.11759e-08, 1, 1, 1, 1 )
+tracks/7/type = "transform"
+tracks/7/path = NodePath("scoutqc_skeleton/Skeleton:bip_dogtag_2")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/keys = PoolRealArray( 0, 1, 0.319984, 0.561892, -1.38127, 0.309069, -0.0481252, 0.0283501, 0.949398, 1, 1, 1 )
+tracks/8/type = "transform"
+tracks/8/path = NodePath("scoutqc_skeleton/Skeleton:bip_dogtag_1_L")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/keys = PoolRealArray( 0, 1, -0.0937538, -0.105149, 0.222542, 0.182272, 0.00381909, 0.0201705, 0.983034, 1, 1, 1 )
+tracks/9/type = "transform"
+tracks/9/path = NodePath("scoutqc_skeleton/Skeleton:bip_dogtag_1_R")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/imported = false
+tracks/9/enabled = true
+tracks/9/keys = PoolRealArray( 0, 1, -0.00316811, 0.0612228, -0.0522273, 0.169164, -0.00597349, -0.0170217, 0.985423, 1, 1, 1 )
+tracks/10/type = "transform"
+tracks/10/path = NodePath("scoutqc_skeleton/Skeleton:bip_dogtag_1")
+tracks/10/interp = 1
+tracks/10/loop_wrap = true
+tracks/10/imported = false
+tracks/10/enabled = true
+tracks/10/keys = PoolRealArray( 0, 1, 1.43051e-06, 9.53674e-07, -7.51019e-06, -0.000142101, 6.51926e-08, -1.67638e-08, 1, 1, 1, 1 )
+tracks/11/type = "transform"
+tracks/11/path = NodePath("scoutqc_skeleton/Skeleton:bip_dogtag_0")
+tracks/11/interp = 1
+tracks/11/loop_wrap = true
+tracks/11/imported = false
+tracks/11/enabled = true
+tracks/11/keys = PoolRealArray( 0, 1, -4.76837e-07, -3.8147e-06, -1.79857e-05, 0.201801, 0.00361037, 0.0362221, 0.97875, 1, 1, 1 )
+tracks/12/type = "transform"
+tracks/12/path = NodePath("scoutqc_skeleton/Skeleton:bip_neck")
+tracks/12/interp = 1
+tracks/12/loop_wrap = true
+tracks/12/imported = false
+tracks/12/enabled = true
+tracks/12/keys = PoolRealArray( 0, 1, -4.76837e-07, -9.53674e-07, 1.71661e-05, -0.0634563, -0.162234, -0.0990635, 0.979714, 1, 1, 1 )
+tracks/13/type = "transform"
+tracks/13/path = NodePath("scoutqc_skeleton/Skeleton:bip_thumb_2_L")
+tracks/13/interp = 1
+tracks/13/loop_wrap = true
+tracks/13/imported = false
+tracks/13/enabled = true
+tracks/13/keys = PoolRealArray( 0, 1, -3.62098e-06, -4.88758e-06, 1.37687e-05, -0.18474, -0.0835327, 0.0606942, 0.977348, 1, 1, 1 )
+tracks/14/type = "transform"
+tracks/14/path = NodePath("scoutqc_skeleton/Skeleton:bip_thumb_1_L")
+tracks/14/interp = 1
+tracks/14/loop_wrap = true
+tracks/14/imported = false
+tracks/14/enabled = true
+tracks/14/keys = PoolRealArray( 0, 1, 7.7486e-07, 1.78814e-05, 1.74046e-05, 0.121354, -0.132972, 0.13128, 0.974863, 1, 1, 1 )
+tracks/15/type = "transform"
+tracks/15/path = NodePath("scoutqc_skeleton/Skeleton:bip_thumb_0_L")
+tracks/15/interp = 1
+tracks/15/loop_wrap = true
+tracks/15/imported = false
+tracks/15/enabled = true
+tracks/15/keys = PoolRealArray( 0, 1, 2.68221e-06, -1.19209e-06, -1.61529e-05, -0.0886418, 0.0869401, -0.0443043, 0.991273, 1, 1, 1 )
+tracks/16/type = "transform"
+tracks/16/path = NodePath("scoutqc_skeleton/Skeleton:bip_pinky_2_L")
+tracks/16/interp = 1
+tracks/16/loop_wrap = true
+tracks/16/imported = false
+tracks/16/enabled = true
+tracks/16/keys = PoolRealArray( 0, 1, 3.21865e-06, 1.37091e-05, -2.23517e-06, 0.211055, 0.000569318, -0.0130877, 0.977386, 1, 1, 1 )
+tracks/17/type = "transform"
+tracks/17/path = NodePath("scoutqc_skeleton/Skeleton:bip_pinky_1_L")
+tracks/17/interp = 1
+tracks/17/loop_wrap = true
+tracks/17/imported = false
+tracks/17/enabled = true
+tracks/17/keys = PoolRealArray( 0, 1, -3.42727e-06, 2.02656e-06, -6.85453e-06, 0.26128, 0.00570608, -0.0151813, 0.965127, 1, 1, 1 )
+tracks/18/type = "transform"
+tracks/18/path = NodePath("scoutqc_skeleton/Skeleton:bip_pinky_0_L")
+tracks/18/interp = 1
+tracks/18/loop_wrap = true
+tracks/18/imported = false
+tracks/18/enabled = true
+tracks/18/keys = PoolRealArray( 0, 1, -0.0587169, 0.311084, 0.315615, 0.379538, -0.0348658, 0.106737, 0.918337, 1, 1, 1 )
+tracks/19/type = "transform"
+tracks/19/path = NodePath("scoutqc_skeleton/Skeleton:bip_index_2_L")
+tracks/19/interp = 1
+tracks/19/loop_wrap = true
+tracks/19/imported = false
+tracks/19/enabled = true
+tracks/19/keys = PoolRealArray( 0, 1, -1.54972e-06, 5.60284e-06, 2.98023e-06, -0.0266284, -0.00121562, 0.00579449, 0.999628, 1, 1, 1 )
+tracks/20/type = "transform"
+tracks/20/path = NodePath("scoutqc_skeleton/Skeleton:bip_index_1_L")
+tracks/20/interp = 1
+tracks/20/loop_wrap = true
+tracks/20/imported = false
+tracks/20/enabled = true
+tracks/20/keys = PoolRealArray( 0, 1, -1.84774e-06, -1.57356e-05, -5.30481e-06, -0.0888691, -0.00533155, 0.0190303, 0.995847, 1, 1, 1 )
+tracks/21/type = "transform"
+tracks/21/path = NodePath("scoutqc_skeleton/Skeleton:bip_index_0_L")
+tracks/21/interp = 1
+tracks/21/loop_wrap = true
+tracks/21/imported = false
+tracks/21/enabled = true
+tracks/21/keys = PoolRealArray( 0, 1, 0.0148184, -0.278511, -0.307492, 0.213254, -0.0760729, 0.0163882, 0.973893, 1, 1, 1 )
+tracks/22/type = "transform"
+tracks/22/path = NodePath("scoutqc_skeleton/Skeleton:bip_middle_2_L")
+tracks/22/interp = 1
+tracks/22/loop_wrap = true
+tracks/22/imported = false
+tracks/22/enabled = true
+tracks/22/keys = PoolRealArray( 0, 1, -1.19209e-06, 3.09944e-06, -8.49366e-07, 0.13937, 0.00525431, -0.0137282, 0.990131, 1, 1, 1 )
+tracks/23/type = "transform"
+tracks/23/path = NodePath("scoutqc_skeleton/Skeleton:bip_middle_1_L")
+tracks/23/interp = 1
+tracks/23/loop_wrap = true
+tracks/23/imported = false
+tracks/23/enabled = true
+tracks/23/keys = PoolRealArray( 0, 1, -1.28746e-05, 9.53674e-07, 1.78814e-06, 0.0419933, -0.00153594, 0.00244318, 0.999114, 1, 1, 1 )
+tracks/24/type = "transform"
+tracks/24/path = NodePath("scoutqc_skeleton/Skeleton:bip_middle_0_L")
+tracks/24/interp = 1
+tracks/24/loop_wrap = true
+tracks/24/imported = false
+tracks/24/enabled = true
+tracks/24/keys = PoolRealArray( 0, 1, 0.0232033, -0.108257, -0.12264, 0.212834, -0.0480473, 0.0770916, 0.972857, 1, 1, 1 )
+tracks/25/type = "transform"
+tracks/25/path = NodePath("scoutqc_skeleton/Skeleton:bip_ring_2_L")
+tracks/25/interp = 1
+tracks/25/loop_wrap = true
+tracks/25/imported = false
+tracks/25/enabled = true
+tracks/25/keys = PoolRealArray( 0, 1, -1.78814e-06, -1.19209e-06, -8.55327e-06, 0.336713, 0.0372476, -0.0321429, 0.940321, 1, 1, 1 )
+tracks/26/type = "transform"
+tracks/26/path = NodePath("scoutqc_skeleton/Skeleton:bip_ring_1_L")
+tracks/26/interp = 1
+tracks/26/loop_wrap = true
+tracks/26/imported = false
+tracks/26/enabled = true
+tracks/26/keys = PoolRealArray( 0, 1, -9.83477e-06, -6.4373e-06, 1.54972e-06, 0.157204, 0.0204852, -0.0103949, 0.987299, 1, 1, 1 )
+tracks/27/type = "transform"
+tracks/27/path = NodePath("scoutqc_skeleton/Skeleton:bip_ring_0_L")
+tracks/27/interp = 1
+tracks/27/loop_wrap = true
+tracks/27/imported = false
+tracks/27/enabled = true
+tracks/27/keys = PoolRealArray( 0, 1, -0.029886, 0.0768681, 0.106627, 0.301599, -0.0151558, 0.0924149, 0.948825, 1, 1, 1 )
+tracks/28/type = "transform"
+tracks/28/path = NodePath("scoutqc_skeleton/Skeleton:weapon_bone_L")
+tracks/28/interp = 1
+tracks/28/loop_wrap = true
+tracks/28/imported = false
+tracks/28/enabled = true
+tracks/28/keys = PoolRealArray( 0, 1, 5.72205e-06, -1.87159e-05, -1.43051e-06, 1.10269e-06, 3.52505e-07, -6.23987e-07, 1, 1, 1, 1 )
+tracks/29/type = "transform"
+tracks/29/path = NodePath("scoutqc_skeleton/Skeleton:comic_front_cover.001")
+tracks/29/interp = 1
+tracks/29/loop_wrap = true
+tracks/29/imported = false
+tracks/29/enabled = true
+tracks/29/keys = PoolRealArray( 0, 1, -2.86102e-06, 4.05312e-06, 7.62939e-06, 1.49012e-08, 3.54776e-08, -1.5425e-08, 1, 1, 1, 1 )
+tracks/30/type = "transform"
+tracks/30/path = NodePath("scoutqc_skeleton/Skeleton:comic_front_cover")
+tracks/30/interp = 1
+tracks/30/loop_wrap = true
+tracks/30/imported = false
+tracks/30/enabled = true
+tracks/30/keys = PoolRealArray( 0, 1, -1.90735e-06, 1.2517e-06, 3.57628e-06, -1.49012e-08, 0, 0, 1, 1, 1, 1 )
+tracks/31/type = "transform"
+tracks/31/path = NodePath("scoutqc_skeleton/Skeleton:comic_back_cover.001")
+tracks/31/interp = 1
+tracks/31/loop_wrap = true
+tracks/31/imported = false
+tracks/31/enabled = true
+tracks/31/keys = PoolRealArray( 0, 1, -3.12924e-07, -4.76837e-07, 2.08616e-06, 2.6077e-08, 2.98023e-08, 3.72529e-09, 1, 1, 1, 1 )
+tracks/32/type = "transform"
+tracks/32/path = NodePath("scoutqc_skeleton/Skeleton:comic_back_cover")
+tracks/32/interp = 1
+tracks/32/loop_wrap = true
+tracks/32/imported = false
+tracks/32/enabled = true
+tracks/32/keys = PoolRealArray( 0, 1, -3.8147e-06, 2.83122e-07, 4.76837e-07, -4.47035e-08, -3.72529e-08, -1.49012e-08, 1, 1, 1, 1 )
+tracks/33/type = "transform"
+tracks/33/path = NodePath("scoutqc_skeleton/Skeleton:comic_page.001")
+tracks/33/interp = 1
+tracks/33/loop_wrap = true
+tracks/33/imported = false
+tracks/33/enabled = true
+tracks/33/keys = PoolRealArray( 0, 1, 2.32551e-06, -2.38419e-06, 3.53548e-06, 7.45058e-09, -1.49012e-08, -3.72543e-09, 1, 1, 1, 1 )
+tracks/34/type = "transform"
+tracks/34/path = NodePath("scoutqc_skeleton/Skeleton:comic_page")
+tracks/34/interp = 1
+tracks/34/loop_wrap = true
+tracks/34/imported = false
+tracks/34/enabled = true
+tracks/34/keys = PoolRealArray( 0, 1, -2.38419e-06, -2.00421e-06, -3.33786e-06, 1.78814e-07, -1.59872e-14, -8.9407e-08, 1, 1, 1, 1 )
+tracks/35/type = "transform"
+tracks/35/path = NodePath("scoutqc_skeleton/Skeleton:comic_main")
+tracks/35/interp = 1
+tracks/35/loop_wrap = true
+tracks/35/imported = false
+tracks/35/enabled = true
+tracks/35/keys = PoolRealArray( 0, 1, -4.17233e-06, 1.90735e-06, 8.34465e-07, 5.58794e-09, 2.13371e-16, 3.81842e-08, 1, 1, 1, 1 )
+tracks/36/type = "transform"
+tracks/36/path = NodePath("scoutqc_skeleton/Skeleton:bip_hand_L_comic")
+tracks/36/interp = 1
+tracks/36/loop_wrap = true
+tracks/36/imported = false
+tracks/36/enabled = true
+tracks/36/keys = PoolRealArray( 0, 1, 1.57766e-06, 3.01003e-06, 3.52412e-06, -7.91624e-09, -7.45058e-09, -7.45058e-09, 1, 1, 1, 1 )
+tracks/37/type = "transform"
+tracks/37/path = NodePath("scoutqc_skeleton/Skeleton:bip_hand_L")
+tracks/37/interp = 1
+tracks/37/loop_wrap = true
+tracks/37/imported = false
+tracks/37/enabled = true
+tracks/37/keys = PoolRealArray( 0, 1, 0.000108004, -5.72205e-06, -3.47793e-05, 0.0259, 0.152968, -0.132246, 0.979, 1, 1, 1 )
+tracks/38/type = "transform"
+tracks/38/path = NodePath("scoutqc_skeleton/Skeleton:hlp_forearm_L")
+tracks/38/interp = 1
+tracks/38/loop_wrap = true
+tracks/38/imported = false
+tracks/38/enabled = true
+tracks/38/keys = PoolRealArray( 0, 1, 4.95912e-05, -4.76837e-07, -1.9908e-05, 1.84774e-06, -1.84776e-06, 4.88758e-06, 1, 1, 1, 1 )
+tracks/39/type = "transform"
+tracks/39/path = NodePath("scoutqc_skeleton/Skeleton:bip_lowerArm_L")
+tracks/39/interp = 1
+tracks/39/loop_wrap = true
+tracks/39/imported = false
+tracks/39/enabled = true
+tracks/39/keys = PoolRealArray( 0, 1, -1.62125e-05, 2.19345e-05, 4.32729e-05, -0.683768, 0.0532614, -0.00748255, 0.727714, 1, 1, 1 )
+tracks/40/type = "transform"
+tracks/40/path = NodePath("scoutqc_skeleton/Skeleton:prp_sleeve_L")
+tracks/40/interp = 1
+tracks/40/loop_wrap = true
+tracks/40/imported = false
+tracks/40/enabled = true
+tracks/40/keys = PoolRealArray( 0, 1, -2.38419e-06, -2.28882e-05, -4.45545e-06, -5.58618e-06, -1.1729e-05, -9.4038e-06, 1, 1, 1, 1 )
+tracks/41/type = "transform"
+tracks/41/path = NodePath("scoutqc_skeleton/Skeleton:bip_bicep_twist_01_L")
+tracks/41/interp = 1
+tracks/41/loop_wrap = true
+tracks/41/imported = false
+tracks/41/enabled = true
+tracks/41/keys = PoolRealArray( 0, 1, -1.71065e-05, 2.24113e-05, 3.99351e-06, -1.48996e-08, 5.1176e-07, -1.43051e-06, 1, 1, 1, 1 )
+tracks/42/type = "transform"
+tracks/42/path = NodePath("scoutqc_skeleton/Skeleton:bip_bicep_twist_02_L")
+tracks/42/interp = 1
+tracks/42/loop_wrap = true
+tracks/42/imported = false
+tracks/42/enabled = true
+tracks/42/keys = PoolRealArray( 0, 1, -3.21865e-05, 3.14713e-05, 8.22544e-06, 5.66244e-07, 3.96743e-07, -1.01328e-06, 1, 1, 1, 1 )
+tracks/43/type = "transform"
+tracks/43/path = NodePath("scoutqc_skeleton/Skeleton:bip_upperArm_L")
+tracks/43/interp = 1
+tracks/43/loop_wrap = true
+tracks/43/imported = false
+tracks/43/enabled = true
+tracks/43/keys = PoolRealArray( 0, 1, -0.981516, -0.0598259, 0.818684, 0.114526, -0.679456, -0.0475299, 0.723162, 1, 1, 1 )
+tracks/44/type = "transform"
+tracks/44/path = NodePath("scoutqc_skeleton/Skeleton:bip_collar_L")
+tracks/44/interp = 1
+tracks/44/loop_wrap = true
+tracks/44/imported = false
+tracks/44/enabled = true
+tracks/44/keys = PoolRealArray( 0, 1, 4.41074e-06, 1.3411e-06, -4.29153e-06, -0.0199787, 0.00905853, 0.120219, 0.992505, 1, 1, 1 )
+tracks/45/type = "transform"
+tracks/45/path = NodePath("scoutqc_skeleton/Skeleton:bip_thumb_2_R")
+tracks/45/interp = 1
+tracks/45/loop_wrap = true
+tracks/45/imported = false
+tracks/45/enabled = true
+tracks/45/keys = PoolRealArray( 0, 1, -4.76836e-06, 2.38419e-06, -1.68085e-05, 0.33902, -0.179139, -0.112904, 0.916639, 1, 1, 1 )
+tracks/46/type = "transform"
+tracks/46/path = NodePath("scoutqc_skeleton/Skeleton:bip_thumb_1_R")
+tracks/46/interp = 1
+tracks/46/loop_wrap = true
+tracks/46/imported = false
+tracks/46/enabled = true
+tracks/46/keys = PoolRealArray( 0, 1, -4.52996e-06, 0, -2.07424e-05, 0.0593116, 0.00739085, 0.0565474, 0.996609, 1, 1, 1 )
+tracks/47/type = "transform"
+tracks/47/path = NodePath("scoutqc_skeleton/Skeleton:bip_thumb_0_R")
+tracks/47/interp = 1
+tracks/47/loop_wrap = true
+tracks/47/imported = false
+tracks/47/enabled = true
+tracks/47/keys = PoolRealArray( 0, 1, 3.57628e-07, -3.09944e-06, 5.06639e-06, 6.03497e-06, -1.71364e-06, -4.47024e-07, 1, 1, 1, 1 )
+tracks/48/type = "transform"
+tracks/48/path = NodePath("scoutqc_skeleton/Skeleton:bip_index_2_R")
+tracks/48/interp = 1
+tracks/48/loop_wrap = true
+tracks/48/imported = false
+tracks/48/enabled = true
+tracks/48/keys = PoolRealArray( 0, 1, -0.04441, 0.213623, -0.351291, 0.327497, 0.0606839, -0.00449684, 0.942891, 1, 1, 1 )
+tracks/49/type = "transform"
+tracks/49/path = NodePath("scoutqc_skeleton/Skeleton:bip_index_1_R")
+tracks/49/interp = 1
+tracks/49/loop_wrap = true
+tracks/49/imported = false
+tracks/49/enabled = true
+tracks/49/keys = PoolRealArray( 0, 1, -0.105168, -0.0272461, -0.494128, 0.473851, 0.0518254, -0.103702, 0.872941, 1, 1, 1 )
+tracks/50/type = "transform"
+tracks/50/path = NodePath("scoutqc_skeleton/Skeleton:bip_index_0_R")
+tracks/50/interp = 1
+tracks/50/loop_wrap = true
+tracks/50/imported = false
+tracks/50/enabled = true
+tracks/50/keys = PoolRealArray( 0, 1, 0.0195816, -0.0790305, 0.171425, 0.259496, -0.0280682, -0.0426012, 0.964396, 1, 1, 1 )
+tracks/51/type = "transform"
+tracks/51/path = NodePath("scoutqc_skeleton/Skeleton:weapon_bone_1")
+tracks/51/interp = 1
+tracks/51/loop_wrap = true
+tracks/51/imported = false
+tracks/51/enabled = true
+tracks/51/keys = PoolRealArray( 0, 1, 1.19209e-06, -2.6226e-06, -4.76837e-07, -1.32516e-06, -1.68569e-06, 6.09555e-07, 1, 1, 1, 1 )
+tracks/52/type = "transform"
+tracks/52/path = NodePath("scoutqc_skeleton/Skeleton:weapon_bone_2")
+tracks/52/interp = 1
+tracks/52/loop_wrap = true
+tracks/52/imported = false
+tracks/52/enabled = true
+tracks/52/keys = PoolRealArray( 0, 1, 4.29153e-06, -5.24521e-06, -7.39098e-06, -1.67638e-08, -5.58794e-09, 3.59491e-07, 1, 1, 1, 1 )
+tracks/53/type = "transform"
+tracks/53/path = NodePath("scoutqc_skeleton/Skeleton:weapon_bone_3")
+tracks/53/interp = 1
+tracks/53/loop_wrap = true
+tracks/53/imported = false
+tracks/53/enabled = true
+tracks/53/keys = PoolRealArray( 0, 1, 1.43051e-06, -6.19888e-06, 4.76837e-07, -1.67638e-08, -5.58794e-09, 3.59491e-07, 1, 1, 1, 1 )
+tracks/54/type = "transform"
+tracks/54/path = NodePath("scoutqc_skeleton/Skeleton:weapon_bone_4")
+tracks/54/interp = 1
+tracks/54/loop_wrap = true
+tracks/54/imported = false
+tracks/54/enabled = true
+tracks/54/keys = PoolRealArray( 0, 1, -5.96047e-06, -1.38283e-05, -1.43051e-06, -1.11759e-08, -1.11759e-08, 3.67872e-07, 1, 1, 1, 1 )
+tracks/55/type = "transform"
+tracks/55/path = NodePath("scoutqc_skeleton/Skeleton:weapon_bone")
+tracks/55/interp = 1
+tracks/55/loop_wrap = true
+tracks/55/imported = false
+tracks/55/enabled = true
+tracks/55/keys = PoolRealArray( 0, 1, 9.53674e-07, -1.12057e-05, 5.72205e-06, 5.9605e-08, 4.98723e-07, -7.78586e-07, 1, 1, 1, 1 )
+tracks/56/type = "transform"
+tracks/56/path = NodePath("scoutqc_skeleton/Skeleton:bip_middle_2_R")
+tracks/56/interp = 1
+tracks/56/loop_wrap = true
+tracks/56/imported = false
+tracks/56/enabled = true
+tracks/56/keys = PoolRealArray( 0, 1, -0.0665898, 0.186925, 0.368946, 0.31978, 0.0926506, 0.0107686, 0.94289, 1, 1, 1 )
+tracks/57/type = "transform"
+tracks/57/path = NodePath("scoutqc_skeleton/Skeleton:bip_middle_1_R")
+tracks/57/interp = 1
+tracks/57/loop_wrap = true
+tracks/57/imported = false
+tracks/57/enabled = true
+tracks/57/keys = PoolRealArray( 0, 1, 0.0301154, 0.178369, 0.426591, 0.47441, 0.0889524, -0.0706805, 0.872941, 1, 1, 1 )
+tracks/58/type = "transform"
+tracks/58/path = NodePath("scoutqc_skeleton/Skeleton:bip_middle_0_R")
+tracks/58/interp = 1
+tracks/58/loop_wrap = true
+tracks/58/imported = false
+tracks/58/enabled = true
+tracks/58/keys = PoolRealArray( 0, 1, 0.0052976, 0.0131054, 0.0913671, 0.26347, -0.0191572, -0.0125701, 0.964395, 1, 1, 1 )
+tracks/59/type = "transform"
+tracks/59/path = NodePath("scoutqc_skeleton/Skeleton:bip_pinky_2_R")
+tracks/59/interp = 1
+tracks/59/loop_wrap = true
+tracks/59/imported = false
+tracks/59/enabled = true
+tracks/59/keys = PoolRealArray( 0, 1, 0.116127, -0.355124, -0.0426013, 0.313251, 0.0950373, 0.0616712, 0.942888, 1, 1, 1 )
+tracks/60/type = "transform"
+tracks/60/path = NodePath("scoutqc_skeleton/Skeleton:bip_pinky_1_R")
+tracks/60/interp = 1
+tracks/60/loop_wrap = true
+tracks/60/imported = false
+tracks/60/enabled = true
+tracks/60/keys = PoolRealArray( 0, 1, 0.0242252, -0.146958, -0.0406013, 0.481735, 0.0720151, 0.0267849, 0.872942, 1, 1, 1 )
+tracks/61/type = "transform"
+tracks/61/path = NodePath("scoutqc_skeleton/Skeleton:bip_pinky_0_R")
+tracks/61/interp = 1
+tracks/61/loop_wrap = true
+tracks/61/imported = false
+tracks/61/enabled = true
+tracks/61/keys = PoolRealArray( 0, 1, 0.0187659, 0.00815678, -0.205637, 0.257999, -0.0540335, 0.0214142, 0.964395, 1, 1, 1 )
+tracks/62/type = "transform"
+tracks/62/path = NodePath("scoutqc_skeleton/Skeleton:bip_ring_2_R")
+tracks/62/interp = 1
+tracks/62/loop_wrap = true
+tracks/62/imported = false
+tracks/62/enabled = true
+tracks/62/keys = PoolRealArray( 0, 1, -0.00463027, -0.00836563, 0.0997967, 0.315967, 0.102875, 0.0232889, 0.942889, 1, 1, 1 )
+tracks/63/type = "transform"
+tracks/63/path = NodePath("scoutqc_skeleton/Skeleton:bip_ring_1_R")
+tracks/63/interp = 1
+tracks/63/loop_wrap = true
+tracks/63/imported = false
+tracks/63/enabled = true
+tracks/63/keys = PoolRealArray( 0, 1, 0.00109053, 0.0287189, 0.101752, 0.474577, 0.107237, -0.0353299, 0.872943, 1, 1, 1 )
+tracks/64/type = "transform"
+tracks/64/path = NodePath("scoutqc_skeleton/Skeleton:bip_ring_0_R")
+tracks/64/interp = 1
+tracks/64/loop_wrap = true
+tracks/64/imported = false
+tracks/64/enabled = true
+tracks/64/keys = PoolRealArray( 0, 1, 0.00507665, 0.0599813, -0.0569267, 0.263652, -0.0206152, 0.00184147, 0.964396, 1, 1, 1 )
+tracks/65/type = "transform"
+tracks/65/path = NodePath("scoutqc_skeleton/Skeleton:bip_hand_R")
+tracks/65/interp = 1
+tracks/65/loop_wrap = true
+tracks/65/imported = false
+tracks/65/enabled = true
+tracks/65/keys = PoolRealArray( 0, 1, 4.29154e-06, 2.86102e-06, 7.20024e-05, 0.000675864, -0.075263, -0.140174, 0.987262, 1, 1, 1 )
+tracks/66/type = "transform"
+tracks/66/path = NodePath("scoutqc_skeleton/Skeleton:hlp_forearm_R")
+tracks/66/interp = 1
+tracks/66/loop_wrap = true
+tracks/66/imported = false
+tracks/66/enabled = true
+tracks/66/keys = PoolRealArray( 0, 1, -9.53673e-07, -8.10623e-06, 3.43323e-05, 3.15905e-06, 1.19209e-07, 1.78814e-07, 1, 1, 1, 1 )
+tracks/67/type = "transform"
+tracks/67/path = NodePath("scoutqc_skeleton/Skeleton:bip_lowerArm_R")
+tracks/67/interp = 1
+tracks/67/loop_wrap = true
+tracks/67/imported = false
+tracks/67/enabled = true
+tracks/67/keys = PoolRealArray( 0, 1, -2.86102e-05, 4.3869e-05, -3.57657e-07, 0.291023, -0.734927, -0.306036, 0.530594, 1, 1, 1 )
+tracks/68/type = "transform"
+tracks/68/path = NodePath("scoutqc_skeleton/Skeleton:prp_sleeve_R")
+tracks/68/interp = 1
+tracks/68/loop_wrap = true
+tracks/68/imported = false
+tracks/68/enabled = true
+tracks/68/keys = PoolRealArray( 0, 1, 7.51019e-06, 1.23978e-05, 5.62146e-06, -5.59529e-06, 8.32982e-06, -1.18333e-05, 1, 1, 1, 1 )
+tracks/69/type = "transform"
+tracks/69/path = NodePath("scoutqc_skeleton/Skeleton:bip_bicep_twist_01_R")
+tracks/69/interp = 1
+tracks/69/loop_wrap = true
+tracks/69/imported = false
+tracks/69/enabled = true
+tracks/69/keys = PoolRealArray( 0, 1, 2.98023e-06, 1.90735e-05, 1.49607e-05, 2.65241e-06, -9.98378e-07, 2.98022e-07, 1, 1, 1, 1 )
+tracks/70/type = "transform"
+tracks/70/path = NodePath("scoutqc_skeleton/Skeleton:bip_bicep_twist_02_R")
+tracks/70/interp = 1
+tracks/70/loop_wrap = true
+tracks/70/imported = false
+tracks/70/enabled = true
+tracks/70/keys = PoolRealArray(  )
+tracks/71/type = "transform"
+tracks/71/path = NodePath("scoutqc_skeleton/Skeleton:bip_upperArm_R")
+tracks/71/interp = 1
+tracks/71/loop_wrap = true
+tracks/71/imported = false
+tracks/71/enabled = true
+tracks/71/keys = PoolRealArray( 0, 1, 0.950059, 0.848626, 0.120534, 0.160219, -0.28718, -0.338557, 0.88161, 1, 1, 1 )
+tracks/72/type = "transform"
+tracks/72/path = NodePath("scoutqc_skeleton/Skeleton:bip_collar_R")
+tracks/72/interp = 1
+tracks/72/loop_wrap = true
+tracks/72/imported = false
+tracks/72/enabled = true
+tracks/72/keys = PoolRealArray( 0, 1, -9.89437e-06, -1.40071e-06, 7.15256e-06, -0.0381931, 0.0595362, 0.196679, 0.977913, 1, 1, 1 )
+tracks/73/type = "transform"
+tracks/73/path = NodePath("scoutqc_skeleton/Skeleton:bip_spine_3")
+tracks/73/interp = 1
+tracks/73/loop_wrap = true
+tracks/73/imported = false
+tracks/73/enabled = true
+tracks/73/keys = PoolRealArray( 0, 1, 6.55651e-07, 7.15256e-06, 7.39098e-06, 0.128645, -0.181597, 0.0375742, 0.974198, 1, 1, 1 )
+tracks/74/type = "transform"
+tracks/74/path = NodePath("scoutqc_skeleton/Skeleton:bip_packbottom")
+tracks/74/interp = 1
+tracks/74/loop_wrap = true
+tracks/74/imported = false
+tracks/74/enabled = true
+tracks/74/keys = PoolRealArray( 0, 1, -1.04904e-05, -1.90735e-06, 2.70605e-05, -3.42913e-06, 9.42498e-07, 3.49805e-06, 1, 1, 1, 1 )
+tracks/75/type = "transform"
+tracks/75/path = NodePath("scoutqc_skeleton/Skeleton:bip_packmiddle")
+tracks/75/interp = 1
+tracks/75/loop_wrap = true
+tracks/75/imported = false
+tracks/75/enabled = true
+tracks/75/keys = PoolRealArray( 0, 1, -0.000157356, -3.33786e-05, 2.47955e-05, -8.64278e-07, -9.96515e-07, -1.03973e-05, 1, 1, 1, 1 )
+tracks/76/type = "transform"
+tracks/76/path = NodePath("scoutqc_skeleton/Skeleton:bip_packtop")
+tracks/76/interp = 1
+tracks/76/loop_wrap = true
+tracks/76/imported = false
+tracks/76/enabled = true
+tracks/76/keys = PoolRealArray( 0, 1, 2.98023e-06, -1.23978e-05, -4.76837e-06, 1.274e-06, 8.00193e-06, 6.78747e-06, 1, 1, 1, 1 )
+tracks/77/type = "transform"
+tracks/77/path = NodePath("scoutqc_skeleton/Skeleton:medal_bone")
+tracks/77/interp = 1
+tracks/77/loop_wrap = true
+tracks/77/imported = false
+tracks/77/enabled = true
+tracks/77/keys = PoolRealArray( 0, 1, -2.14577e-06, 4.76837e-07, -7.62939e-06, 5.1409e-07, 8.94068e-08, -2.58908e-07, 1, 1, 1, 1 )
+tracks/78/type = "transform"
+tracks/78/path = NodePath("scoutqc_skeleton/Skeleton:bip_spine_2")
+tracks/78/interp = 1
+tracks/78/loop_wrap = true
+tracks/78/imported = false
+tracks/78/enabled = true
+tracks/78/keys = PoolRealArray( 0, 1, 1.19209e-07, -1.52588e-05, -5.73397e-05, -0.110524, 0.00530103, -0.0467102, 0.992761, 1, 1, 1 )
+tracks/79/type = "transform"
+tracks/79/path = NodePath("scoutqc_skeleton/Skeleton:bip_spine_1")
+tracks/79/interp = 1
+tracks/79/loop_wrap = true
+tracks/79/imported = false
+tracks/79/enabled = true
+tracks/79/keys = PoolRealArray( 0, 1, 6.25849e-07, -9.05991e-06, -5.21243e-05, 0.0435762, -0.0013989, -0.0580145, 0.997363, 1, 1, 1 )
+tracks/80/type = "transform"
+tracks/80/path = NodePath("scoutqc_skeleton/Skeleton:bip_spine_0")
+tracks/80/interp = 1
+tracks/80/loop_wrap = true
+tracks/80/imported = false
+tracks/80/enabled = true
+tracks/80/keys = PoolRealArray( 0, 1, -1.78814e-07, -6.67572e-06, 3.06964e-06, 0.162302, -0.0531146, 0.0474513, 0.984167, 1, 1, 1 )
+tracks/81/type = "transform"
+tracks/81/path = NodePath("scoutqc_skeleton/Skeleton:bip_toe_R")
+tracks/81/interp = 1
+tracks/81/loop_wrap = true
+tracks/81/imported = false
+tracks/81/enabled = true
+tracks/81/keys = PoolRealArray( 0, 1, -2.59578e-05, -2.71797e-05, 2.55108e-05, 3.05474e-06, -3.18885e-06, 1.02259e-06, 1, 1, 1, 1 )
+tracks/82/type = "transform"
+tracks/82/path = NodePath("scoutqc_skeleton/Skeleton:bip_foot_R")
+tracks/82/interp = 1
+tracks/82/loop_wrap = true
+tracks/82/imported = false
+tracks/82/enabled = true
+tracks/82/keys = PoolRealArray( 0, 1, -6.91414e-06, 5.43594e-05, -4.00543e-05, 0.345676, -0.1448, -0.0533525, 0.925578, 1, 1, 1 )
+tracks/83/type = "transform"
+tracks/83/path = NodePath("scoutqc_skeleton/Skeleton:bip_knee_R")
+tracks/83/interp = 1
+tracks/83/loop_wrap = true
+tracks/83/imported = false
+tracks/83/enabled = true
+tracks/83/keys = PoolRealArray( 0, 1, -3.43323e-05, 1.13249e-06, 4.14848e-05, 0.0719361, 0.563384, -0.21184, 0.795329, 1, 1, 1 )
+tracks/84/type = "transform"
+tracks/84/path = NodePath("scoutqc_skeleton/Skeleton:bip_hip_R")
+tracks/84/interp = 1
+tracks/84/loop_wrap = true
+tracks/84/imported = false
+tracks/84/enabled = true
+tracks/84/keys = PoolRealArray( 0, 1, -0.0794044, 0.143797, -0.0396733, -0.0413799, -0.38653, -0.601567, 0.697853, 1, 1, 1 )
+tracks/85/type = "transform"
+tracks/85/path = NodePath("scoutqc_skeleton/Skeleton:bip_toe_L")
+tracks/85/interp = 1
+tracks/85/loop_wrap = true
+tracks/85/imported = false
+tracks/85/enabled = true
+tracks/85/keys = PoolRealArray( 0, 1, 1.03712e-05, 5.34058e-05, -5.60284e-05, 5.91576e-06, -7.64616e-07, 5.51343e-07, 1, 1, 1, 1 )
+tracks/86/type = "transform"
+tracks/86/path = NodePath("scoutqc_skeleton/Skeleton:bip_foot_L")
+tracks/86/interp = 1
+tracks/86/loop_wrap = true
+tracks/86/imported = false
+tracks/86/enabled = true
+tracks/86/keys = PoolRealArray( 0, 1, -0.000149488, 3.43323e-05, -3.8147e-05, 0.0197984, -0.0090832, -0.085153, 0.99613, 1, 1, 1 )
+tracks/87/type = "transform"
+tracks/87/path = NodePath("scoutqc_skeleton/Skeleton:bip_knee_L")
+tracks/87/interp = 1
+tracks/87/loop_wrap = true
+tracks/87/imported = false
+tracks/87/enabled = true
+tracks/87/keys = PoolRealArray( 0, 1, -2.28882e-05, -0.000158072, 0.000107288, -0.058546, 0.891637, 0.136542, 0.427683, 1, 1, 1 )
+tracks/88/type = "transform"
+tracks/88/path = NodePath("scoutqc_skeleton/Skeleton:bip_hip_L")
+tracks/88/interp = 1
+tracks/88/loop_wrap = true
+tracks/88/imported = false
+tracks/88/enabled = true
+tracks/88/keys = PoolRealArray( 0, 1, -1.86507, 1.543, -0.273983, 0.212898, 0.89338, -0.111037, -0.379759, 1, 1, 1 )
+tracks/89/type = "transform"
+tracks/89/path = NodePath("scoutqc_skeleton/Skeleton:mvm")
+tracks/89/interp = 1
+tracks/89/loop_wrap = true
+tracks/89/imported = false
+tracks/89/enabled = true
+tracks/89/keys = PoolRealArray( 0, 1, 1.19209e-07, -1.19209e-06, 2.86102e-06, 2.83122e-06, 7.3015e-07, -2.4885e-06, 1, 1, 1, 1 )
+tracks/90/type = "transform"
+tracks/90/path = NodePath("scoutqc_skeleton/Skeleton:bip_pelvis")
+tracks/90/interp = 1
+tracks/90/loop_wrap = true
+tracks/90/imported = false
+tracks/90/enabled = true
+tracks/90/keys = PoolRealArray( 0, 1, -7.50857, 9.10998, 24.3591, -0.0493394, 0.0380318, -0.0520511, 0.9967, 1, 1, 1 )
+
+[sub_resource type="Animation" id=35]
+resource_name = "holding_phone"
+loop = true
+tracks/0/type = "transform"
+tracks/0/path = NodePath("scoutqc_skeleton/Skeleton:prp_microphone")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = PoolRealArray( 0, 1, 1.90735e-06, -6.19888e-06, 1.66297e-05, -1.48639e-06, 1.07177e-05, 4.55345e-08, 1, 0.999995, 0.999999, 0.999998 )
+tracks/1/type = "transform"
+tracks/1/path = NodePath("scoutqc_skeleton/Skeleton:prp_headphones")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = PoolRealArray( 0, 1, 2.80142e-06, 3.09944e-06, -1.66893e-06, -1.49757e-06, -2.32831e-09, 1.86265e-09, 1, 1, 1, 1 )
+tracks/2/type = "transform"
+tracks/2/path = NodePath("scoutqc_skeleton/Skeleton:prp_hat")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = PoolRealArray( 0, 1, -1.96695e-06, -1.4782e-05, -3.26633e-05, 3.33041e-06, -3.72529e-09, -5.58794e-09, 1, 1, 1, 1 )
+tracks/3/type = "transform"
+tracks/3/path = NodePath("scoutqc_skeleton/Skeleton:bip_head")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = PoolRealArray( 0, 1, 2.38419e-06, -4.72069e-05, 6.4373e-05, -0.039866, -0.00328192, 0.00210716, 0.999197, 1, 1, 1 )
+tracks/4/type = "transform"
+tracks/4/path = NodePath("scoutqc_skeleton/Skeleton:bip_dogtag_3")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = PoolRealArray( 0, 1, 0.0639608, 0.301865, -0.91676, 0.180212, 0.0202191, 0.0227409, 0.983157, 1, 1, 1 )
+tracks/5/type = "transform"
+tracks/5/path = NodePath("scoutqc_skeleton/Skeleton:bip_dogtag_2_L")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/keys = PoolRealArray( 0, 1, -4.76837e-07, 1.78814e-06, 2.13981e-05, 2.84985e-07, -1.11759e-08, 7.45058e-09, 1, 1, 1, 1 )
+tracks/6/type = "transform"
+tracks/6/path = NodePath("scoutqc_skeleton/Skeleton:bip_dogtag_2_R")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/keys = PoolRealArray( 0, 1, -9.53674e-07, -4.52995e-06, -4.76837e-06, 8.62405e-07, -7.07805e-08, -3.72529e-09, 1, 1, 1, 1 )
+tracks/7/type = "transform"
+tracks/7/path = NodePath("scoutqc_skeleton/Skeleton:bip_dogtag_2")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/keys = PoolRealArray( 0, 1, 0.319983, 0.56189, -1.38127, 0.309069, -0.0481252, 0.0283501, 0.949398, 1, 1, 1 )
+tracks/8/type = "transform"
+tracks/8/path = NodePath("scoutqc_skeleton/Skeleton:bip_dogtag_1_L")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/keys = PoolRealArray( 0, 1, -0.0937555, -0.105152, 0.222545, 0.182272, 0.0038191, 0.0201705, 0.983034, 1, 1, 1 )
+tracks/9/type = "transform"
+tracks/9/path = NodePath("scoutqc_skeleton/Skeleton:bip_dogtag_1_R")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/imported = false
+tracks/9/enabled = true
+tracks/9/keys = PoolRealArray( 0, 1, -0.00316834, 0.0612214, -0.0522274, 0.169164, -0.0059735, -0.0170217, 0.985423, 1, 1, 1 )
+tracks/10/type = "transform"
+tracks/10/path = NodePath("scoutqc_skeleton/Skeleton:bip_dogtag_1")
+tracks/10/interp = 1
+tracks/10/loop_wrap = true
+tracks/10/imported = false
+tracks/10/enabled = true
+tracks/10/keys = PoolRealArray( 0, 1, -3.57628e-07, -5.72205e-06, -6.25849e-06, -0.00014207, 6.51926e-08, -1.67638e-08, 1, 1, 1, 1 )
+tracks/11/type = "transform"
+tracks/11/path = NodePath("scoutqc_skeleton/Skeleton:bip_dogtag_0")
+tracks/11/interp = 1
+tracks/11/loop_wrap = true
+tracks/11/imported = false
+tracks/11/enabled = true
+tracks/11/keys = PoolRealArray( 0, 1, 2.38419e-06, -6.19888e-06, -2.11149e-05, 0.201801, 0.00361037, 0.0362222, 0.97875, 1, 1, 1 )
+tracks/12/type = "transform"
+tracks/12/path = NodePath("scoutqc_skeleton/Skeleton:bip_neck")
+tracks/12/interp = 1
+tracks/12/loop_wrap = true
+tracks/12/imported = false
+tracks/12/enabled = true
+tracks/12/keys = PoolRealArray( 0, 1, -1.43051e-06, 9.53674e-07, 2.16365e-05, -0.428102, -0.00577994, 0.0422236, 0.902725, 1, 1, 1 )
+tracks/13/type = "transform"
+tracks/13/path = NodePath("scoutqc_skeleton/Skeleton:bip_thumb_2_L")
+tracks/13/interp = 1
+tracks/13/loop_wrap = true
+tracks/13/imported = false
+tracks/13/enabled = true
+tracks/13/keys = PoolRealArray( 0, 1, 0.136111, 0.0411344, 0.100581, 0.25871, -0.0295455, -0.0275017, 0.965111, 1, 1, 1 )
+tracks/14/type = "transform"
+tracks/14/path = NodePath("scoutqc_skeleton/Skeleton:bip_thumb_1_L")
+tracks/14/interp = 1
+tracks/14/loop_wrap = true
+tracks/14/imported = false
+tracks/14/enabled = true
+tracks/14/keys = PoolRealArray( 0, 1, -8.34465e-07, 1.37091e-05, 1.33514e-05, -1.68383e-06, 1.69873e-06, 1.3262e-06, 1, 1, 1, 1 )
+tracks/15/type = "transform"
+tracks/15/path = NodePath("scoutqc_skeleton/Skeleton:bip_thumb_0_L")
+tracks/15/interp = 1
+tracks/15/loop_wrap = true
+tracks/15/imported = false
+tracks/15/enabled = true
+tracks/15/keys = PoolRealArray( 0, 1, 3.93391e-06, 7.62939e-06, -1.77026e-05, -0.148808, 0.039075, 0.0579584, 0.986392, 1, 1, 1 )
+tracks/16/type = "transform"
+tracks/16/path = NodePath("scoutqc_skeleton/Skeleton:bip_pinky_2_L")
+tracks/16/interp = 1
+tracks/16/loop_wrap = true
+tracks/16/imported = false
+tracks/16/enabled = true
+tracks/16/keys = PoolRealArray( 0, 1, -0.14743, 0.397013, 0.382745, 0.303706, 0.0195193, 0.0967321, 0.947642, 1, 1, 1 )
+tracks/17/type = "transform"
+tracks/17/path = NodePath("scoutqc_skeleton/Skeleton:bip_pinky_1_L")
+tracks/17/interp = 1
+tracks/17/loop_wrap = true
+tracks/17/imported = false
+tracks/17/enabled = true
+tracks/17/keys = PoolRealArray( 0, 1, -0.0182054, 0.115885, 0.0232559, 0.0746284, 0.00651055, 0.0259611, 0.996852, 1, 1, 1 )
+tracks/18/type = "transform"
+tracks/18/path = NodePath("scoutqc_skeleton/Skeleton:bip_pinky_0_L")
+tracks/18/interp = 1
+tracks/18/loop_wrap = true
+tracks/18/imported = false
+tracks/18/enabled = true
+tracks/18/keys = PoolRealArray( 0, 1, -0.0773493, 0.471753, 0.277382, 0.106078, -0.0652255, 0.13966, 0.982338, 1, 1, 1 )
+tracks/19/type = "transform"
+tracks/19/path = NodePath("scoutqc_skeleton/Skeleton:bip_index_2_L")
+tracks/19/interp = 1
+tracks/19/loop_wrap = true
+tracks/19/imported = false
+tracks/19/enabled = true
+tracks/19/keys = PoolRealArray( 0, 1, -0.0119991, -0.184864, 0.00964261, 0.318262, -0.0197686, 0.0170371, 0.947644, 1, 1, 1 )
+tracks/20/type = "transform"
+tracks/20/path = NodePath("scoutqc_skeleton/Skeleton:bip_index_1_L")
+tracks/20/interp = 1
+tracks/20/loop_wrap = true
+tracks/20/imported = false
+tracks/20/enabled = true
+tracks/20/keys = PoolRealArray( 0, 1, -0.00011545, -0.0557203, 0.0476506, 0.0789964, 0.00427422, 0.00519634, 0.996852, 1, 1, 1 )
+tracks/21/type = "transform"
+tracks/21/path = NodePath("scoutqc_skeleton/Skeleton:bip_index_0_L")
+tracks/21/interp = 1
+tracks/21/loop_wrap = true
+tracks/21/imported = false
+tracks/21/enabled = true
+tracks/21/keys = PoolRealArray( 0, 1, 0.0838766, -0.533344, -0.357652, 0.143089, -0.0504763, 0.109496, 0.982338, 1, 1, 1 )
+tracks/22/type = "transform"
+tracks/22/path = NodePath("scoutqc_skeleton/Skeleton:bip_middle_2_L")
+tracks/22/interp = 1
+tracks/22/loop_wrap = true
+tracks/22/imported = false
+tracks/22/enabled = true
+tracks/22/keys = PoolRealArray( 0, 1, 0.0693214, -0.190852, -0.477218, 0.316462, 0.014282, 0.0402602, 0.947643, 1, 1, 1 )
+tracks/23/type = "transform"
+tracks/23/path = NodePath("scoutqc_skeleton/Skeleton:bip_middle_1_L")
+tracks/23/interp = 1
+tracks/23/loop_wrap = true
+tracks/23/imported = false
+tracks/23/enabled = true
+tracks/23/keys = PoolRealArray( 0, 1, 0.0212943, -0.0851059, -0.0580465, 0.0776087, 0.0119886, 0.0108933, 0.996852, 1, 1, 1 )
+tracks/24/type = "transform"
+tracks/24/path = NodePath("scoutqc_skeleton/Skeleton:bip_middle_0_L")
+tracks/24/interp = 1
+tracks/24/loop_wrap = true
+tracks/24/imported = false
+tracks/24/enabled = true
+tracks/24/keys = PoolRealArray( 0, 1, 0.0623089, -0.185894, -0.141543, 0.130939, -0.0494111, 0.124202, 0.982338, 1, 1, 1 )
+tracks/25/type = "transform"
+tracks/25/path = NodePath("scoutqc_skeleton/Skeleton:bip_ring_2_L")
+tracks/25/interp = 1
+tracks/25/loop_wrap = true
+tracks/25/imported = false
+tracks/25/enabled = true
+tracks/25/keys = PoolRealArray( 0, 1, -0.00301589, 0.013383, 0.0115355, 0.313854, 0.0247232, 0.05347, 0.947642, 1, 1, 1 )
+tracks/26/type = "transform"
+tracks/26/path = NodePath("scoutqc_skeleton/Skeleton:bip_ring_1_L")
+tracks/26/interp = 1
+tracks/26/loop_wrap = true
+tracks/26/imported = false
+tracks/26/enabled = true
+tracks/26/keys = PoolRealArray( 0, 1, -0.00262719, 0.0204433, -0.00286132, 0.076678, 0.0120653, 0.0161275, 0.996852, 1, 0.999999, 1 )
+tracks/27/type = "transform"
+tracks/27/path = NodePath("scoutqc_skeleton/Skeleton:bip_ring_0_L")
+tracks/27/interp = 1
+tracks/27/loop_wrap = true
+tracks/27/imported = false
+tracks/27/enabled = true
+tracks/27/keys = PoolRealArray( 0, 1, -0.037505, 0.143955, 0.084365, 0.123933, -0.0468033, 0.132146, 0.982338, 1, 1, 1 )
+tracks/28/type = "transform"
+tracks/28/path = NodePath("scoutqc_skeleton/Skeleton:weapon_bone_L")
+tracks/28/interp = 1
+tracks/28/loop_wrap = true
+tracks/28/imported = false
+tracks/28/enabled = true
+tracks/28/keys = PoolRealArray( 0, 1, 1.22786e-05, -2.21729e-05, -1.00136e-05, 1.08779e-06, 3.83704e-07, -5.84871e-07, 1, 1, 1, 1 )
+tracks/29/type = "transform"
+tracks/29/path = NodePath("scoutqc_skeleton/Skeleton:bip_hand_L")
+tracks/29/interp = 1
+tracks/29/loop_wrap = true
+tracks/29/imported = false
+tracks/29/enabled = true
+tracks/29/keys = PoolRealArray( 0, 1, 0.000104964, 9.53674e-07, -3.48091e-05, -0.200643, -0.459624, -0.00859837, 0.865109, 1, 1, 1 )
+tracks/30/type = "transform"
+tracks/30/path = NodePath("scoutqc_skeleton/Skeleton:hlp_forearm_L")
+tracks/30/interp = 1
+tracks/30/loop_wrap = true
+tracks/30/imported = false
+tracks/30/enabled = true
+tracks/30/keys = PoolRealArray( 0, 1, 4.97103e-05, 3.33786e-06, -2.57492e-05, 1.93714e-06, -1.95206e-06, 4.82797e-06, 1, 1, 1, 1 )
+tracks/31/type = "transform"
+tracks/31/path = NodePath("scoutqc_skeleton/Skeleton:bip_lowerArm_L")
+tracks/31/interp = 1
+tracks/31/loop_wrap = true
+tracks/31/imported = false
+tracks/31/enabled = true
+tracks/31/keys = PoolRealArray( 0, 1, -1.14441e-05, 1.90735e-05, 4.57764e-05, 0.379987, 0.701886, -0.379206, -0.468155, 1, 1, 1 )
+tracks/32/type = "transform"
+tracks/32/path = NodePath("scoutqc_skeleton/Skeleton:prp_sleeve_L")
+tracks/32/interp = 1
+tracks/32/loop_wrap = true
+tracks/32/imported = false
+tracks/32/enabled = true
+tracks/32/keys = PoolRealArray( 0, 1, -5.60284e-06, -1.66893e-05, -4.54485e-07, -5.60667e-06, -1.16992e-05, -9.31801e-06, 1, 1, 1, 1 )
+tracks/33/type = "transform"
+tracks/33/path = NodePath("scoutqc_skeleton/Skeleton:bip_bicep_twist_01_L")
+tracks/33/interp = 1
+tracks/33/loop_wrap = true
+tracks/33/imported = false
+tracks/33/enabled = true
+tracks/33/keys = PoolRealArray( 0, 1, -2.52724e-05, 1.19209e-05, 8.46386e-06, -6.51933e-09, 4.787e-07, -1.3113e-06, 1, 1, 1, 1 )
+tracks/34/type = "transform"
+tracks/34/path = NodePath("scoutqc_skeleton/Skeleton:bip_bicep_twist_02_L")
+tracks/34/interp = 1
+tracks/34/loop_wrap = true
+tracks/34/imported = false
+tracks/34/enabled = true
+tracks/34/keys = PoolRealArray( 0, 1, -3.95775e-05, 2.00272e-05, 1.2517e-06, 5.81145e-07, 3.93018e-07, -1.07288e-06, 1, 1, 1, 1 )
+tracks/35/type = "transform"
+tracks/35/path = NodePath("scoutqc_skeleton/Skeleton:bip_upperArm_L")
+tracks/35/interp = 1
+tracks/35/loop_wrap = true
+tracks/35/imported = false
+tracks/35/enabled = true
+tracks/35/keys = PoolRealArray( 0, 1, -0.981511, -0.0598264, 0.818683, 0.337181, 0.818438, 0.251754, -0.391265, 1, 1, 1 )
+tracks/36/type = "transform"
+tracks/36/path = NodePath("scoutqc_skeleton/Skeleton:bip_collar_L")
+tracks/36/interp = 1
+tracks/36/loop_wrap = true
+tracks/36/imported = false
+tracks/36/enabled = true
+tracks/36/keys = PoolRealArray( 0, 1, 1.03712e-05, 5.27501e-06, -7.86781e-06, -0.127246, -0.0077383, 0.122617, 0.984233, 1, 1, 1 )
+tracks/37/type = "transform"
+tracks/37/path = NodePath("scoutqc_skeleton/Skeleton:bip_thumb_2_R")
+tracks/37/interp = 1
+tracks/37/loop_wrap = true
+tracks/37/imported = false
+tracks/37/enabled = true
+tracks/37/keys = PoolRealArray( 0, 1, -5.00679e-06, -3.57628e-07, -1.80006e-05, -4.17232e-07, -1.20141e-06, 7.13393e-07, 1, 1, 1, 1 )
+tracks/38/type = "transform"
+tracks/38/path = NodePath("scoutqc_skeleton/Skeleton:bip_thumb_1_R")
+tracks/38/interp = 1
+tracks/38/loop_wrap = true
+tracks/38/imported = false
+tracks/38/enabled = true
+tracks/38/keys = PoolRealArray( 0, 1, -3.09944e-06, -1.38283e-05, -1.47223e-05, -1.16229e-06, 1.02352e-06, -7.20611e-07, 1, 1, 1, 1 )
+tracks/39/type = "transform"
+tracks/39/path = NodePath("scoutqc_skeleton/Skeleton:bip_thumb_0_R")
+tracks/39/interp = 1
+tracks/39/loop_wrap = true
+tracks/39/imported = false
+tracks/39/enabled = true
+tracks/39/keys = PoolRealArray( 0, 1, 4.35114e-06, -7.15256e-07, 2.6226e-06, 6.02007e-06, -1.77324e-06, -4.35848e-07, 1, 1, 1, 1 )
+tracks/40/type = "transform"
+tracks/40/path = NodePath("scoutqc_skeleton/Skeleton:bip_index_2_R")
+tracks/40/interp = 1
+tracks/40/loop_wrap = true
+tracks/40/imported = false
+tracks/40/enabled = true
+tracks/40/keys = PoolRealArray( 0, 1, 3.57628e-07, 4.17233e-06, -2.43634e-06, -1.84029e-06, -1.80723e-06, 3.72529e-08, 1, 1, 1, 1 )
+tracks/41/type = "transform"
+tracks/41/path = NodePath("scoutqc_skeleton/Skeleton:bip_index_1_R")
+tracks/41/interp = 1
+tracks/41/loop_wrap = true
+tracks/41/imported = false
+tracks/41/enabled = true
+tracks/41/keys = PoolRealArray( 0, 1, -4.05311e-06, 8.34465e-07, -1.07288e-06, 1.69873e-06, 2.22283e-06, 6.7614e-07, 1, 1, 1, 1 )
+tracks/42/type = "transform"
+tracks/42/path = NodePath("scoutqc_skeleton/Skeleton:bip_index_0_R")
+tracks/42/interp = 1
+tracks/42/loop_wrap = true
+tracks/42/imported = false
+tracks/42/enabled = true
+tracks/42/keys = PoolRealArray( 0, 1, -7.15256e-06, 5.24521e-06, 1.03712e-05, -9.28529e-07, -8.63335e-07, -6.2585e-07, 1, 1, 1, 1 )
+tracks/43/type = "transform"
+tracks/43/path = NodePath("scoutqc_skeleton/Skeleton:weapon_bone_1")
+tracks/43/interp = 1
+tracks/43/loop_wrap = true
+tracks/43/imported = false
+tracks/43/enabled = true
+tracks/43/keys = PoolRealArray( 0, 1, 3.09944e-06, -3.09944e-06, 1.66893e-06, -1.44457e-06, -1.70898e-06, 6.18401e-07, 1, 1, 1, 1 )
+tracks/44/type = "transform"
+tracks/44/path = NodePath("scoutqc_skeleton/Skeleton:weapon_bone_2")
+tracks/44/interp = 1
+tracks/44/loop_wrap = true
+tracks/44/imported = false
+tracks/44/enabled = true
+tracks/44/keys = PoolRealArray( 0, 1, 4.29153e-06, -7.39098e-06, -2.14577e-06, 4.65661e-09, -2.32831e-09, 3.70201e-07, 1, 1, 1, 1 )
+tracks/45/type = "transform"
+tracks/45/path = NodePath("scoutqc_skeleton/Skeleton:weapon_bone_3")
+tracks/45/interp = 1
+tracks/45/loop_wrap = true
+tracks/45/imported = false
+tracks/45/enabled = true
+tracks/45/keys = PoolRealArray( 0, 1, 1.66893e-06, -6.19888e-06, 0, 4.65661e-09, -2.32831e-09, 3.70201e-07, 1, 1, 1, 1 )
+tracks/46/type = "transform"
+tracks/46/path = NodePath("scoutqc_skeleton/Skeleton:weapon_bone_4")
+tracks/46/interp = 1
+tracks/46/loop_wrap = true
+tracks/46/imported = false
+tracks/46/enabled = true
+tracks/46/keys = PoolRealArray( 0, 1, -6.91414e-06, -1.20401e-05, 9.53674e-07, 4.65661e-09, -2.32831e-09, 3.70201e-07, 1, 1, 1, 1 )
+tracks/47/type = "transform"
+tracks/47/path = NodePath("scoutqc_skeleton/Skeleton:weapon_bone")
+tracks/47/interp = 1
+tracks/47/loop_wrap = true
+tracks/47/imported = false
+tracks/47/enabled = true
+tracks/47/keys = PoolRealArray( 0, 1, 4.29153e-06, -2.74181e-06, 7.15256e-06, -1.49008e-08, 4.79631e-07, -7.84173e-07, 1, 1, 1, 1 )
+tracks/48/type = "transform"
+tracks/48/path = NodePath("scoutqc_skeleton/Skeleton:bip_middle_2_R")
+tracks/48/interp = 1
+tracks/48/loop_wrap = true
+tracks/48/imported = false
+tracks/48/enabled = true
+tracks/48/keys = PoolRealArray( 0, 1, -2.14577e-06, -5.60284e-06, -4.29153e-06, 9.35048e-07, 7.94418e-07, 1.71363e-07, 1, 1, 1, 1 )
+tracks/49/type = "transform"
+tracks/49/path = NodePath("scoutqc_skeleton/Skeleton:bip_middle_1_R")
+tracks/49/interp = 1
+tracks/49/loop_wrap = true
+tracks/49/imported = false
+tracks/49/enabled = true
+tracks/49/keys = PoolRealArray( 0, 1, 6.31809e-06, -1.90735e-06, -2.14577e-06, 1.63912e-07, -2.44006e-07, -1.1418e-06, 1, 1, 1, 1 )
+tracks/50/type = "transform"
+tracks/50/path = NodePath("scoutqc_skeleton/Skeleton:bip_middle_0_R")
+tracks/50/interp = 1
+tracks/50/loop_wrap = true
+tracks/50/imported = false
+tracks/50/enabled = true
+tracks/50/keys = PoolRealArray( 0, 1, -7.7486e-06, 3.33786e-06, 1.03712e-05, 2.74739e-07, 5.55069e-07, 2.11596e-06, 1, 1, 1, 1 )
+tracks/51/type = "transform"
+tracks/51/path = NodePath("scoutqc_skeleton/Skeleton:bip_pinky_2_R")
+tracks/51/interp = 1
+tracks/51/loop_wrap = true
+tracks/51/imported = false
+tracks/51/enabled = true
+tracks/51/keys = PoolRealArray( 0, 1, -3.09944e-06, 9.53674e-06, -3.33786e-06, 3.8743e-06, 4.64031e-06, 1.00641e-06, 1, 1, 1, 1 )
+tracks/52/type = "transform"
+tracks/52/path = NodePath("scoutqc_skeleton/Skeleton:bip_pinky_1_R")
+tracks/52/interp = 1
+tracks/52/loop_wrap = true
+tracks/52/imported = false
+tracks/52/enabled = true
+tracks/52/keys = PoolRealArray( 0, 1, -1.57952e-06, 3.33786e-06, -4.76837e-06, -7.15255e-07, -9.31322e-08, 1.11689e-06, 1, 1, 1, 1 )
+tracks/53/type = "transform"
+tracks/53/path = NodePath("scoutqc_skeleton/Skeleton:bip_pinky_0_R")
+tracks/53/interp = 1
+tracks/53/loop_wrap = true
+tracks/53/imported = false
+tracks/53/enabled = true
+tracks/53/keys = PoolRealArray( 0, 1, -8.82149e-06, 0, 1.0252e-05, 1.49384e-06, 1.49757e-06, -2.98046e-08, 1, 1, 1, 1 )
+tracks/54/type = "transform"
+tracks/54/path = NodePath("scoutqc_skeleton/Skeleton:bip_ring_2_R")
+tracks/54/interp = 1
+tracks/54/loop_wrap = true
+tracks/54/imported = false
+tracks/54/enabled = true
+tracks/54/keys = PoolRealArray( 0, 1, -2.68221e-06, 1.19209e-07, 8.13603e-06, 2.86102e-06, 3.06498e-06, -2.03028e-07, 1, 1, 1, 1 )
+tracks/55/type = "transform"
+tracks/55/path = NodePath("scoutqc_skeleton/Skeleton:bip_ring_1_R")
+tracks/55/interp = 1
+tracks/55/loop_wrap = true
+tracks/55/imported = false
+tracks/55/enabled = true
+tracks/55/keys = PoolRealArray( 0, 1, 1.3113e-06, 2.98023e-06, 6.67572e-06, -1.35601e-06, -2.55555e-06, -1.77883e-06, 1, 1, 1, 1 )
+tracks/56/type = "transform"
+tracks/56/path = NodePath("scoutqc_skeleton/Skeleton:bip_ring_0_R")
+tracks/56/interp = 1
+tracks/56/loop_wrap = true
+tracks/56/imported = false
+tracks/56/enabled = true
+tracks/56/keys = PoolRealArray( 0, 1, -3.8147e-06, 4.76837e-07, 2.26498e-06, -1.50502e-06, -1.16229e-06, 1.46776e-06, 1, 1, 1, 1 )
+tracks/57/type = "transform"
+tracks/57/path = NodePath("scoutqc_skeleton/Skeleton:bip_hand_R")
+tracks/57/interp = 1
+tracks/57/loop_wrap = true
+tracks/57/imported = false
+tracks/57/enabled = true
+tracks/57/keys = PoolRealArray( 0, 1, 1.96696e-06, 1.23978e-05, 7.05719e-05, 0.155632, -0.0667338, -0.0311975, 0.985064, 1, 1, 1 )
+tracks/58/type = "transform"
+tracks/58/path = NodePath("scoutqc_skeleton/Skeleton:hlp_forearm_R")
+tracks/58/interp = 1
+tracks/58/loop_wrap = true
+tracks/58/imported = false
+tracks/58/enabled = true
+tracks/58/keys = PoolRealArray( 0, 1, -5.54322e-06, 5.72205e-06, 3.38554e-05, 3.18885e-06, 2.23517e-07, 1.78814e-07, 1, 1, 1, 1 )
+tracks/59/type = "transform"
+tracks/59/path = NodePath("scoutqc_skeleton/Skeleton:bip_lowerArm_R")
+tracks/59/interp = 1
+tracks/59/loop_wrap = true
+tracks/59/imported = false
+tracks/59/enabled = true
+tracks/59/keys = PoolRealArray( 0, 1, -2.67029e-05, 4.43459e-05, 6.67574e-06, 0.00900934, -0.284758, 0.21165, 0.934899, 1, 1, 1 )
+tracks/60/type = "transform"
+tracks/60/path = NodePath("scoutqc_skeleton/Skeleton:prp_sleeve_R")
+tracks/60/interp = 1
+tracks/60/loop_wrap = true
+tracks/60/imported = false
+tracks/60/enabled = true
+tracks/60/keys = PoolRealArray( 0, 1, 1.21593e-05, 1.66893e-05, -1.05426e-06, -5.61764e-06, 8.30933e-06, -1.17353e-05, 1, 1, 1, 1 )
+tracks/61/type = "transform"
+tracks/61/path = NodePath("scoutqc_skeleton/Skeleton:bip_bicep_twist_01_R")
+tracks/61/interp = 1
+tracks/61/loop_wrap = true
+tracks/61/imported = false
+tracks/61/enabled = true
+tracks/61/keys = PoolRealArray( 0, 1, 3.8147e-06, 2.14577e-05, 1.52588e-05, 2.5928e-06, -1.08779e-06, 2.38416e-07, 1, 1, 1, 1 )
+tracks/62/type = "transform"
+tracks/62/path = NodePath("scoutqc_skeleton/Skeleton:bip_bicep_twist_02_R")
+tracks/62/interp = 1
+tracks/62/loop_wrap = true
+tracks/62/imported = false
+tracks/62/enabled = true
+tracks/62/keys = PoolRealArray( 0, 1, 4.76837e-06, -1.90735e-06, 3.71933e-05, 3.09944e-06, -1.10269e-06, 5.96043e-07, 1, 1, 1, 1 )
+tracks/63/type = "transform"
+tracks/63/path = NodePath("scoutqc_skeleton/Skeleton:bip_upperArm_R")
+tracks/63/interp = 1
+tracks/63/loop_wrap = true
+tracks/63/imported = false
+tracks/63/enabled = true
+tracks/63/keys = PoolRealArray( 0, 1, 0.950061, 0.848619, 0.120529, 0.476042, 0.21712, 0.0287847, 0.851713, 1, 1, 1 )
+tracks/64/type = "transform"
+tracks/64/path = NodePath("scoutqc_skeleton/Skeleton:bip_collar_R")
+tracks/64/interp = 1
+tracks/64/loop_wrap = true
+tracks/64/imported = false
+tracks/64/enabled = true
+tracks/64/keys = PoolRealArray( 0, 1, -2.00272e-05, 1.37091e-06, 5.48363e-06, -0.0102206, 0.0154314, 0.0473075, 0.998709, 1, 1, 1 )
+tracks/65/type = "transform"
+tracks/65/path = NodePath("scoutqc_skeleton/Skeleton:bip_spine_3")
+tracks/65/interp = 1
+tracks/65/loop_wrap = true
+tracks/65/imported = false
+tracks/65/enabled = true
+tracks/65/keys = PoolRealArray( 0, 1, 5.96046e-07, 1.43051e-06, 6.19888e-06, 0.0035302, -0.120452, 0.119342, 0.985513, 1, 1, 1 )
+tracks/66/type = "transform"
+tracks/66/path = NodePath("scoutqc_skeleton/Skeleton:bip_packbottom")
+tracks/66/interp = 1
+tracks/66/loop_wrap = true
+tracks/66/imported = false
+tracks/66/enabled = true
+tracks/66/keys = PoolRealArray( 0, 1, -6.67572e-06, 1.90735e-06, 1.81794e-05, -3.46219e-06, 9.22009e-07, 3.47011e-06, 1, 1, 1, 1 )
+tracks/67/type = "transform"
+tracks/67/path = NodePath("scoutqc_skeleton/Skeleton:bip_packmiddle")
+tracks/67/interp = 1
+tracks/67/loop_wrap = true
+tracks/67/imported = false
+tracks/67/enabled = true
+tracks/67/keys = PoolRealArray( 0, 1, -0.000166416, -3.91006e-05, 1.52588e-05, -7.59969e-07, -9.59261e-07, -1.03656e-05, 1, 1, 1, 1 )
+tracks/68/type = "transform"
+tracks/68/path = NodePath("scoutqc_skeleton/Skeleton:bip_packtop")
+tracks/68/interp = 1
+tracks/68/loop_wrap = true
+tracks/68/imported = false
+tracks/68/enabled = true
+tracks/68/keys = PoolRealArray( 0, 1, 3.57628e-07, -1.00136e-05, -9.53674e-06, 1.3038e-06, 7.89762e-06, 6.67571e-06, 1, 1, 1, 1 )
+tracks/69/type = "transform"
+tracks/69/path = NodePath("scoutqc_skeleton/Skeleton:medal_bone")
+tracks/69/interp = 1
+tracks/69/loop_wrap = true
+tracks/69/imported = false
+tracks/69/enabled = true
+tracks/69/keys = PoolRealArray( 0, 1, -1.07288e-06, 1.0252e-05, -8.10623e-06, 4.76837e-07, 7.45057e-08, -2.58908e-07, 1, 1, 1, 0.999995 )
+tracks/70/type = "transform"
+tracks/70/path = NodePath("scoutqc_skeleton/Skeleton:bip_spine_2")
+tracks/70/interp = 1
+tracks/70/loop_wrap = true
+tracks/70/imported = false
+tracks/70/enabled = true
+tracks/70/keys = PoolRealArray( 0, 1, 4.76837e-07, -1.19209e-05, -4.95911e-05, -0.037644, 0.00145759, -0.0171381, 0.999143, 1, 1, 1 )
+tracks/71/type = "transform"
+tracks/71/path = NodePath("scoutqc_skeleton/Skeleton:bip_spine_1")
+tracks/71/interp = 1
+tracks/71/loop_wrap = true
+tracks/71/imported = false
+tracks/71/enabled = true
+tracks/71/keys = PoolRealArray( 0, 1, 4.76837e-07, -5.24521e-06, -5.53429e-05, 0.0214157, 0.0138494, -0.00642514, 0.999654, 1, 1, 1 )
+tracks/72/type = "transform"
+tracks/72/path = NodePath("scoutqc_skeleton/Skeleton:bip_spine_0")
+tracks/72/interp = 1
+tracks/72/loop_wrap = true
+tracks/72/imported = false
+tracks/72/enabled = true
+tracks/72/keys = PoolRealArray( 0, 1, -9.53674e-07, -1.90735e-06, 2.20537e-06, 0.0699606, -0.0313527, 0.0578965, 0.995375, 1, 1, 1 )
+tracks/73/type = "transform"
+tracks/73/path = NodePath("scoutqc_skeleton/Skeleton:bip_toe_R")
+tracks/73/interp = 1
+tracks/73/loop_wrap = true
+tracks/73/imported = false
+tracks/73/enabled = true
+tracks/73/keys = PoolRealArray( 0, 1, -2.83718e-05, -2.3365e-05, 2.98023e-05, 3.03984e-06, -3.1963e-06, 1.00792e-06, 1, 1, 1, 1 )
+tracks/74/type = "transform"
+tracks/74/path = NodePath("scoutqc_skeleton/Skeleton:bip_foot_R")
+tracks/74/interp = 1
+tracks/74/loop_wrap = true
+tracks/74/imported = false
+tracks/74/enabled = true
+tracks/74/keys = PoolRealArray( 0, 1, -6.4373e-06, 5.24521e-05, -4.3869e-05, 0.345676, -0.1448, -0.0533525, 0.925578, 1, 1, 1 )
+tracks/75/type = "transform"
+tracks/75/path = NodePath("scoutqc_skeleton/Skeleton:bip_knee_R")
+tracks/75/interp = 1
+tracks/75/loop_wrap = true
+tracks/75/imported = false
+tracks/75/enabled = true
+tracks/75/keys = PoolRealArray( 0, 1, -3.05176e-05, -1.3113e-06, 3.8147e-05, -0.0202186, 0.0899838, -0.0760789, 0.992827, 1, 1, 1 )
+tracks/76/type = "transform"
+tracks/76/path = NodePath("scoutqc_skeleton/Skeleton:bip_hip_R")
+tracks/76/interp = 1
+tracks/76/loop_wrap = true
+tracks/76/imported = false
+tracks/76/enabled = true
+tracks/76/keys = PoolRealArray( 0, 1, -0.031101, 0.0725231, -0.0184278, 0.0997732, -0.11946, -0.470543, 0.868541, 1, 1, 1 )
+tracks/77/type = "transform"
+tracks/77/path = NodePath("scoutqc_skeleton/Skeleton:bip_toe_L")
+tracks/77/interp = 1
+tracks/77/loop_wrap = true
+tracks/77/imported = false
+tracks/77/enabled = true
+tracks/77/keys = PoolRealArray( 0, 1, 1.45435e-05, 5.19753e-05, -5.8651e-05, 5.91576e-06, -7.7486e-07, 5.36442e-07, 1, 1, 1, 1 )
+tracks/78/type = "transform"
+tracks/78/path = NodePath("scoutqc_skeleton/Skeleton:bip_foot_L")
+tracks/78/interp = 1
+tracks/78/loop_wrap = true
+tracks/78/imported = false
+tracks/78/enabled = true
+tracks/78/keys = PoolRealArray( 0, 1, -0.000149488, 3.14713e-05, -3.24249e-05, 0.221065, -0.0954424, -0.0304137, 0.970101, 1, 1, 1 )
+tracks/79/type = "transform"
+tracks/79/path = NodePath("scoutqc_skeleton/Skeleton:bip_knee_L")
+tracks/79/interp = 1
+tracks/79/loop_wrap = true
+tracks/79/imported = false
+tracks/79/enabled = true
+tracks/79/keys = PoolRealArray( 0, 1, -2.47955e-05, -0.000158787, 0.000103951, 0.135266, 0.135909, 0.0524668, 0.98004, 1, 1, 1 )
+tracks/80/type = "transform"
+tracks/80/path = NodePath("scoutqc_skeleton/Skeleton:bip_hip_L")
+tracks/80/interp = 1
+tracks/80/loop_wrap = true
+tracks/80/imported = false
+tracks/80/enabled = true
+tracks/80/keys = PoolRealArray( 0, 1, -0.0140741, 0.045593, -0.254952, -0.359949, -0.487532, -0.144258, 0.782265, 1, 1, 1 )
+tracks/81/type = "transform"
+tracks/81/path = NodePath("scoutqc_skeleton/Skeleton:mvm")
+tracks/81/interp = 1
+tracks/81/loop_wrap = true
+tracks/81/imported = false
+tracks/81/enabled = true
+tracks/81/keys = PoolRealArray( 0, 1, -1.66893e-06, -3.57628e-06, -9.53674e-07, 2.83122e-06, 7.15248e-07, -2.47359e-06, 1, 1, 1, 1 )
+tracks/82/type = "transform"
+tracks/82/path = NodePath("scoutqc_skeleton/Skeleton:bip_pelvis")
+tracks/82/interp = 1
+tracks/82/loop_wrap = true
+tracks/82/imported = false
+tracks/82/enabled = true
+tracks/82/keys = PoolRealArray( 0, 1, -2.47485, 6.07459, 32.6178, -0.263081, -0.0923196, -0.132899, 0.951106, 1, 1, 1 )
 
 [sub_resource type="Animation" id=9]
 resource_name = "lounge"
@@ -1522,198 +2761,6 @@ tracks/90/loop_wrap = true
 tracks/90/imported = false
 tracks/90/enabled = true
 tracks/90/keys = PoolRealArray( 0, 1, -2.47485, 6.07459, 32.6178, -0.263081, -0.0923196, -0.132899, 0.951106, 1, 1, 1 )
-tracks/91/type = "value"
-tracks/91/path = NodePath("scoutqc_skeleton/Skeleton/scout_morphs_sfm:blend_shapes/A_CompressLipsL+CompressLipsR")
-tracks/91/interp = 1
-tracks/91/loop_wrap = true
-tracks/91/imported = false
-tracks/91/enabled = true
-tracks/91/keys = {
-"times": PoolRealArray( 0 ),
-"transitions": PoolRealArray( 1 ),
-"update": 0,
-"values": [ 0.0 ]
-}
-tracks/92/type = "value"
-tracks/92/path = NodePath("scoutqc_skeleton/Skeleton/scout_morphs_sfm:blend_shapes/B_OpenLips_OpenLowerLip_SmileFull_ZipLip100L+OpenLips_Ope")
-tracks/92/interp = 1
-tracks/92/loop_wrap = true
-tracks/92/imported = false
-tracks/92/enabled = true
-tracks/92/keys = {
-"times": PoolRealArray( 0 ),
-"transitions": PoolRealArray( 1 ),
-"update": 0,
-"values": [ 0.0 ]
-}
-tracks/93/type = "value"
-tracks/93/path = NodePath("scoutqc_skeleton/Skeleton/scout_morphs_sfm:blend_shapes/B_SmileFullL+SmileFullR")
-tracks/93/interp = 1
-tracks/93/loop_wrap = true
-tracks/93/imported = false
-tracks/93/enabled = true
-tracks/93/keys = {
-"times": PoolRealArray( 0 ),
-"transitions": PoolRealArray( 1 ),
-"update": 0,
-"values": [ 0.0 ]
-}
-tracks/94/type = "value"
-tracks/94/path = NodePath("scoutqc_skeleton/Skeleton/scout_morphs_sfm:blend_shapes/C_OpenJaw")
-tracks/94/interp = 1
-tracks/94/loop_wrap = true
-tracks/94/imported = false
-tracks/94/enabled = true
-tracks/94/keys = {
-"times": PoolRealArray( 0 ),
-"transitions": PoolRealArray( 1 ),
-"update": 0,
-"values": [ 0.0 ]
-}
-tracks/95/type = "value"
-tracks/95/path = NodePath("scoutqc_skeleton/Skeleton/scout_morphs_sfm:blend_shapes/D_OpenLipsL+OpenLipsR")
-tracks/95/interp = 1
-tracks/95/loop_wrap = true
-tracks/95/imported = false
-tracks/95/enabled = true
-tracks/95/keys = {
-"times": PoolRealArray( 0 ),
-"transitions": PoolRealArray( 1 ),
-"update": 0,
-"values": [ 0.0 ]
-}
-tracks/96/type = "value"
-tracks/96/path = NodePath("scoutqc_skeleton/Skeleton/scout_morphs_sfm:blend_shapes/D_FunnelLipLoL+FunnelLipLoR")
-tracks/96/interp = 1
-tracks/96/loop_wrap = true
-tracks/96/imported = false
-tracks/96/enabled = true
-tracks/96/keys = {
-"times": PoolRealArray( 0 ),
-"transitions": PoolRealArray( 1 ),
-"update": 0,
-"values": [ 0.0 ]
-}
-tracks/97/type = "value"
-tracks/97/path = NodePath("scoutqc_skeleton/Skeleton/scout_morphs_sfm:blend_shapes/D_OpenUpperLip_ZipLip25L+OpenUpperLip_ZipLip25R")
-tracks/97/interp = 1
-tracks/97/loop_wrap = true
-tracks/97/imported = false
-tracks/97/enabled = true
-tracks/97/keys = {
-"times": PoolRealArray( 0 ),
-"transitions": PoolRealArray( 1 ),
-"update": 0,
-"values": [ 0.0 ]
-}
-tracks/98/type = "value"
-tracks/98/path = NodePath("scoutqc_skeleton/Skeleton/scout_morphs_sfm:blend_shapes/D_OpenJaw_OpenLips_PuckerLipLo_ZipLip100L+OpenJaw_OpenLips_Puck")
-tracks/98/interp = 1
-tracks/98/loop_wrap = true
-tracks/98/imported = false
-tracks/98/enabled = true
-tracks/98/keys = {
-"times": PoolRealArray( 0 ),
-"transitions": PoolRealArray( 1 ),
-"update": 0,
-"values": [ 0.0 ]
-}
-tracks/99/type = "value"
-tracks/99/path = NodePath("scoutqc_skeleton/Skeleton/scout_morphs_sfm:blend_shapes/E_Platysmus_SmileFullL+Platysmus_SmileFul")
-tracks/99/interp = 1
-tracks/99/loop_wrap = true
-tracks/99/imported = false
-tracks/99/enabled = true
-tracks/99/keys = {
-"times": PoolRealArray( 0 ),
-"transitions": PoolRealArray( 1 ),
-"update": 0,
-"values": [ 0.0 ]
-}
-tracks/100/type = "value"
-tracks/100/path = NodePath("scoutqc_skeleton/Skeleton/scout_morphs_sfm:blend_shapes/F_TongueBack")
-tracks/100/interp = 1
-tracks/100/loop_wrap = true
-tracks/100/imported = false
-tracks/100/enabled = true
-tracks/100/keys = {
-"times": PoolRealArray( 0 ),
-"transitions": PoolRealArray( 1 ),
-"update": 0,
-"values": [ 0.0 ]
-}
-tracks/101/type = "value"
-tracks/101/path = NodePath("scoutqc_skeleton/Skeleton/scout_morphs_sfm:blend_shapes/F_OpenLowerLip_OpenUpperLip_Platysmus_SmileFullL+OpenLowerLip_O")
-tracks/101/interp = 1
-tracks/101/loop_wrap = true
-tracks/101/imported = false
-tracks/101/enabled = true
-tracks/101/keys = {
-"times": PoolRealArray( 0 ),
-"transitions": PoolRealArray( 1 ),
-"update": 0,
-"values": [ 0.0 ]
-}
-tracks/102/type = "value"
-tracks/102/path = NodePath("scoutqc_skeleton/Skeleton/scout_morphs_sfm:blend_shapes/F_OpenLips_OpenUpperLip_ZipLip100L+OpenLips_OpenUpperLip_ZipLip")
-tracks/102/interp = 1
-tracks/102/loop_wrap = true
-tracks/102/imported = false
-tracks/102/enabled = true
-tracks/102/keys = {
-"times": PoolRealArray( 0 ),
-"transitions": PoolRealArray( 1 ),
-"update": 0,
-"values": [ 0.0 ]
-}
-tracks/103/type = "value"
-tracks/103/path = NodePath("scoutqc_skeleton/Skeleton/scout_morphs_sfm:blend_shapes/F_OpenJaw_OpenLips_PuckerLipUp_ZipLip100L+OpenJaw_OpenLips_Puck")
-tracks/103/interp = 1
-tracks/103/loop_wrap = true
-tracks/103/imported = false
-tracks/103/enabled = true
-tracks/103/keys = {
-"times": PoolRealArray( 0 ),
-"transitions": PoolRealArray( 1 ),
-"update": 0,
-"values": [ 0.0 ]
-}
-tracks/104/type = "value"
-tracks/104/path = NodePath("scoutqc_skeleton/Skeleton/scout_morphs_sfm:blend_shapes/G_SuckJaw")
-tracks/104/interp = 1
-tracks/104/loop_wrap = true
-tracks/104/imported = false
-tracks/104/enabled = true
-tracks/104/keys = {
-"times": PoolRealArray( 0 ),
-"transitions": PoolRealArray( 1 ),
-"update": 0,
-"values": [ 0.0 ]
-}
-tracks/105/type = "value"
-tracks/105/path = NodePath("scoutqc_skeleton/Skeleton/scout_morphs_sfm:blend_shapes/G_SuckLipLoL+SuckLipLoR")
-tracks/105/interp = 1
-tracks/105/loop_wrap = true
-tracks/105/imported = false
-tracks/105/enabled = true
-tracks/105/keys = {
-"times": PoolRealArray( 0 ),
-"transitions": PoolRealArray( 1 ),
-"update": 0,
-"values": [ 0.0 ]
-}
-tracks/106/type = "value"
-tracks/106/path = NodePath("scoutqc_skeleton/Skeleton/scout_morphs_sfm:blend_shapes/H_TongueV")
-tracks/106/interp = 1
-tracks/106/loop_wrap = true
-tracks/106/imported = false
-tracks/106/enabled = true
-tracks/106/keys = {
-"times": PoolRealArray( 0 ),
-"transitions": PoolRealArray( 1 ),
-"update": 0,
-"values": [ 0.0 ]
-}
 
 [sub_resource type="Animation" id=11]
 resource_name = "page_flip"
@@ -2356,198 +3403,6 @@ tracks/90/loop_wrap = true
 tracks/90/imported = false
 tracks/90/enabled = true
 tracks/90/keys = PoolRealArray( 0, 1, -7.50857, 9.10998, 24.3591, -0.0493394, 0.0380318, -0.0520511, 0.9967, 1, 1, 1, 1.66667, 1, -7.50857, 9.10998, 24.3591, -0.0493394, 0.0380318, -0.0520511, 0.9967, 1, 1, 1 )
-tracks/91/type = "value"
-tracks/91/path = NodePath("scoutqc_skeleton/Skeleton/scout_morphs_sfm:blend_shapes/A_CompressLipsL+CompressLipsR")
-tracks/91/interp = 1
-tracks/91/loop_wrap = true
-tracks/91/imported = false
-tracks/91/enabled = true
-tracks/91/keys = {
-"times": PoolRealArray( 0, 0.0416667, 0.0833333, 0.125, 0.166667, 0.208333, 0.25, 0.291667, 0.333333, 0.375, 0.416667, 0.458333, 0.5, 0.541667, 0.583333, 0.625, 0.666667, 0.708333, 0.75, 0.791667, 0.833333, 0.875, 0.916667, 0.958333, 1, 1.04167, 1.08333, 1.125, 1.16667, 1.20833, 1.25, 1.29167, 1.33333, 1.375, 1.41667, 1.45833, 1.5, 1.54167, 1.58333, 1.625, 1.66667 ),
-"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 ),
-"update": 0,
-"values": [ 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0 ]
-}
-tracks/92/type = "value"
-tracks/92/path = NodePath("scoutqc_skeleton/Skeleton/scout_morphs_sfm:blend_shapes/B_OpenLips_OpenLowerLip_SmileFull_ZipLip100L+OpenLips_Ope")
-tracks/92/interp = 1
-tracks/92/loop_wrap = true
-tracks/92/imported = false
-tracks/92/enabled = true
-tracks/92/keys = {
-"times": PoolRealArray( 0, 0.0416667, 0.0833333, 0.125, 0.166667, 0.208333, 0.25, 0.291667, 0.333333, 0.375, 0.416667, 0.458333, 0.5, 0.541667, 0.583333, 0.625, 0.666667, 0.708333, 0.75, 0.791667, 0.833333, 0.875, 0.916667, 0.958333, 1, 1.04167, 1.08333, 1.125, 1.16667, 1.20833, 1.25, 1.29167, 1.33333, 1.375, 1.41667, 1.45833, 1.5, 1.54167, 1.58333, 1.625, 1.66667 ),
-"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 ),
-"update": 0,
-"values": [ 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0 ]
-}
-tracks/93/type = "value"
-tracks/93/path = NodePath("scoutqc_skeleton/Skeleton/scout_morphs_sfm:blend_shapes/B_SmileFullL+SmileFullR")
-tracks/93/interp = 1
-tracks/93/loop_wrap = true
-tracks/93/imported = false
-tracks/93/enabled = true
-tracks/93/keys = {
-"times": PoolRealArray( 0, 0.0416667, 0.0833333, 0.125, 0.166667, 0.208333, 0.25, 0.291667, 0.333333, 0.375, 0.416667, 0.458333, 0.5, 0.541667, 0.583333, 0.625, 0.666667, 0.708333, 0.75, 0.791667, 0.833333, 0.875, 0.916667, 0.958333, 1, 1.04167, 1.08333, 1.125, 1.16667, 1.20833, 1.25, 1.29167, 1.33333, 1.375, 1.41667, 1.45833, 1.5, 1.54167, 1.58333, 1.625, 1.66667 ),
-"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 ),
-"update": 0,
-"values": [ 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0 ]
-}
-tracks/94/type = "value"
-tracks/94/path = NodePath("scoutqc_skeleton/Skeleton/scout_morphs_sfm:blend_shapes/C_OpenJaw")
-tracks/94/interp = 1
-tracks/94/loop_wrap = true
-tracks/94/imported = false
-tracks/94/enabled = true
-tracks/94/keys = {
-"times": PoolRealArray( 0, 0.0416667, 0.0833333, 0.125, 0.166667, 0.208333, 0.25, 0.291667, 0.333333, 0.375, 0.416667, 0.458333, 0.5, 0.541667, 0.583333, 0.625, 0.666667, 0.708333, 0.75, 0.791667, 0.833333, 0.875, 0.916667, 0.958333, 1, 1.04167, 1.08333, 1.125, 1.16667, 1.20833, 1.25, 1.29167, 1.33333, 1.375, 1.41667, 1.45833, 1.5, 1.54167, 1.58333, 1.625, 1.66667 ),
-"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 ),
-"update": 0,
-"values": [ 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0 ]
-}
-tracks/95/type = "value"
-tracks/95/path = NodePath("scoutqc_skeleton/Skeleton/scout_morphs_sfm:blend_shapes/D_OpenLipsL+OpenLipsR")
-tracks/95/interp = 1
-tracks/95/loop_wrap = true
-tracks/95/imported = false
-tracks/95/enabled = true
-tracks/95/keys = {
-"times": PoolRealArray( 0, 0.0416667, 0.0833333, 0.125, 0.166667, 0.208333, 0.25, 0.291667, 0.333333, 0.375, 0.416667, 0.458333, 0.5, 0.541667, 0.583333, 0.625, 0.666667, 0.708333, 0.75, 0.791667, 0.833333, 0.875, 0.916667, 0.958333, 1, 1.04167, 1.08333, 1.125, 1.16667, 1.20833, 1.25, 1.29167, 1.33333, 1.375, 1.41667, 1.45833, 1.5, 1.54167, 1.58333, 1.625, 1.66667 ),
-"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 ),
-"update": 0,
-"values": [ 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0 ]
-}
-tracks/96/type = "value"
-tracks/96/path = NodePath("scoutqc_skeleton/Skeleton/scout_morphs_sfm:blend_shapes/D_FunnelLipLoL+FunnelLipLoR")
-tracks/96/interp = 1
-tracks/96/loop_wrap = true
-tracks/96/imported = false
-tracks/96/enabled = true
-tracks/96/keys = {
-"times": PoolRealArray( 0, 0.0416667, 0.0833333, 0.125, 0.166667, 0.208333, 0.25, 0.291667, 0.333333, 0.375, 0.416667, 0.458333, 0.5, 0.541667, 0.583333, 0.625, 0.666667, 0.708333, 0.75, 0.791667, 0.833333, 0.875, 0.916667, 0.958333, 1, 1.04167, 1.08333, 1.125, 1.16667, 1.20833, 1.25, 1.29167, 1.33333, 1.375, 1.41667, 1.45833, 1.5, 1.54167, 1.58333, 1.625, 1.66667 ),
-"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 ),
-"update": 0,
-"values": [ 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0 ]
-}
-tracks/97/type = "value"
-tracks/97/path = NodePath("scoutqc_skeleton/Skeleton/scout_morphs_sfm:blend_shapes/D_OpenUpperLip_ZipLip25L+OpenUpperLip_ZipLip25R")
-tracks/97/interp = 1
-tracks/97/loop_wrap = true
-tracks/97/imported = false
-tracks/97/enabled = true
-tracks/97/keys = {
-"times": PoolRealArray( 0, 0.0416667, 0.0833333, 0.125, 0.166667, 0.208333, 0.25, 0.291667, 0.333333, 0.375, 0.416667, 0.458333, 0.5, 0.541667, 0.583333, 0.625, 0.666667, 0.708333, 0.75, 0.791667, 0.833333, 0.875, 0.916667, 0.958333, 1, 1.04167, 1.08333, 1.125, 1.16667, 1.20833, 1.25, 1.29167, 1.33333, 1.375, 1.41667, 1.45833, 1.5, 1.54167, 1.58333, 1.625, 1.66667 ),
-"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 ),
-"update": 0,
-"values": [ 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0 ]
-}
-tracks/98/type = "value"
-tracks/98/path = NodePath("scoutqc_skeleton/Skeleton/scout_morphs_sfm:blend_shapes/D_OpenJaw_OpenLips_PuckerLipLo_ZipLip100L+OpenJaw_OpenLips_Puck")
-tracks/98/interp = 1
-tracks/98/loop_wrap = true
-tracks/98/imported = false
-tracks/98/enabled = true
-tracks/98/keys = {
-"times": PoolRealArray( 0, 0.0416667, 0.0833333, 0.125, 0.166667, 0.208333, 0.25, 0.291667, 0.333333, 0.375, 0.416667, 0.458333, 0.5, 0.541667, 0.583333, 0.625, 0.666667, 0.708333, 0.75, 0.791667, 0.833333, 0.875, 0.916667, 0.958333, 1, 1.04167, 1.08333, 1.125, 1.16667, 1.20833, 1.25, 1.29167, 1.33333, 1.375, 1.41667, 1.45833, 1.5, 1.54167, 1.58333, 1.625, 1.66667 ),
-"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 ),
-"update": 0,
-"values": [ 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0 ]
-}
-tracks/99/type = "value"
-tracks/99/path = NodePath("scoutqc_skeleton/Skeleton/scout_morphs_sfm:blend_shapes/E_Platysmus_SmileFullL+Platysmus_SmileFul")
-tracks/99/interp = 1
-tracks/99/loop_wrap = true
-tracks/99/imported = false
-tracks/99/enabled = true
-tracks/99/keys = {
-"times": PoolRealArray( 0, 0.0416667, 0.0833333, 0.125, 0.166667, 0.208333, 0.25, 0.291667, 0.333333, 0.375, 0.416667, 0.458333, 0.5, 0.541667, 0.583333, 0.625, 0.666667, 0.708333, 0.75, 0.791667, 0.833333, 0.875, 0.916667, 0.958333, 1, 1.04167, 1.08333, 1.125, 1.16667, 1.20833, 1.25, 1.29167, 1.33333, 1.375, 1.41667, 1.45833, 1.5, 1.54167, 1.58333, 1.625, 1.66667 ),
-"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 ),
-"update": 0,
-"values": [ 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0 ]
-}
-tracks/100/type = "value"
-tracks/100/path = NodePath("scoutqc_skeleton/Skeleton/scout_morphs_sfm:blend_shapes/F_TongueBack")
-tracks/100/interp = 1
-tracks/100/loop_wrap = true
-tracks/100/imported = false
-tracks/100/enabled = true
-tracks/100/keys = {
-"times": PoolRealArray( 0, 0.0416667, 0.0833333, 0.125, 0.166667, 0.208333, 0.25, 0.291667, 0.333333, 0.375, 0.416667, 0.458333, 0.5, 0.541667, 0.583333, 0.625, 0.666667, 0.708333, 0.75, 0.791667, 0.833333, 0.875, 0.916667, 0.958333, 1, 1.04167, 1.08333, 1.125, 1.16667, 1.20833, 1.25, 1.29167, 1.33333, 1.375, 1.41667, 1.45833, 1.5, 1.54167, 1.58333, 1.625, 1.66667 ),
-"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 ),
-"update": 0,
-"values": [ 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0 ]
-}
-tracks/101/type = "value"
-tracks/101/path = NodePath("scoutqc_skeleton/Skeleton/scout_morphs_sfm:blend_shapes/F_OpenLowerLip_OpenUpperLip_Platysmus_SmileFullL+OpenLowerLip_O")
-tracks/101/interp = 1
-tracks/101/loop_wrap = true
-tracks/101/imported = false
-tracks/101/enabled = true
-tracks/101/keys = {
-"times": PoolRealArray( 0, 0.0416667, 0.0833333, 0.125, 0.166667, 0.208333, 0.25, 0.291667, 0.333333, 0.375, 0.416667, 0.458333, 0.5, 0.541667, 0.583333, 0.625, 0.666667, 0.708333, 0.75, 0.791667, 0.833333, 0.875, 0.916667, 0.958333, 1, 1.04167, 1.08333, 1.125, 1.16667, 1.20833, 1.25, 1.29167, 1.33333, 1.375, 1.41667, 1.45833, 1.5, 1.54167, 1.58333, 1.625, 1.66667 ),
-"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 ),
-"update": 0,
-"values": [ 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0 ]
-}
-tracks/102/type = "value"
-tracks/102/path = NodePath("scoutqc_skeleton/Skeleton/scout_morphs_sfm:blend_shapes/F_OpenLips_OpenUpperLip_ZipLip100L+OpenLips_OpenUpperLip_ZipLip")
-tracks/102/interp = 1
-tracks/102/loop_wrap = true
-tracks/102/imported = false
-tracks/102/enabled = true
-tracks/102/keys = {
-"times": PoolRealArray( 0, 0.0416667, 0.0833333, 0.125, 0.166667, 0.208333, 0.25, 0.291667, 0.333333, 0.375, 0.416667, 0.458333, 0.5, 0.541667, 0.583333, 0.625, 0.666667, 0.708333, 0.75, 0.791667, 0.833333, 0.875, 0.916667, 0.958333, 1, 1.04167, 1.08333, 1.125, 1.16667, 1.20833, 1.25, 1.29167, 1.33333, 1.375, 1.41667, 1.45833, 1.5, 1.54167, 1.58333, 1.625, 1.66667 ),
-"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 ),
-"update": 0,
-"values": [ 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0 ]
-}
-tracks/103/type = "value"
-tracks/103/path = NodePath("scoutqc_skeleton/Skeleton/scout_morphs_sfm:blend_shapes/F_OpenJaw_OpenLips_PuckerLipUp_ZipLip100L+OpenJaw_OpenLips_Puck")
-tracks/103/interp = 1
-tracks/103/loop_wrap = true
-tracks/103/imported = false
-tracks/103/enabled = true
-tracks/103/keys = {
-"times": PoolRealArray( 0, 0.0416667, 0.0833333, 0.125, 0.166667, 0.208333, 0.25, 0.291667, 0.333333, 0.375, 0.416667, 0.458333, 0.5, 0.541667, 0.583333, 0.625, 0.666667, 0.708333, 0.75, 0.791667, 0.833333, 0.875, 0.916667, 0.958333, 1, 1.04167, 1.08333, 1.125, 1.16667, 1.20833, 1.25, 1.29167, 1.33333, 1.375, 1.41667, 1.45833, 1.5, 1.54167, 1.58333, 1.625, 1.66667 ),
-"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 ),
-"update": 0,
-"values": [ 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0 ]
-}
-tracks/104/type = "value"
-tracks/104/path = NodePath("scoutqc_skeleton/Skeleton/scout_morphs_sfm:blend_shapes/G_SuckJaw")
-tracks/104/interp = 1
-tracks/104/loop_wrap = true
-tracks/104/imported = false
-tracks/104/enabled = true
-tracks/104/keys = {
-"times": PoolRealArray( 0, 0.0416667, 0.0833333, 0.125, 0.166667, 0.208333, 0.25, 0.291667, 0.333333, 0.375, 0.416667, 0.458333, 0.5, 0.541667, 0.583333, 0.625, 0.666667, 0.708333, 0.75, 0.791667, 0.833333, 0.875, 0.916667, 0.958333, 1, 1.04167, 1.08333, 1.125, 1.16667, 1.20833, 1.25, 1.29167, 1.33333, 1.375, 1.41667, 1.45833, 1.5, 1.54167, 1.58333, 1.625, 1.66667 ),
-"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 ),
-"update": 0,
-"values": [ 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0 ]
-}
-tracks/105/type = "value"
-tracks/105/path = NodePath("scoutqc_skeleton/Skeleton/scout_morphs_sfm:blend_shapes/G_SuckLipLoL+SuckLipLoR")
-tracks/105/interp = 1
-tracks/105/loop_wrap = true
-tracks/105/imported = false
-tracks/105/enabled = true
-tracks/105/keys = {
-"times": PoolRealArray( 0, 0.0416667, 0.0833333, 0.125, 0.166667, 0.208333, 0.25, 0.291667, 0.333333, 0.375, 0.416667, 0.458333, 0.5, 0.541667, 0.583333, 0.625, 0.666667, 0.708333, 0.75, 0.791667, 0.833333, 0.875, 0.916667, 0.958333, 1, 1.04167, 1.08333, 1.125, 1.16667, 1.20833, 1.25, 1.29167, 1.33333, 1.375, 1.41667, 1.45833, 1.5, 1.54167, 1.58333, 1.625, 1.66667 ),
-"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 ),
-"update": 0,
-"values": [ 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0 ]
-}
-tracks/106/type = "value"
-tracks/106/path = NodePath("scoutqc_skeleton/Skeleton/scout_morphs_sfm:blend_shapes/H_TongueV")
-tracks/106/interp = 1
-tracks/106/loop_wrap = true
-tracks/106/imported = false
-tracks/106/enabled = true
-tracks/106/keys = {
-"times": PoolRealArray( 0, 0.0416667, 0.0833333, 0.125, 0.166667, 0.208333, 0.25, 0.291667, 0.333333, 0.375, 0.416667, 0.458333, 0.5, 0.541667, 0.583333, 0.625, 0.666667, 0.708333, 0.75, 0.791667, 0.833333, 0.875, 0.916667, 0.958333, 1, 1.04167, 1.08333, 1.125, 1.16667, 1.20833, 1.25, 1.29167, 1.33333, 1.375, 1.41667, 1.45833, 1.5, 1.54167, 1.58333, 1.625, 1.66667 ),
-"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 ),
-"update": 0,
-"values": [ 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0 ]
-}
 
 [sub_resource type="Animation" id=13]
 resource_name = "reading_pose_2"
@@ -4856,196 +5711,42 @@ tracks/90/imported = false
 tracks/90/enabled = true
 tracks/90/keys = PoolRealArray( 0, 1, -7.50857, 9.10998, 24.3591, -0.0493394, 0.0380318, -0.0520511, 0.9967, 1, 1, 1, 1.53333, 1, -7.50857, 9.10998, 24.3591, -0.0493394, 0.0380318, -0.0520511, 0.9967, 1, 1, 1, 1.6, 1, -7.37053, 8.96267, 24.7599, -0.0567268, 0.0329749, -0.0539419, 0.996386, 1, 1, 1, 1.66667, 1, -6.94893, 8.57417, 25.8169, -0.0793656, 0.0176839, -0.0600991, 0.994875, 1, 1, 1, 1.73333, 1, -6.43886, 8.09417, 27.1229, -0.10692, -0.00038673, -0.0685049, 0.991905, 1, 1, 1, 1.8, 1, -6.21235, 7.73361, 28.104, -0.119182, -0.00828307, -0.0724922, 0.990188, 1, 1, 1, 2, 1, -6.21235, 7.11735, 29.7807, -0.119182, -0.00828307, -0.0724922, 0.990188, 1, 1, 1, 2.13333, 1, -6.21235, 6.84727, 30.5155, -0.119182, -0.00828307, -0.0724922, 0.990188, 1, 1, 1, 2.2, 1, -6.21235, 6.74679, 30.7889, -0.119182, -0.00828307, -0.0724922, 0.990188, 1, 1, 1, 2.26667, 1, -6.21235, 6.66683, 31.0065, -0.119182, -0.00828307, -0.0724922, 0.990188, 1, 1, 1, 2.33333, 1, -6.21235, 6.60381, 31.178, -0.119182, -0.00828307, -0.0724922, 0.990188, 1, 1, 1, 2.4, 1, -6.21235, 6.55795, 31.3027, -0.119182, -0.00828307, -0.0724922, 0.990188, 1, 1, 1, 2.46667, 1, -6.21235, 6.52458, 31.3935, -0.119182, -0.00828307, -0.0724922, 0.990188, 1, 1, 1, 2.53333, 1, -6.21235, 6.50258, 31.4534, -0.119182, -0.00828307, -0.0724922, 0.990188, 1, 1, 1, 2.6, 1, -6.21235, 6.4895, 31.489, -0.119182, -0.00828307, -0.0724922, 0.990188, 1, 1, 1, 2.66667, 1, -6.21235, 6.48266, 31.5076, -0.119182, -0.00828307, -0.0724922, 0.990188, 1, 1, 1, 2.73333, 1, -6.21235, 6.48051, 31.5134, -0.119182, -0.00828307, -0.0724922, 0.990188, 1, 1, 1, 2.8, 1, -6.21235, 6.48016, 31.5144, -0.119182, -0.00828307, -0.0724922, 0.990188, 1, 1, 1, 3, 1, -6.21235, 6.48016, 31.5144, -0.119182, -0.00828307, -0.0724922, 0.990188, 1, 1, 1, 3.06667, 1, -6.21235, 6.48016, 31.5144, -0.0969746, -0.011168, -0.0675972, 0.992926, 1, 1, 1, 3.26667, 1, -6.21235, 6.48016, 31.5144, 0.0600899, -0.0253973, -0.031119, 0.997384, 1, 1, 1, 3.33333, 1, -6.21235, 6.48016, 31.5144, 0.0825138, -0.0265459, -0.0256976, 0.995905, 1, 1, 1, 3.53333, 1, -6.21235, 6.48016, 31.5144, 0.0825138, -0.0265459, -0.0256976, 0.995905, 1, 1, 1, 3.6, 1, -5.91288, 6.3138, 31.967, 0.0436866, -0.0370061, -0.0351426, 0.997741, 1, 1, 1, 3.66667, 1, -5.16497, 5.89833, 33.0974, -0.0539547, -0.0603888, -0.0616205, 0.994809, 1, 1, 1, 3.73333, 1, -4.28671, 5.41047, 34.4248, -0.168628, -0.0808328, -0.0986927, 0.97739, 1, 1, 1, 3.8, 1, -3.66914, 5.06741, 35.3582, -0.248088, -0.0909079, -0.127201, 0.956038, 1, 1, 1, 3.86667, 1, -3.55122, 5.0019, 35.5365, -0.263081, -0.0923196, -0.132899, 0.951106, 1, 1, 1, 4.125, 1, -3.55122, 5.0019, 35.5365, -0.263081, -0.0923196, -0.132899, 0.951106, 1, 1, 1 )
 tracks/91/type = "value"
-tracks/91/path = NodePath("scoutqc_skeleton/Skeleton/scout_morphs_sfm:blend_shapes/A_CompressLipsL+CompressLipsR")
+tracks/91/path = NodePath("scoutqc_skeleton/Skeleton/comic_hand:visible")
 tracks/91/interp = 1
 tracks/91/loop_wrap = true
 tracks/91/imported = false
 tracks/91/enabled = true
 tracks/91/keys = {
-"times": PoolRealArray( 0, 0.0416667, 0.0833333, 0.125, 0.166667, 0.208333, 0.25, 0.291667, 0.333333, 0.375, 0.416667, 0.458333, 0.5, 0.541667, 0.583333, 0.625, 0.666667, 0.708333, 0.75, 0.791667, 0.833333, 0.875, 0.916667, 0.958333, 1, 1.04167, 1.08333, 1.125, 1.16667, 1.20833, 1.25, 1.29167, 1.33333, 1.375, 1.41667, 1.45833, 1.5, 1.54167, 1.58333, 1.625, 1.66667, 1.70833, 1.75, 1.79167, 1.83333, 1.875, 1.91667, 1.95833, 2, 2.04167, 2.08333, 2.125, 2.16667, 2.20833, 2.25, 2.29167, 2.33333, 2.375, 2.41667, 2.45833, 2.5, 2.54167, 2.58333, 2.625, 2.66667, 2.70833, 2.75, 2.79167, 2.83333, 2.875, 2.91667, 2.95833, 3, 3.04167, 3.08333, 3.125, 3.16667, 3.20833, 3.25, 3.29167, 3.33333, 3.375, 3.41667, 3.45833, 3.5, 3.54167, 3.58333, 3.625, 3.66667, 3.70833, 3.75, 3.79167, 3.83333, 3.875, 3.91667, 3.95833, 4, 4.04167, 4.08333, 4.125 ),
-"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 ),
-"update": 0,
-"values": [ 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0 ]
+"times": PoolRealArray( 0, 1.2 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ true, false ]
 }
 tracks/92/type = "value"
-tracks/92/path = NodePath("scoutqc_skeleton/Skeleton/scout_morphs_sfm:blend_shapes/B_OpenLips_OpenLowerLip_SmileFull_ZipLip100L+OpenLips_Ope")
+tracks/92/path = NodePath("AnimationTree:parameters/sleep-lounge-read/blend_amount")
 tracks/92/interp = 1
 tracks/92/loop_wrap = true
 tracks/92/imported = false
 tracks/92/enabled = true
 tracks/92/keys = {
-"times": PoolRealArray( 0, 0.0416667, 0.0833333, 0.125, 0.166667, 0.208333, 0.25, 0.291667, 0.333333, 0.375, 0.416667, 0.458333, 0.5, 0.541667, 0.583333, 0.625, 0.666667, 0.708333, 0.75, 0.791667, 0.833333, 0.875, 0.916667, 0.958333, 1, 1.04167, 1.08333, 1.125, 1.16667, 1.20833, 1.25, 1.29167, 1.33333, 1.375, 1.41667, 1.45833, 1.5, 1.54167, 1.58333, 1.625, 1.66667, 1.70833, 1.75, 1.79167, 1.83333, 1.875, 1.91667, 1.95833, 2, 2.04167, 2.08333, 2.125, 2.16667, 2.20833, 2.25, 2.29167, 2.33333, 2.375, 2.41667, 2.45833, 2.5, 2.54167, 2.58333, 2.625, 2.66667, 2.70833, 2.75, 2.79167, 2.83333, 2.875, 2.91667, 2.95833, 3, 3.04167, 3.08333, 3.125, 3.16667, 3.20833, 3.25, 3.29167, 3.33333, 3.375, 3.41667, 3.45833, 3.5, 3.54167, 3.58333, 3.625, 3.66667, 3.70833, 3.75, 3.79167, 3.83333, 3.875, 3.91667, 3.95833, 4, 4.04167, 4.08333, 4.125 ),
-"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 ),
+"times": PoolRealArray( 0, 3.6, 4.1 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
 "update": 0,
-"values": [ 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0 ]
+"values": [ 1.0, 1.0, 0.0 ]
 }
-tracks/93/type = "value"
-tracks/93/path = NodePath("scoutqc_skeleton/Skeleton/scout_morphs_sfm:blend_shapes/B_SmileFullL+SmileFullR")
+tracks/93/type = "method"
+tracks/93/path = NodePath(".")
 tracks/93/interp = 1
 tracks/93/loop_wrap = true
 tracks/93/imported = false
 tracks/93/enabled = true
 tracks/93/keys = {
-"times": PoolRealArray( 0, 0.0416667, 0.0833333, 0.125, 0.166667, 0.208333, 0.25, 0.291667, 0.333333, 0.375, 0.416667, 0.458333, 0.5, 0.541667, 0.583333, 0.625, 0.666667, 0.708333, 0.75, 0.791667, 0.833333, 0.875, 0.916667, 0.958333, 1, 1.04167, 1.08333, 1.125, 1.16667, 1.20833, 1.25, 1.29167, 1.33333, 1.375, 1.41667, 1.45833, 1.5, 1.54167, 1.58333, 1.625, 1.66667, 1.70833, 1.75, 1.79167, 1.83333, 1.875, 1.91667, 1.95833, 2, 2.04167, 2.08333, 2.125, 2.16667, 2.20833, 2.25, 2.29167, 2.33333, 2.375, 2.41667, 2.45833, 2.5, 2.54167, 2.58333, 2.625, 2.66667, 2.70833, 2.75, 2.79167, 2.83333, 2.875, 2.91667, 2.95833, 3, 3.04167, 3.08333, 3.125, 3.16667, 3.20833, 3.25, 3.29167, 3.33333, 3.375, 3.41667, 3.45833, 3.5, 3.54167, 3.58333, 3.625, 3.66667, 3.70833, 3.75, 3.79167, 3.83333, 3.875, 3.91667, 3.95833, 4, 4.04167, 4.08333, 4.125 ),
-"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 ),
-"update": 0,
-"values": [ 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0 ]
-}
-tracks/94/type = "value"
-tracks/94/path = NodePath("scoutqc_skeleton/Skeleton/scout_morphs_sfm:blend_shapes/C_OpenJaw")
-tracks/94/interp = 1
-tracks/94/loop_wrap = true
-tracks/94/imported = false
-tracks/94/enabled = true
-tracks/94/keys = {
-"times": PoolRealArray( 0, 0.0416667, 0.0833333, 0.125, 0.166667, 0.208333, 0.25, 0.291667, 0.333333, 0.375, 0.416667, 0.458333, 0.5, 0.541667, 0.583333, 0.625, 0.666667, 0.708333, 0.75, 0.791667, 0.833333, 0.875, 0.916667, 0.958333, 1, 1.04167, 1.08333, 1.125, 1.16667, 1.20833, 1.25, 1.29167, 1.33333, 1.375, 1.41667, 1.45833, 1.5, 1.54167, 1.58333, 1.625, 1.66667, 1.70833, 1.75, 1.79167, 1.83333, 1.875, 1.91667, 1.95833, 2, 2.04167, 2.08333, 2.125, 2.16667, 2.20833, 2.25, 2.29167, 2.33333, 2.375, 2.41667, 2.45833, 2.5, 2.54167, 2.58333, 2.625, 2.66667, 2.70833, 2.75, 2.79167, 2.83333, 2.875, 2.91667, 2.95833, 3, 3.04167, 3.08333, 3.125, 3.16667, 3.20833, 3.25, 3.29167, 3.33333, 3.375, 3.41667, 3.45833, 3.5, 3.54167, 3.58333, 3.625, 3.66667, 3.70833, 3.75, 3.79167, 3.83333, 3.875, 3.91667, 3.95833, 4, 4.04167, 4.08333, 4.125 ),
-"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 ),
-"update": 0,
-"values": [ 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0 ]
-}
-tracks/95/type = "value"
-tracks/95/path = NodePath("scoutqc_skeleton/Skeleton/scout_morphs_sfm:blend_shapes/D_OpenLipsL+OpenLipsR")
-tracks/95/interp = 1
-tracks/95/loop_wrap = true
-tracks/95/imported = false
-tracks/95/enabled = true
-tracks/95/keys = {
-"times": PoolRealArray( 0, 0.0416667, 0.0833333, 0.125, 0.166667, 0.208333, 0.25, 0.291667, 0.333333, 0.375, 0.416667, 0.458333, 0.5, 0.541667, 0.583333, 0.625, 0.666667, 0.708333, 0.75, 0.791667, 0.833333, 0.875, 0.916667, 0.958333, 1, 1.04167, 1.08333, 1.125, 1.16667, 1.20833, 1.25, 1.29167, 1.33333, 1.375, 1.41667, 1.45833, 1.5, 1.54167, 1.58333, 1.625, 1.66667, 1.70833, 1.75, 1.79167, 1.83333, 1.875, 1.91667, 1.95833, 2, 2.04167, 2.08333, 2.125, 2.16667, 2.20833, 2.25, 2.29167, 2.33333, 2.375, 2.41667, 2.45833, 2.5, 2.54167, 2.58333, 2.625, 2.66667, 2.70833, 2.75, 2.79167, 2.83333, 2.875, 2.91667, 2.95833, 3, 3.04167, 3.08333, 3.125, 3.16667, 3.20833, 3.25, 3.29167, 3.33333, 3.375, 3.41667, 3.45833, 3.5, 3.54167, 3.58333, 3.625, 3.66667, 3.70833, 3.75, 3.79167, 3.83333, 3.875, 3.91667, 3.95833, 4, 4.04167, 4.08333, 4.125 ),
-"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 ),
-"update": 0,
-"values": [ 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0 ]
-}
-tracks/96/type = "value"
-tracks/96/path = NodePath("scoutqc_skeleton/Skeleton/scout_morphs_sfm:blend_shapes/D_FunnelLipLoL+FunnelLipLoR")
-tracks/96/interp = 1
-tracks/96/loop_wrap = true
-tracks/96/imported = false
-tracks/96/enabled = true
-tracks/96/keys = {
-"times": PoolRealArray( 0, 0.0416667, 0.0833333, 0.125, 0.166667, 0.208333, 0.25, 0.291667, 0.333333, 0.375, 0.416667, 0.458333, 0.5, 0.541667, 0.583333, 0.625, 0.666667, 0.708333, 0.75, 0.791667, 0.833333, 0.875, 0.916667, 0.958333, 1, 1.04167, 1.08333, 1.125, 1.16667, 1.20833, 1.25, 1.29167, 1.33333, 1.375, 1.41667, 1.45833, 1.5, 1.54167, 1.58333, 1.625, 1.66667, 1.70833, 1.75, 1.79167, 1.83333, 1.875, 1.91667, 1.95833, 2, 2.04167, 2.08333, 2.125, 2.16667, 2.20833, 2.25, 2.29167, 2.33333, 2.375, 2.41667, 2.45833, 2.5, 2.54167, 2.58333, 2.625, 2.66667, 2.70833, 2.75, 2.79167, 2.83333, 2.875, 2.91667, 2.95833, 3, 3.04167, 3.08333, 3.125, 3.16667, 3.20833, 3.25, 3.29167, 3.33333, 3.375, 3.41667, 3.45833, 3.5, 3.54167, 3.58333, 3.625, 3.66667, 3.70833, 3.75, 3.79167, 3.83333, 3.875, 3.91667, 3.95833, 4, 4.04167, 4.08333, 4.125 ),
-"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 ),
-"update": 0,
-"values": [ 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0 ]
-}
-tracks/97/type = "value"
-tracks/97/path = NodePath("scoutqc_skeleton/Skeleton/scout_morphs_sfm:blend_shapes/D_OpenUpperLip_ZipLip25L+OpenUpperLip_ZipLip25R")
-tracks/97/interp = 1
-tracks/97/loop_wrap = true
-tracks/97/imported = false
-tracks/97/enabled = true
-tracks/97/keys = {
-"times": PoolRealArray( 0, 0.0416667, 0.0833333, 0.125, 0.166667, 0.208333, 0.25, 0.291667, 0.333333, 0.375, 0.416667, 0.458333, 0.5, 0.541667, 0.583333, 0.625, 0.666667, 0.708333, 0.75, 0.791667, 0.833333, 0.875, 0.916667, 0.958333, 1, 1.04167, 1.08333, 1.125, 1.16667, 1.20833, 1.25, 1.29167, 1.33333, 1.375, 1.41667, 1.45833, 1.5, 1.54167, 1.58333, 1.625, 1.66667, 1.70833, 1.75, 1.79167, 1.83333, 1.875, 1.91667, 1.95833, 2, 2.04167, 2.08333, 2.125, 2.16667, 2.20833, 2.25, 2.29167, 2.33333, 2.375, 2.41667, 2.45833, 2.5, 2.54167, 2.58333, 2.625, 2.66667, 2.70833, 2.75, 2.79167, 2.83333, 2.875, 2.91667, 2.95833, 3, 3.04167, 3.08333, 3.125, 3.16667, 3.20833, 3.25, 3.29167, 3.33333, 3.375, 3.41667, 3.45833, 3.5, 3.54167, 3.58333, 3.625, 3.66667, 3.70833, 3.75, 3.79167, 3.83333, 3.875, 3.91667, 3.95833, 4, 4.04167, 4.08333, 4.125 ),
-"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 ),
-"update": 0,
-"values": [ 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0 ]
-}
-tracks/98/type = "value"
-tracks/98/path = NodePath("scoutqc_skeleton/Skeleton/scout_morphs_sfm:blend_shapes/D_OpenJaw_OpenLips_PuckerLipLo_ZipLip100L+OpenJaw_OpenLips_Puck")
-tracks/98/interp = 1
-tracks/98/loop_wrap = true
-tracks/98/imported = false
-tracks/98/enabled = true
-tracks/98/keys = {
-"times": PoolRealArray( 0, 0.0416667, 0.0833333, 0.125, 0.166667, 0.208333, 0.25, 0.291667, 0.333333, 0.375, 0.416667, 0.458333, 0.5, 0.541667, 0.583333, 0.625, 0.666667, 0.708333, 0.75, 0.791667, 0.833333, 0.875, 0.916667, 0.958333, 1, 1.04167, 1.08333, 1.125, 1.16667, 1.20833, 1.25, 1.29167, 1.33333, 1.375, 1.41667, 1.45833, 1.5, 1.54167, 1.58333, 1.625, 1.66667, 1.70833, 1.75, 1.79167, 1.83333, 1.875, 1.91667, 1.95833, 2, 2.04167, 2.08333, 2.125, 2.16667, 2.20833, 2.25, 2.29167, 2.33333, 2.375, 2.41667, 2.45833, 2.5, 2.54167, 2.58333, 2.625, 2.66667, 2.70833, 2.75, 2.79167, 2.83333, 2.875, 2.91667, 2.95833, 3, 3.04167, 3.08333, 3.125, 3.16667, 3.20833, 3.25, 3.29167, 3.33333, 3.375, 3.41667, 3.45833, 3.5, 3.54167, 3.58333, 3.625, 3.66667, 3.70833, 3.75, 3.79167, 3.83333, 3.875, 3.91667, 3.95833, 4, 4.04167, 4.08333, 4.125 ),
-"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 ),
-"update": 0,
-"values": [ 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0 ]
-}
-tracks/99/type = "value"
-tracks/99/path = NodePath("scoutqc_skeleton/Skeleton/scout_morphs_sfm:blend_shapes/E_Platysmus_SmileFullL+Platysmus_SmileFul")
-tracks/99/interp = 1
-tracks/99/loop_wrap = true
-tracks/99/imported = false
-tracks/99/enabled = true
-tracks/99/keys = {
-"times": PoolRealArray( 0, 0.0416667, 0.0833333, 0.125, 0.166667, 0.208333, 0.25, 0.291667, 0.333333, 0.375, 0.416667, 0.458333, 0.5, 0.541667, 0.583333, 0.625, 0.666667, 0.708333, 0.75, 0.791667, 0.833333, 0.875, 0.916667, 0.958333, 1, 1.04167, 1.08333, 1.125, 1.16667, 1.20833, 1.25, 1.29167, 1.33333, 1.375, 1.41667, 1.45833, 1.5, 1.54167, 1.58333, 1.625, 1.66667, 1.70833, 1.75, 1.79167, 1.83333, 1.875, 1.91667, 1.95833, 2, 2.04167, 2.08333, 2.125, 2.16667, 2.20833, 2.25, 2.29167, 2.33333, 2.375, 2.41667, 2.45833, 2.5, 2.54167, 2.58333, 2.625, 2.66667, 2.70833, 2.75, 2.79167, 2.83333, 2.875, 2.91667, 2.95833, 3, 3.04167, 3.08333, 3.125, 3.16667, 3.20833, 3.25, 3.29167, 3.33333, 3.375, 3.41667, 3.45833, 3.5, 3.54167, 3.58333, 3.625, 3.66667, 3.70833, 3.75, 3.79167, 3.83333, 3.875, 3.91667, 3.95833, 4, 4.04167, 4.08333, 4.125 ),
-"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 ),
-"update": 0,
-"values": [ 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0 ]
-}
-tracks/100/type = "value"
-tracks/100/path = NodePath("scoutqc_skeleton/Skeleton/scout_morphs_sfm:blend_shapes/F_TongueBack")
-tracks/100/interp = 1
-tracks/100/loop_wrap = true
-tracks/100/imported = false
-tracks/100/enabled = true
-tracks/100/keys = {
-"times": PoolRealArray( 0, 0.0416667, 0.0833333, 0.125, 0.166667, 0.208333, 0.25, 0.291667, 0.333333, 0.375, 0.416667, 0.458333, 0.5, 0.541667, 0.583333, 0.625, 0.666667, 0.708333, 0.75, 0.791667, 0.833333, 0.875, 0.916667, 0.958333, 1, 1.04167, 1.08333, 1.125, 1.16667, 1.20833, 1.25, 1.29167, 1.33333, 1.375, 1.41667, 1.45833, 1.5, 1.54167, 1.58333, 1.625, 1.66667, 1.70833, 1.75, 1.79167, 1.83333, 1.875, 1.91667, 1.95833, 2, 2.04167, 2.08333, 2.125, 2.16667, 2.20833, 2.25, 2.29167, 2.33333, 2.375, 2.41667, 2.45833, 2.5, 2.54167, 2.58333, 2.625, 2.66667, 2.70833, 2.75, 2.79167, 2.83333, 2.875, 2.91667, 2.95833, 3, 3.04167, 3.08333, 3.125, 3.16667, 3.20833, 3.25, 3.29167, 3.33333, 3.375, 3.41667, 3.45833, 3.5, 3.54167, 3.58333, 3.625, 3.66667, 3.70833, 3.75, 3.79167, 3.83333, 3.875, 3.91667, 3.95833, 4, 4.04167, 4.08333, 4.125 ),
-"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 ),
-"update": 0,
-"values": [ 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0 ]
-}
-tracks/101/type = "value"
-tracks/101/path = NodePath("scoutqc_skeleton/Skeleton/scout_morphs_sfm:blend_shapes/F_OpenLowerLip_OpenUpperLip_Platysmus_SmileFullL+OpenLowerLip_O")
-tracks/101/interp = 1
-tracks/101/loop_wrap = true
-tracks/101/imported = false
-tracks/101/enabled = true
-tracks/101/keys = {
-"times": PoolRealArray( 0, 0.0416667, 0.0833333, 0.125, 0.166667, 0.208333, 0.25, 0.291667, 0.333333, 0.375, 0.416667, 0.458333, 0.5, 0.541667, 0.583333, 0.625, 0.666667, 0.708333, 0.75, 0.791667, 0.833333, 0.875, 0.916667, 0.958333, 1, 1.04167, 1.08333, 1.125, 1.16667, 1.20833, 1.25, 1.29167, 1.33333, 1.375, 1.41667, 1.45833, 1.5, 1.54167, 1.58333, 1.625, 1.66667, 1.70833, 1.75, 1.79167, 1.83333, 1.875, 1.91667, 1.95833, 2, 2.04167, 2.08333, 2.125, 2.16667, 2.20833, 2.25, 2.29167, 2.33333, 2.375, 2.41667, 2.45833, 2.5, 2.54167, 2.58333, 2.625, 2.66667, 2.70833, 2.75, 2.79167, 2.83333, 2.875, 2.91667, 2.95833, 3, 3.04167, 3.08333, 3.125, 3.16667, 3.20833, 3.25, 3.29167, 3.33333, 3.375, 3.41667, 3.45833, 3.5, 3.54167, 3.58333, 3.625, 3.66667, 3.70833, 3.75, 3.79167, 3.83333, 3.875, 3.91667, 3.95833, 4, 4.04167, 4.08333, 4.125 ),
-"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 ),
-"update": 0,
-"values": [ 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0 ]
-}
-tracks/102/type = "value"
-tracks/102/path = NodePath("scoutqc_skeleton/Skeleton/scout_morphs_sfm:blend_shapes/F_OpenLips_OpenUpperLip_ZipLip100L+OpenLips_OpenUpperLip_ZipLip")
-tracks/102/interp = 1
-tracks/102/loop_wrap = true
-tracks/102/imported = false
-tracks/102/enabled = true
-tracks/102/keys = {
-"times": PoolRealArray( 0, 0.0416667, 0.0833333, 0.125, 0.166667, 0.208333, 0.25, 0.291667, 0.333333, 0.375, 0.416667, 0.458333, 0.5, 0.541667, 0.583333, 0.625, 0.666667, 0.708333, 0.75, 0.791667, 0.833333, 0.875, 0.916667, 0.958333, 1, 1.04167, 1.08333, 1.125, 1.16667, 1.20833, 1.25, 1.29167, 1.33333, 1.375, 1.41667, 1.45833, 1.5, 1.54167, 1.58333, 1.625, 1.66667, 1.70833, 1.75, 1.79167, 1.83333, 1.875, 1.91667, 1.95833, 2, 2.04167, 2.08333, 2.125, 2.16667, 2.20833, 2.25, 2.29167, 2.33333, 2.375, 2.41667, 2.45833, 2.5, 2.54167, 2.58333, 2.625, 2.66667, 2.70833, 2.75, 2.79167, 2.83333, 2.875, 2.91667, 2.95833, 3, 3.04167, 3.08333, 3.125, 3.16667, 3.20833, 3.25, 3.29167, 3.33333, 3.375, 3.41667, 3.45833, 3.5, 3.54167, 3.58333, 3.625, 3.66667, 3.70833, 3.75, 3.79167, 3.83333, 3.875, 3.91667, 3.95833, 4, 4.04167, 4.08333, 4.125 ),
-"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 ),
-"update": 0,
-"values": [ 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0 ]
-}
-tracks/103/type = "value"
-tracks/103/path = NodePath("scoutqc_skeleton/Skeleton/scout_morphs_sfm:blend_shapes/F_OpenJaw_OpenLips_PuckerLipUp_ZipLip100L+OpenJaw_OpenLips_Puck")
-tracks/103/interp = 1
-tracks/103/loop_wrap = true
-tracks/103/imported = false
-tracks/103/enabled = true
-tracks/103/keys = {
-"times": PoolRealArray( 0, 0.0416667, 0.0833333, 0.125, 0.166667, 0.208333, 0.25, 0.291667, 0.333333, 0.375, 0.416667, 0.458333, 0.5, 0.541667, 0.583333, 0.625, 0.666667, 0.708333, 0.75, 0.791667, 0.833333, 0.875, 0.916667, 0.958333, 1, 1.04167, 1.08333, 1.125, 1.16667, 1.20833, 1.25, 1.29167, 1.33333, 1.375, 1.41667, 1.45833, 1.5, 1.54167, 1.58333, 1.625, 1.66667, 1.70833, 1.75, 1.79167, 1.83333, 1.875, 1.91667, 1.95833, 2, 2.04167, 2.08333, 2.125, 2.16667, 2.20833, 2.25, 2.29167, 2.33333, 2.375, 2.41667, 2.45833, 2.5, 2.54167, 2.58333, 2.625, 2.66667, 2.70833, 2.75, 2.79167, 2.83333, 2.875, 2.91667, 2.95833, 3, 3.04167, 3.08333, 3.125, 3.16667, 3.20833, 3.25, 3.29167, 3.33333, 3.375, 3.41667, 3.45833, 3.5, 3.54167, 3.58333, 3.625, 3.66667, 3.70833, 3.75, 3.79167, 3.83333, 3.875, 3.91667, 3.95833, 4, 4.04167, 4.08333, 4.125 ),
-"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 ),
-"update": 0,
-"values": [ 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0 ]
-}
-tracks/104/type = "value"
-tracks/104/path = NodePath("scoutqc_skeleton/Skeleton/scout_morphs_sfm:blend_shapes/G_SuckJaw")
-tracks/104/interp = 1
-tracks/104/loop_wrap = true
-tracks/104/imported = false
-tracks/104/enabled = true
-tracks/104/keys = {
-"times": PoolRealArray( 0, 0.0416667, 0.0833333, 0.125, 0.166667, 0.208333, 0.25, 0.291667, 0.333333, 0.375, 0.416667, 0.458333, 0.5, 0.541667, 0.583333, 0.625, 0.666667, 0.708333, 0.75, 0.791667, 0.833333, 0.875, 0.916667, 0.958333, 1, 1.04167, 1.08333, 1.125, 1.16667, 1.20833, 1.25, 1.29167, 1.33333, 1.375, 1.41667, 1.45833, 1.5, 1.54167, 1.58333, 1.625, 1.66667, 1.70833, 1.75, 1.79167, 1.83333, 1.875, 1.91667, 1.95833, 2, 2.04167, 2.08333, 2.125, 2.16667, 2.20833, 2.25, 2.29167, 2.33333, 2.375, 2.41667, 2.45833, 2.5, 2.54167, 2.58333, 2.625, 2.66667, 2.70833, 2.75, 2.79167, 2.83333, 2.875, 2.91667, 2.95833, 3, 3.04167, 3.08333, 3.125, 3.16667, 3.20833, 3.25, 3.29167, 3.33333, 3.375, 3.41667, 3.45833, 3.5, 3.54167, 3.58333, 3.625, 3.66667, 3.70833, 3.75, 3.79167, 3.83333, 3.875, 3.91667, 3.95833, 4, 4.04167, 4.08333, 4.125 ),
-"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 ),
-"update": 0,
-"values": [ 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0 ]
-}
-tracks/105/type = "value"
-tracks/105/path = NodePath("scoutqc_skeleton/Skeleton/scout_morphs_sfm:blend_shapes/G_SuckLipLoL+SuckLipLoR")
-tracks/105/interp = 1
-tracks/105/loop_wrap = true
-tracks/105/imported = false
-tracks/105/enabled = true
-tracks/105/keys = {
-"times": PoolRealArray( 0, 0.0416667, 0.0833333, 0.125, 0.166667, 0.208333, 0.25, 0.291667, 0.333333, 0.375, 0.416667, 0.458333, 0.5, 0.541667, 0.583333, 0.625, 0.666667, 0.708333, 0.75, 0.791667, 0.833333, 0.875, 0.916667, 0.958333, 1, 1.04167, 1.08333, 1.125, 1.16667, 1.20833, 1.25, 1.29167, 1.33333, 1.375, 1.41667, 1.45833, 1.5, 1.54167, 1.58333, 1.625, 1.66667, 1.70833, 1.75, 1.79167, 1.83333, 1.875, 1.91667, 1.95833, 2, 2.04167, 2.08333, 2.125, 2.16667, 2.20833, 2.25, 2.29167, 2.33333, 2.375, 2.41667, 2.45833, 2.5, 2.54167, 2.58333, 2.625, 2.66667, 2.70833, 2.75, 2.79167, 2.83333, 2.875, 2.91667, 2.95833, 3, 3.04167, 3.08333, 3.125, 3.16667, 3.20833, 3.25, 3.29167, 3.33333, 3.375, 3.41667, 3.45833, 3.5, 3.54167, 3.58333, 3.625, 3.66667, 3.70833, 3.75, 3.79167, 3.83333, 3.875, 3.91667, 3.95833, 4, 4.04167, 4.08333, 4.125 ),
-"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 ),
-"update": 0,
-"values": [ 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0 ]
-}
-tracks/106/type = "value"
-tracks/106/path = NodePath("scoutqc_skeleton/Skeleton/scout_morphs_sfm:blend_shapes/H_TongueV")
-tracks/106/interp = 1
-tracks/106/loop_wrap = true
-tracks/106/imported = false
-tracks/106/enabled = true
-tracks/106/keys = {
-"times": PoolRealArray( 0, 0.0416667, 0.0833333, 0.125, 0.166667, 0.208333, 0.25, 0.291667, 0.333333, 0.375, 0.416667, 0.458333, 0.5, 0.541667, 0.583333, 0.625, 0.666667, 0.708333, 0.75, 0.791667, 0.833333, 0.875, 0.916667, 0.958333, 1, 1.04167, 1.08333, 1.125, 1.16667, 1.20833, 1.25, 1.29167, 1.33333, 1.375, 1.41667, 1.45833, 1.5, 1.54167, 1.58333, 1.625, 1.66667, 1.70833, 1.75, 1.79167, 1.83333, 1.875, 1.91667, 1.95833, 2, 2.04167, 2.08333, 2.125, 2.16667, 2.20833, 2.25, 2.29167, 2.33333, 2.375, 2.41667, 2.45833, 2.5, 2.54167, 2.58333, 2.625, 2.66667, 2.70833, 2.75, 2.79167, 2.83333, 2.875, 2.91667, 2.95833, 3, 3.04167, 3.08333, 3.125, 3.16667, 3.20833, 3.25, 3.29167, 3.33333, 3.375, 3.41667, 3.45833, 3.5, 3.54167, 3.58333, 3.625, 3.66667, 3.70833, 3.75, 3.79167, 3.83333, 3.875, 3.91667, 3.95833, 4, 4.04167, 4.08333, 4.125 ),
-"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 ),
-"update": 0,
-"values": [ 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0 ]
+"times": PoolRealArray( 4.1 ),
+"transitions": PoolRealArray( 1 ),
+"values": [ {
+"args": [  ],
+"method": "comic_toss_complete"
+} ]
 }
 
 [sub_resource type="Animation" id=17]
@@ -5695,38 +6396,157 @@ tracks/91/loop_wrap = true
 tracks/91/imported = false
 tracks/91/enabled = true
 tracks/91/keys = {
-"times": PoolRealArray( 1.2, 1.9, 2.4 ),
-"transitions": PoolRealArray( 1, 1, 1 ),
+"times": PoolRealArray( 2.4 ),
+"transitions": PoolRealArray( 1 ),
 "values": [ {
 "args": [  ],
-"method": "slow_down_x2"
-}, {
+"method": "wake_up_complete"
+} ]
+}
+tracks/92/type = "value"
+tracks/92/path = NodePath("AnimationTree:parameters/sleep-lounge-read/blend_amount")
+tracks/92/interp = 1
+tracks/92/loop_wrap = true
+tracks/92/imported = false
+tracks/92/enabled = true
+tracks/92/keys = {
+"times": PoolRealArray( 0, 2, 2.3 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ -1.0, -1.0, 0.0 ]
+}
+tracks/93/type = "value"
+tracks/93/path = NodePath("scout_mg_anims:playback_speed")
+tracks/93/interp = 1
+tracks/93/loop_wrap = true
+tracks/93/imported = false
+tracks/93/enabled = true
+tracks/93/keys = {
+"times": PoolRealArray( 0, 1.9, 2, 2.3, 2.4, 2.401 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ 1.0, 1.0, 0.11, 0.11, 1.0, 0.11 ]
+}
+tracks/94/type = "method"
+tracks/94/path = NodePath("AnimationTree")
+tracks/94/interp = 1
+tracks/94/loop_wrap = true
+tracks/94/imported = false
+tracks/94/enabled = true
+tracks/94/keys = {
+"times": PoolRealArray( 0.7 ),
+"transitions": PoolRealArray( 1 ),
+"values": [ {
 "args": [  ],
-"method": "slow_down_x3"
-}, {
-"args": [  ],
-"method": "get_phone"
+"method": "test"
 } ]
 }
 
-[sub_resource type="AnimationNodeBlendSpace1D" id=19]
-value_label = "0"
-
-[sub_resource type="AnimationNodeBlendTree" id=20]
-graph_offset = Vector2( -36.661, 159.595 )
-nodes/BlendSpace1D/node = SubResource( 19 )
-nodes/BlendSpace1D/position = Vector2( 0, 140 )
-node_connections = [ "output", 0, "BlendSpace1D" ]
-
 [sub_resource type="AudioStreamMicrophone" id=18]
+
+[sub_resource type="AnimationNodeAnimation" id=19]
+animation = "grab_comic"
+
+[sub_resource type="AnimationNodeOneShot" id=20]
+
+[sub_resource type="AnimationNodeAnimation" id=25]
+animation = "hang_up"
+
+[sub_resource type="AnimationNodeOneShot" id=12]
+filters = [ "scoutqc_skeleton/Handset_chair:visible", "scoutqc_skeleton/Skeleton/Handset_scout:visible" ]
+
+[sub_resource type="AnimationNodeAnimation" id=26]
+animation = "holding_comic"
+
+[sub_resource type="AnimationNodeAnimation" id=27]
+animation = "holding_phone"
+
+[sub_resource type="AnimationNodeBlend2" id=14]
+filters = [ "scoutqc_skeleton/Handset_chair:visible", "scoutqc_skeleton/Skeleton/Handset_scout:visible" ]
+
+[sub_resource type="AnimationNodeAnimation" id=28]
+animation = "lounge_loop"
+
+[sub_resource type="AnimationNodeAnimation" id=21]
+animation = "page_flip"
+
+[sub_resource type="AnimationNodeOneShot" id=29]
+
+[sub_resource type="AnimationNodeAnimation" id=30]
+animation = "reach_for_phone"
+
+[sub_resource type="AnimationNodeOneShot" id=31]
+
+[sub_resource type="AnimationNodeBlend3" id=22]
+
+[sub_resource type="AnimationNodeAnimation" id=6]
+animation = "sleep_anim"
+
+[sub_resource type="AnimationNodeAnimation" id=23]
+animation = "throw_away_comic"
+
+[sub_resource type="AnimationNodeOneShot" id=24]
+
+[sub_resource type="AnimationNodeAnimation" id=32]
+animation = "wake_up"
+
+[sub_resource type="AnimationNodeTimeScale" id=10]
+
+[sub_resource type="AnimationNodeOneShot" id=33]
+
+[sub_resource type="AnimationNodeBlendTree" id=34]
+graph_offset = Vector2( -400.172, -1336.53 )
+nodes/grab_comic_anim/node = SubResource( 19 )
+nodes/grab_comic_anim/position = Vector2( -133.333, -613.333 )
+nodes/grab_comic_trigger/node = SubResource( 20 )
+nodes/grab_comic_trigger/position = Vector2( 426.667, -560 )
+nodes/hang_up_anim/node = SubResource( 25 )
+nodes/hang_up_anim/position = Vector2( 640, 480 )
+nodes/hang_up_trigger/node = SubResource( 12 )
+nodes/hang_up_trigger/position = Vector2( 880, 240 )
+nodes/holding_comic/node = SubResource( 26 )
+nodes/holding_comic/position = Vector2( -133.333, -880 )
+nodes/holding_phone_loop/node = SubResource( 27 )
+nodes/holding_phone_loop/position = Vector2( 586.667, 266.667 )
+nodes/lounge-holdphone-hangup/node = SubResource( 14 )
+nodes/lounge-holdphone-hangup/position = Vector2( 1440, -80 )
+nodes/lounge_loop_anim/node = SubResource( 28 )
+nodes/lounge_loop_anim/position = Vector2( 53.3333, 293.333 )
+nodes/output/position = Vector2( 1893.33, 26.6667 )
+nodes/page_flip_anim/node = SubResource( 21 )
+nodes/page_flip_anim/position = Vector2( -133.333, -746.667 )
+nodes/page_flip_trigger/node = SubResource( 29 )
+nodes/page_flip_trigger/position = Vector2( 160, -853.333 )
+nodes/reach_for_phone_anim/node = SubResource( 30 )
+nodes/reach_for_phone_anim/position = Vector2( 0, 506.667 )
+nodes/reach_for_phone_trigger/node = SubResource( 31 )
+nodes/reach_for_phone_trigger/position = Vector2( 293.333, 240 )
+nodes/sleep-lounge-read/node = SubResource( 22 )
+nodes/sleep-lounge-read/position = Vector2( 853.333, -160 )
+nodes/sleep_loop_anim/node = SubResource( 6 )
+nodes/sleep_loop_anim/position = Vector2( -160, -80 )
+nodes/throw_away_comic/node = SubResource( 23 )
+nodes/throw_away_comic/position = Vector2( 80, -266.667 )
+nodes/throw_away_trigger/node = SubResource( 24 )
+nodes/throw_away_trigger/position = Vector2( 506.667, -293.333 )
+nodes/wake_up_anim/node = SubResource( 32 )
+nodes/wake_up_anim/position = Vector2( -373.333, 80 )
+nodes/wake_up_scale/node = SubResource( 10 )
+nodes/wake_up_scale/position = Vector2( -160, 53.3333 )
+nodes/wakeup_trigger/node = SubResource( 33 )
+nodes/wakeup_trigger/position = Vector2( 80, -106.667 )
+node_connections = [ "output", 0, "lounge-holdphone-hangup", "lounge-holdphone-hangup", 0, "sleep-lounge-read", "lounge-holdphone-hangup", 1, "hang_up_trigger", "wake_up_scale", 0, "wake_up_anim", "page_flip_trigger", 0, "holding_comic", "page_flip_trigger", 1, "page_flip_anim", "reach_for_phone_trigger", 0, "lounge_loop_anim", "reach_for_phone_trigger", 1, "reach_for_phone_anim", "sleep-lounge-read", 0, "wakeup_trigger", "sleep-lounge-read", 1, "reach_for_phone_trigger", "sleep-lounge-read", 2, "throw_away_trigger", "throw_away_trigger", 0, "grab_comic_trigger", "throw_away_trigger", 1, "throw_away_comic", "wakeup_trigger", 0, "sleep_loop_anim", "wakeup_trigger", 1, "wake_up_scale", "hang_up_trigger", 0, "holding_phone_loop", "hang_up_trigger", 1, "hang_up_anim", "grab_comic_trigger", 0, "page_flip_trigger", "grab_comic_trigger", 1, "grab_comic_anim" ]
 
 [node name="scout_mg" instance=ExtResource( 1 )]
 script = ExtResource( 2 )
 
-[node name="comic_hand" parent="scoutqc_skeleton/Skeleton" index="1"]
+[node name="Cube002seams" parent="." index="0"]
 visible = false
 
-[node name="Handset_scout" parent="scoutqc_skeleton/Skeleton" index="3"]
+[node name="Cube001seams" parent="." index="2"]
+visible = false
+
+[node name="Handset_chair" parent="scoutqc_skeleton" index="0"]
 visible = false
 
 [node name="Floor" parent="." index="11"]
@@ -5746,6 +6566,8 @@ anims/comic_opening = SubResource( 5 )
 anims/grab_comic = ExtResource( 10 )
 anims/hang_up = SubResource( 7 )
 anims/headphones_bodygroupAction = SubResource( 8 )
+anims/holding_comic = SubResource( 36 )
+anims/holding_phone = SubResource( 35 )
 anims/lounge = SubResource( 9 )
 anims/lounge_loop = ExtResource( 8 )
 anims/page_flip = SubResource( 11 )
@@ -5758,12 +6580,7 @@ anims/vo_uh_no = ExtResource( 6 )
 anims/wake_up = SubResource( 17 )
 
 [node name="scout_anims_timer" type="Timer" parent="scout_mg_anims" index="0"]
-
-[node name="animation_blender" type="AnimationTree" parent="scout_mg_anims" index="1"]
-tree_root = SubResource( 20 )
-anim_player = NodePath("..")
-active = true
-parameters/BlendSpace1D/blend_position = -1.03686
+autostart = true
 
 [node name="scout_vo" type="AudioStreamPlayer" parent="." index="16"]
 stream = ExtResource( 5 )
@@ -5781,13 +6598,23 @@ stream = ExtResource( 3 )
 [node name="scout_mg_hud" parent="CanvasLayer" index="0" instance=ExtResource( 4 )]
 
 [node name="anim_timer" type="Timer" parent="." index="20"]
-one_shot = true
+wait_time = 7.0
+autostart = true
 
-[node name="scout_mg_timer" type="Timer" parent="." index="21"]
+[node name="AnimationTree" type="AnimationTree" parent="." index="21"]
+tree_root = SubResource( 34 )
+anim_player = NodePath("../scout_mg_anims")
+active = true
+parameters/grab_comic_trigger/active = false
+parameters/hang_up_trigger/active = false
+parameters/lounge-holdphone-hangup/blend_amount = 0.0
+parameters/page_flip_trigger/active = false
+parameters/reach_for_phone_trigger/active = false
+parameters/sleep-lounge-read/blend_amount = 1.0
+parameters/throw_away_trigger/active = false
+parameters/wake_up_scale/scale = 1.0
+parameters/wakeup_trigger/active = false
+script = ExtResource( 11 )
 
-[node name="Tween" type="Tween" parent="." index="22"]
-
-[connection signal="timeout" from="scout_mg_anims/scout_anims_timer" to="." method="_on_scout_anims_timer_timeout"]
 [connection signal="finished" from="phone_ring" to="." method="_on_phone_ring_finished"]
 [connection signal="timeout" from="anim_timer" to="." method="_on_anim_timer_timeout"]
-[connection signal="timeout" from="scout_mg_timer" to="." method="_on_scout_mg_timer_timeout"]

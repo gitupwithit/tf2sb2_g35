@@ -1,0 +1,109 @@
+[gd_scene load_steps=21 format=2]
+
+[sub_resource type="AnimationNodeAnimation" id=19]
+animation = "grab_comic"
+
+[sub_resource type="AnimationNodeOneShot" id=20]
+
+[sub_resource type="AnimationNodeAnimation" id=25]
+animation = "hang_up"
+
+[sub_resource type="AnimationNodeOneShot" id=12]
+filters = [ "scoutqc_skeleton/Handset_chair:visible", "scoutqc_skeleton/Skeleton/Handset_scout:visible" ]
+
+[sub_resource type="AnimationNodeAnimation" id=26]
+animation = "holding_comic"
+
+[sub_resource type="AnimationNodeAnimation" id=27]
+animation = "holding_phone"
+
+[sub_resource type="AnimationNodeBlend2" id=14]
+filters = [ "scoutqc_skeleton/Handset_chair:visible", "scoutqc_skeleton/Skeleton/Handset_scout:visible" ]
+
+[sub_resource type="AnimationNodeAnimation" id=28]
+animation = "lounge_loop"
+
+[sub_resource type="AnimationNodeAnimation" id=21]
+animation = "page_flip"
+
+[sub_resource type="AnimationNodeOneShot" id=29]
+
+[sub_resource type="AnimationNodeAnimation" id=30]
+animation = "reach_for_phone"
+
+[sub_resource type="AnimationNodeOneShot" id=31]
+
+[sub_resource type="AnimationNodeBlend3" id=22]
+
+[sub_resource type="AnimationNodeAnimation" id=6]
+animation = "sleep_anim"
+
+[sub_resource type="AnimationNodeAnimation" id=23]
+animation = "throw_away_comic"
+
+[sub_resource type="AnimationNodeOneShot" id=24]
+
+[sub_resource type="AnimationNodeAnimation" id=32]
+animation = "wake_up"
+
+[sub_resource type="AnimationNodeTimeScale" id=10]
+
+[sub_resource type="AnimationNodeOneShot" id=33]
+
+[sub_resource type="AnimationNodeBlendTree" id=34]
+graph_offset = Vector2( 319.974, -185.112 )
+nodes/grab_comic_anim/node = SubResource( 19 )
+nodes/grab_comic_anim/position = Vector2( -133.333, -613.333 )
+nodes/grab_comic_trigger/node = SubResource( 20 )
+nodes/grab_comic_trigger/position = Vector2( 426.667, -560 )
+nodes/hang_up_anim/node = SubResource( 25 )
+nodes/hang_up_anim/position = Vector2( 640, 480 )
+nodes/hang_up_trigger/node = SubResource( 12 )
+nodes/hang_up_trigger/position = Vector2( 880, 240 )
+nodes/holding_comic/node = SubResource( 26 )
+nodes/holding_comic/position = Vector2( -133.333, -880 )
+nodes/holding_phone_loop/node = SubResource( 27 )
+nodes/holding_phone_loop/position = Vector2( 586.667, 266.667 )
+nodes/lounge-holdphone-hangup/node = SubResource( 14 )
+nodes/lounge-holdphone-hangup/position = Vector2( 1440, -80 )
+nodes/lounge_loop_anim/node = SubResource( 28 )
+nodes/lounge_loop_anim/position = Vector2( 53.3333, 293.333 )
+nodes/output/position = Vector2( 1893.33, 26.6667 )
+nodes/page_flip_anim/node = SubResource( 21 )
+nodes/page_flip_anim/position = Vector2( -133.333, -746.667 )
+nodes/page_flip_trigger/node = SubResource( 29 )
+nodes/page_flip_trigger/position = Vector2( 160, -853.333 )
+nodes/reach_for_phone_anim/node = SubResource( 30 )
+nodes/reach_for_phone_anim/position = Vector2( 0, 506.667 )
+nodes/reach_for_phone_trigger/node = SubResource( 31 )
+nodes/reach_for_phone_trigger/position = Vector2( 293.333, 240 )
+nodes/sleep-lounge-read/node = SubResource( 22 )
+nodes/sleep-lounge-read/position = Vector2( 853.333, -160 )
+nodes/sleep_loop_anim/node = SubResource( 6 )
+nodes/sleep_loop_anim/position = Vector2( -160, -80 )
+nodes/throw_away_comic/node = SubResource( 23 )
+nodes/throw_away_comic/position = Vector2( 80, -266.667 )
+nodes/throw_away_trigger/node = SubResource( 24 )
+nodes/throw_away_trigger/position = Vector2( 506.667, -293.333 )
+nodes/wake_up_anim/node = SubResource( 32 )
+nodes/wake_up_anim/position = Vector2( -373.333, 80 )
+nodes/wake_up_scale/node = SubResource( 10 )
+nodes/wake_up_scale/position = Vector2( -160, 53.3333 )
+nodes/wakeup_trigger/node = SubResource( 33 )
+nodes/wakeup_trigger/position = Vector2( 80, -106.667 )
+node_connections = [ "throw_away_trigger", 0, "grab_comic_trigger", "throw_away_trigger", 1, "throw_away_comic", "wake_up_scale", 0, "wake_up_anim", "hang_up_trigger", 0, "holding_phone_loop", "hang_up_trigger", 1, "hang_up_anim", "grab_comic_trigger", 0, "page_flip_trigger", "grab_comic_trigger", 1, "grab_comic_anim", "reach_for_phone_trigger", 0, "lounge_loop_anim", "reach_for_phone_trigger", 1, "reach_for_phone_anim", "sleep-lounge-read", 0, "wakeup_trigger", "sleep-lounge-read", 1, "reach_for_phone_trigger", "sleep-lounge-read", 2, "throw_away_trigger", "page_flip_trigger", 0, "holding_comic", "page_flip_trigger", 1, "page_flip_anim", "lounge-holdphone-hangup", 0, "sleep-lounge-read", "lounge-holdphone-hangup", 1, "hang_up_trigger", "wakeup_trigger", 0, "sleep_loop_anim", "wakeup_trigger", 1, "wake_up_scale", "output", 0, "lounge-holdphone-hangup" ]
+
+[node name="Spatial" type="Spatial"]
+
+[node name="AnimationTree" type="AnimationTree" parent="."]
+tree_root = SubResource( 34 )
+anim_player = NodePath("../AnimationPlayer2")
+parameters/grab_comic_trigger/active = false
+parameters/hang_up_trigger/active = false
+parameters/lounge-holdphone-hangup/blend_amount = 0.0
+parameters/page_flip_trigger/active = false
+parameters/reach_for_phone_trigger/active = false
+parameters/sleep-lounge-read/blend_amount = 0.0
+parameters/throw_away_trigger/active = false
+parameters/wake_up_scale/scale = 1.0
+parameters/wakeup_trigger/active = false

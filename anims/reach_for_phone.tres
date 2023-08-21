@@ -610,27 +610,13 @@ tracks/84/keys = {
 "update": 1,
 "values": [ false, true ]
 }
-tracks/85/type = "method"
-tracks/85/path = NodePath(".")
+tracks/85/type = "audio"
+tracks/85/path = NodePath("scout_vo")
 tracks/85/interp = 1
 tracks/85/loop_wrap = true
 tracks/85/imported = false
 tracks/85/enabled = true
 tracks/85/keys = {
-"times": PoolRealArray( 3.7 ),
-"transitions": PoolRealArray( 1 ),
-"values": [ {
-"args": [  ],
-"method": "turn_on_mic"
-} ]
-}
-tracks/86/type = "audio"
-tracks/86/path = NodePath("scout_vo")
-tracks/86/interp = 1
-tracks/86/loop_wrap = true
-tracks/86/imported = false
-tracks/86/enabled = true
-tracks/86/keys = {
 "clips": [ {
 "end_offset": 0.0,
 "start_offset": 0.0,
@@ -638,8 +624,20 @@ tracks/86/keys = {
 } ],
 "times": PoolRealArray( 2.4 )
 }
+tracks/86/type = "value"
+tracks/86/path = NodePath("scoutqc_skeleton/Skeleton/scout_morphs_sfm:blend_shapes/D_OpenLipsL+OpenLipsR")
+tracks/86/interp = 1
+tracks/86/loop_wrap = true
+tracks/86/imported = false
+tracks/86/enabled = true
+tracks/86/keys = {
+"times": PoolRealArray( 2.4, 2.5, 2.8, 2.9 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 0,
+"values": [ 0.0, 1.0, 1.0, 0.0 ]
+}
 tracks/87/type = "value"
-tracks/87/path = NodePath("scoutqc_skeleton/Skeleton/scout_morphs_sfm:blend_shapes/D_OpenLipsL+OpenLipsR")
+tracks/87/path = NodePath("scoutqc_skeleton/Skeleton/scout_morphs_sfm:blend_shapes/C_OpenJaw")
 tracks/87/interp = 1
 tracks/87/loop_wrap = true
 tracks/87/imported = false
@@ -648,10 +646,10 @@ tracks/87/keys = {
 "times": PoolRealArray( 2.4, 2.5, 2.8, 2.9 ),
 "transitions": PoolRealArray( 1, 1, 1, 1 ),
 "update": 0,
-"values": [ 0.0, 1.0, 1.0, 0.0 ]
+"values": [ 0.0, 0.3, 0.3, 0.0 ]
 }
 tracks/88/type = "value"
-tracks/88/path = NodePath("scoutqc_skeleton/Skeleton/scout_morphs_sfm:blend_shapes/C_OpenJaw")
+tracks/88/path = NodePath("scoutqc_skeleton/Skeleton/scout_morphs_sfm:blend_shapes/F_OpenLips_OpenUpperLip_ZipLip100L+OpenLips_OpenUpperLip_ZipLip")
 tracks/88/interp = 1
 tracks/88/loop_wrap = true
 tracks/88/imported = false
@@ -660,17 +658,31 @@ tracks/88/keys = {
 "times": PoolRealArray( 2.4, 2.5, 2.8, 2.9 ),
 "transitions": PoolRealArray( 1, 1, 1, 1 ),
 "update": 0,
-"values": [ 0.0, 0.3, 0.3, 0.0 ]
+"values": [ 0.0, 0.75, 0.75, 0.86538 ]
 }
 tracks/89/type = "value"
-tracks/89/path = NodePath("scoutqc_skeleton/Skeleton/scout_morphs_sfm:blend_shapes/F_OpenLips_OpenUpperLip_ZipLip100L+OpenLips_OpenUpperLip_ZipLip")
+tracks/89/path = NodePath("AnimationTree:parameters/lounge-holdphone-hangup/blend_amount")
 tracks/89/interp = 1
 tracks/89/loop_wrap = true
 tracks/89/imported = false
 tracks/89/enabled = true
 tracks/89/keys = {
-"times": PoolRealArray( 2.4, 2.5, 2.8, 2.9 ),
-"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"times": PoolRealArray( 0, 2.8, 3.2 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
 "update": 0,
-"values": [ 0.0, 0.75, 0.75, 0.86538 ]
+"values": [ 0.0, 0.0, 1.0 ]
+}
+tracks/90/type = "method"
+tracks/90/path = NodePath("AnimationTree")
+tracks/90/interp = 1
+tracks/90/loop_wrap = true
+tracks/90/imported = false
+tracks/90/enabled = true
+tracks/90/keys = {
+"times": PoolRealArray( 0.2 ),
+"transitions": PoolRealArray( 1 ),
+"values": [ {
+"args": [  ],
+"method": "test"
+} ]
 }

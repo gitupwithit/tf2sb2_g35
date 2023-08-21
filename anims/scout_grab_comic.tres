@@ -652,3 +652,15 @@ tracks/91/keys = {
 "update": 1,
 "values": [ false, true ]
 }
+tracks/92/type = "value"
+tracks/92/path = NodePath("AnimationTree:parameters/sleep-lounge-read/blend_amount")
+tracks/92/interp = 1
+tracks/92/loop_wrap = true
+tracks/92/imported = false
+tracks/92/enabled = true
+tracks/92/keys = {
+"times": PoolRealArray( 0, 0.4 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ 0.0, 1.0 ]
+}
