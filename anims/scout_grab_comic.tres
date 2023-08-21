@@ -662,5 +662,19 @@ tracks/92/keys = {
 "times": PoolRealArray( 0, 0.4 ),
 "transitions": PoolRealArray( 1, 1 ),
 "update": 0,
-"values": [ 0.0, 1.0 ]
+"values": [ 0.1, 1.0 ]
+}
+tracks/93/type = "method"
+tracks/93/path = NodePath(".")
+tracks/93/interp = 1
+tracks/93/loop_wrap = true
+tracks/93/imported = false
+tracks/93/enabled = true
+tracks/93/keys = {
+"times": PoolRealArray( 2.3 ),
+"transitions": PoolRealArray( 1 ),
+"values": [ {
+"args": [  ],
+"method": "grab_comic_complete"
+} ]
 }

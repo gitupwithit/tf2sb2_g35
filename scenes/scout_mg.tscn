@@ -1,16 +1,15 @@
-[gd_scene load_steps=48 format=2]
+[gd_scene load_steps=49 format=2]
 
 [ext_resource path="res://scout_mg_assets/talking_scout_imported.glb" type="PackedScene" id=1]
 [ext_resource path="res://scripts/scout_mg.gd" type="Script" id=2]
 [ext_resource path="res://audio/sfx/phone_ring.mp3" type="AudioStream" id=3]
 [ext_resource path="res://scenes/scout_mg_hud.tscn" type="PackedScene" id=4]
-[ext_resource path="res://audio/0_scout/yeh1.mp3" type="AudioStream" id=5]
+[ext_resource path="res://audio/0_scout/uh_no.mp3" type="AudioStream" id=5]
 [ext_resource path="res://anims/vo_uh_no.tres" type="Animation" id=6]
 [ext_resource path="res://anims/reach_for_phone.tres" type="Animation" id=7]
 [ext_resource path="res://anims/scout_lounge_loop.tres" type="Animation" id=8]
 [ext_resource path="res://anims/scout_sleep_anim.tres" type="Animation" id=9]
 [ext_resource path="res://anims/scout_grab_comic.tres" type="Animation" id=10]
-[ext_resource path="res://scenes/AnimationTree.gd" type="Script" id=11]
 
 [sub_resource type="Environment" id=1]
 background_energy = 0.8
@@ -864,7 +863,7 @@ tracks/93/loop_wrap = true
 tracks/93/imported = false
 tracks/93/enabled = true
 tracks/93/keys = {
-"times": PoolRealArray( 0, 0.8, 1 ),
+"times": PoolRealArray( 0, 0.6, 1 ),
 "transitions": PoolRealArray( 1, 1, 1 ),
 "update": 0,
 "values": [ 1.0, 1.0, 0.0 ]
@@ -876,7 +875,7 @@ tracks/94/loop_wrap = true
 tracks/94/imported = false
 tracks/94/enabled = true
 tracks/94/keys = {
-"times": PoolRealArray( 1 ),
+"times": PoolRealArray( 0.9 ),
 "transitions": PoolRealArray( 1 ),
 "values": [ {
 "args": [  ],
@@ -1538,7 +1537,6 @@ tracks/90/keys = PoolRealArray( 0, 1, -7.50857, 9.10998, 24.3591, -0.0493394, 0.
 
 [sub_resource type="Animation" id=35]
 resource_name = "holding_phone"
-loop = true
 tracks/0/type = "transform"
 tracks/0/path = NodePath("scoutqc_skeleton/Skeleton:prp_microphone")
 tracks/0/interp = 1
@@ -2765,7 +2763,6 @@ tracks/90/keys = PoolRealArray( 0, 1, -2.47485, 6.07459, 32.6178, -0.263081, -0.
 [sub_resource type="Animation" id=11]
 resource_name = "page_flip"
 length = 1.66667
-loop = true
 tracks/0/type = "transform"
 tracks/0/path = NodePath("scoutqc_skeleton/Skeleton:prp_microphone")
 tracks/0/interp = 1
@@ -5729,7 +5726,7 @@ tracks/92/loop_wrap = true
 tracks/92/imported = false
 tracks/92/enabled = true
 tracks/92/keys = {
-"times": PoolRealArray( 0, 3.6, 4.1 ),
+"times": PoolRealArray( 0, 3.7, 4.1 ),
 "transitions": PoolRealArray( 1, 1, 1 ),
 "update": 0,
 "values": [ 1.0, 1.0, 0.0 ]
@@ -5741,7 +5738,7 @@ tracks/93/loop_wrap = true
 tracks/93/imported = false
 tracks/93/enabled = true
 tracks/93/keys = {
-"times": PoolRealArray( 4.1 ),
+"times": PoolRealArray( 3.6 ),
 "transitions": PoolRealArray( 1 ),
 "values": [ {
 "args": [  ],
@@ -6487,6 +6484,11 @@ animation = "throw_away_comic"
 
 [sub_resource type="AnimationNodeOneShot" id=24]
 
+[sub_resource type="AnimationNodeAnimation" id=37]
+animation = "vo_uh_no"
+
+[sub_resource type="AnimationNodeOneShot" id=38]
+
 [sub_resource type="AnimationNodeAnimation" id=32]
 animation = "wake_up"
 
@@ -6495,47 +6497,51 @@ animation = "wake_up"
 [sub_resource type="AnimationNodeOneShot" id=33]
 
 [sub_resource type="AnimationNodeBlendTree" id=34]
-graph_offset = Vector2( -400.172, -1336.53 )
+graph_offset = Vector2( 261.582, -256.406 )
 nodes/grab_comic_anim/node = SubResource( 19 )
-nodes/grab_comic_anim/position = Vector2( -133.333, -613.333 )
+nodes/grab_comic_anim/position = Vector2( -1140, 520 )
 nodes/grab_comic_trigger/node = SubResource( 20 )
-nodes/grab_comic_trigger/position = Vector2( 426.667, -560 )
+nodes/grab_comic_trigger/position = Vector2( -580, 560 )
 nodes/hang_up_anim/node = SubResource( 25 )
-nodes/hang_up_anim/position = Vector2( 640, 480 )
+nodes/hang_up_anim/position = Vector2( 1020, 1100 )
 nodes/hang_up_trigger/node = SubResource( 12 )
-nodes/hang_up_trigger/position = Vector2( 880, 240 )
+nodes/hang_up_trigger/position = Vector2( 1260, 860 )
 nodes/holding_comic/node = SubResource( 26 )
-nodes/holding_comic/position = Vector2( -133.333, -880 )
+nodes/holding_comic/position = Vector2( -1140, 240 )
 nodes/holding_phone_loop/node = SubResource( 27 )
-nodes/holding_phone_loop/position = Vector2( 586.667, 266.667 )
+nodes/holding_phone_loop/position = Vector2( 460, 760 )
 nodes/lounge-holdphone-hangup/node = SubResource( 14 )
 nodes/lounge-holdphone-hangup/position = Vector2( 1440, -80 )
 nodes/lounge_loop_anim/node = SubResource( 28 )
-nodes/lounge_loop_anim/position = Vector2( 53.3333, 293.333 )
-nodes/output/position = Vector2( 1893.33, 26.6667 )
+nodes/lounge_loop_anim/position = Vector2( -280, -140 )
+nodes/output/position = Vector2( 2100, -100 )
 nodes/page_flip_anim/node = SubResource( 21 )
-nodes/page_flip_anim/position = Vector2( -133.333, -746.667 )
+nodes/page_flip_anim/position = Vector2( -1140, 380 )
 nodes/page_flip_trigger/node = SubResource( 29 )
-nodes/page_flip_trigger/position = Vector2( 160, -853.333 )
+nodes/page_flip_trigger/position = Vector2( -840, 280 )
 nodes/reach_for_phone_anim/node = SubResource( 30 )
-nodes/reach_for_phone_anim/position = Vector2( 0, 506.667 )
+nodes/reach_for_phone_anim/position = Vector2( -340, 60 )
 nodes/reach_for_phone_trigger/node = SubResource( 31 )
-nodes/reach_for_phone_trigger/position = Vector2( 293.333, 240 )
+nodes/reach_for_phone_trigger/position = Vector2( -40, -200 )
 nodes/sleep-lounge-read/node = SubResource( 22 )
 nodes/sleep-lounge-read/position = Vector2( 853.333, -160 )
 nodes/sleep_loop_anim/node = SubResource( 6 )
-nodes/sleep_loop_anim/position = Vector2( -160, -80 )
+nodes/sleep_loop_anim/position = Vector2( 100, -660 )
 nodes/throw_away_comic/node = SubResource( 23 )
-nodes/throw_away_comic/position = Vector2( 80, -266.667 )
+nodes/throw_away_comic/position = Vector2( -600, 820 )
 nodes/throw_away_trigger/node = SubResource( 24 )
-nodes/throw_away_trigger/position = Vector2( 506.667, -293.333 )
+nodes/throw_away_trigger/position = Vector2( -180, 800 )
+nodes/vo_uh_no_anim/node = SubResource( 37 )
+nodes/vo_uh_no_anim/position = Vector2( 680, 960 )
+nodes/vo_uh_no_trigger/node = SubResource( 38 )
+nodes/vo_uh_no_trigger/position = Vector2( 940, 780 )
 nodes/wake_up_anim/node = SubResource( 32 )
-nodes/wake_up_anim/position = Vector2( -373.333, 80 )
+nodes/wake_up_anim/position = Vector2( -140, -460 )
 nodes/wake_up_scale/node = SubResource( 10 )
-nodes/wake_up_scale/position = Vector2( -160, 53.3333 )
+nodes/wake_up_scale/position = Vector2( 140, -480 )
 nodes/wakeup_trigger/node = SubResource( 33 )
-nodes/wakeup_trigger/position = Vector2( 80, -106.667 )
-node_connections = [ "output", 0, "lounge-holdphone-hangup", "lounge-holdphone-hangup", 0, "sleep-lounge-read", "lounge-holdphone-hangup", 1, "hang_up_trigger", "wake_up_scale", 0, "wake_up_anim", "page_flip_trigger", 0, "holding_comic", "page_flip_trigger", 1, "page_flip_anim", "reach_for_phone_trigger", 0, "lounge_loop_anim", "reach_for_phone_trigger", 1, "reach_for_phone_anim", "sleep-lounge-read", 0, "wakeup_trigger", "sleep-lounge-read", 1, "reach_for_phone_trigger", "sleep-lounge-read", 2, "throw_away_trigger", "throw_away_trigger", 0, "grab_comic_trigger", "throw_away_trigger", 1, "throw_away_comic", "wakeup_trigger", 0, "sleep_loop_anim", "wakeup_trigger", 1, "wake_up_scale", "hang_up_trigger", 0, "holding_phone_loop", "hang_up_trigger", 1, "hang_up_anim", "grab_comic_trigger", 0, "page_flip_trigger", "grab_comic_trigger", 1, "grab_comic_anim" ]
+nodes/wakeup_trigger/position = Vector2( 460, -640 )
+node_connections = [ "output", 0, "lounge-holdphone-hangup", "grab_comic_trigger", 0, "page_flip_trigger", "grab_comic_trigger", 1, "grab_comic_anim", "hang_up_trigger", 0, "vo_uh_no_trigger", "hang_up_trigger", 1, "hang_up_anim", "lounge-holdphone-hangup", 0, "sleep-lounge-read", "lounge-holdphone-hangup", 1, "hang_up_trigger", "throw_away_trigger", 0, "grab_comic_trigger", "throw_away_trigger", 1, "throw_away_comic", "wakeup_trigger", 0, "sleep_loop_anim", "wakeup_trigger", 1, "wake_up_scale", "sleep-lounge-read", 0, "wakeup_trigger", "sleep-lounge-read", 1, "reach_for_phone_trigger", "sleep-lounge-read", 2, "throw_away_trigger", "wake_up_scale", 0, "wake_up_anim", "reach_for_phone_trigger", 0, "lounge_loop_anim", "reach_for_phone_trigger", 1, "reach_for_phone_anim", "page_flip_trigger", 0, "holding_comic", "page_flip_trigger", 1, "page_flip_anim", "vo_uh_no_trigger", 0, "holding_phone_loop", "vo_uh_no_trigger", 1, "vo_uh_no_anim" ]
 
 [node name="scout_mg" instance=ExtResource( 1 )]
 script = ExtResource( 2 )
@@ -6546,8 +6552,11 @@ visible = false
 [node name="Cube001seams" parent="." index="2"]
 visible = false
 
-[node name="Handset_chair" parent="scoutqc_skeleton" index="0"]
+[node name="comic_hand" parent="scoutqc_skeleton/Skeleton" index="1"]
 visible = false
+
+[node name="scout_morphs_sfm" parent="scoutqc_skeleton/Skeleton" index="6"]
+blend_shapes/F_OpenLips_OpenUpperLip_ZipLip100L+OpenLips_OpenUpperLip_ZipLip = 0.86538
 
 [node name="Floor" parent="." index="11"]
 transform = Transform( 67.0648, 0, 0, 0, 67.0648, 0, 0, 0, 67.0648, 0, 0, -17.9698 )
@@ -6579,29 +6588,34 @@ anims/throw_away_comic = SubResource( 16 )
 anims/vo_uh_no = ExtResource( 6 )
 anims/wake_up = SubResource( 17 )
 
-[node name="scout_anims_timer" type="Timer" parent="scout_mg_anims" index="0"]
-autostart = true
+[node name="page_flip_timer" type="Timer" parent="scout_mg_anims" index="0"]
+wait_time = 3.0
 
 [node name="scout_vo" type="AudioStreamPlayer" parent="." index="16"]
 stream = ExtResource( 5 )
+volume_db = -18.6831
 
 [node name="mic" type="AudioStreamPlayer" parent="." index="17"]
 stream = SubResource( 18 )
 autoplay = true
 bus = "Record"
 
+[node name="mic_timer" type="Timer" parent="mic" index="0"]
+one_shot = true
+
 [node name="phone_ring" type="AudioStreamPlayer" parent="." index="18"]
 stream = ExtResource( 3 )
+volume_db = -6.0
 
-[node name="CanvasLayer" type="CanvasLayer" parent="." index="19"]
+[node name="phone_ring_timer" type="Timer" parent="phone_ring" index="0"]
+wait_time = 3.0
+one_shot = true
 
-[node name="scout_mg_hud" parent="CanvasLayer" index="0" instance=ExtResource( 4 )]
-
-[node name="anim_timer" type="Timer" parent="." index="20"]
+[node name="lounge_state_timer" type="Timer" parent="." index="19"]
 wait_time = 7.0
 autostart = true
 
-[node name="AnimationTree" type="AnimationTree" parent="." index="21"]
+[node name="AnimationTree" type="AnimationTree" parent="." index="20"]
 tree_root = SubResource( 34 )
 anim_player = NodePath("../scout_mg_anims")
 active = true
@@ -6612,9 +6626,16 @@ parameters/page_flip_trigger/active = false
 parameters/reach_for_phone_trigger/active = false
 parameters/sleep-lounge-read/blend_amount = 1.0
 parameters/throw_away_trigger/active = false
+parameters/vo_uh_no_trigger/active = false
 parameters/wake_up_scale/scale = 1.0
 parameters/wakeup_trigger/active = false
-script = ExtResource( 11 )
 
+[node name="CanvasLayer" type="CanvasLayer" parent="." index="21"]
+
+[node name="scout_mg_hud" parent="CanvasLayer" index="0" instance=ExtResource( 4 )]
+
+[connection signal="timeout" from="scout_mg_anims/page_flip_timer" to="." method="_on_page_flip_timer_timeout"]
+[connection signal="timeout" from="mic/mic_timer" to="." method="_on_mic_timer_timeout"]
 [connection signal="finished" from="phone_ring" to="." method="_on_phone_ring_finished"]
-[connection signal="timeout" from="anim_timer" to="." method="_on_anim_timer_timeout"]
+[connection signal="timeout" from="phone_ring/phone_ring_timer" to="." method="_on_phone_ring_timer_timeout"]
+[connection signal="timeout" from="lounge_state_timer" to="." method="_on_lounge_state_timer_timeout"]

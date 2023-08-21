@@ -667,22 +667,28 @@ tracks/89/loop_wrap = true
 tracks/89/imported = false
 tracks/89/enabled = true
 tracks/89/keys = {
-"times": PoolRealArray( 0, 2.8, 3.2 ),
+"times": PoolRealArray( 0, 3.6, 3.9 ),
 "transitions": PoolRealArray( 1, 1, 1 ),
 "update": 0,
 "values": [ 0.0, 0.0, 1.0 ]
 }
 tracks/90/type = "method"
-tracks/90/path = NodePath("AnimationTree")
+tracks/90/path = NodePath(".")
 tracks/90/interp = 1
 tracks/90/loop_wrap = true
 tracks/90/imported = false
 tracks/90/enabled = true
 tracks/90/keys = {
-"times": PoolRealArray( 0.2 ),
-"transitions": PoolRealArray( 1 ),
+"times": PoolRealArray( 1, 3.5, 3.8 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
 "values": [ {
 "args": [  ],
-"method": "test"
+"method": "stop_ring"
+}, {
+"args": [  ],
+"method": "show_audio_meter"
+}, {
+"args": [  ],
+"method": "phone_grab_complete"
 } ]
 }
